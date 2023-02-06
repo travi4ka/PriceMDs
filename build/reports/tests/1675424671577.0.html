@@ -1,0 +1,1333 @@
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search Facilities</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+	<link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/nifty.min.css" rel="stylesheet">
+	<link href="../css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+	<link href="../plugins/pace/pace.min.css" rel="stylesheet">
+	<script src="../plugins/pace/pace.min.js"></script>
+	<link href="../css/demo/nifty-demo.css" rel="stylesheet">
+	<link href="../plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="../plugins/datatables/extensions/Responsive/css/responsive.dataTables.min.css" rel="stylesheet">
+	<link href="../js/plugins/dropzone/dropzone.css" rel="stylesheet" type="text/css">
+	<link href="../plugins/ionicons/css/ionicons.min.css" rel="stylesheet">
+</head>
+<body class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<input type="hidden" id="userIdV" value="429">
+	<input class="form-control" id="companyId" value="667" disabled="" type="hidden">
+	<div id="container" class="effect aside-float aside-bright mainnav-lg">
+		<header id="navbar">
+	<input type="hidden" id="msgTotal" value="6">	<div id="navbar-container" class="boxed">
+		<div class="navbar-header">
+			<a href="index.html" class="navbar-brand"><img src="../admin/logo/667/pmds_web_panel_bmc_c.fw.png" alt="PriceMDs" class="brand-icon" style="width:200px"></a>
+		</div>
+		<div class="navbar-content">
+			<ul class="nav navbar-top-links">
+				<li class="tgl-menu-btn"><a class="mainnav-toggle" href="#"><i class="demo-pli-list-view"></i></a></li>
+			</ul>
+			<ul class="nav navbar-top-links">
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						<i class="demo-pli-bell"></i><span id="badge" class="badge badge-header badge-danger">6</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right msgInternal-lg">
+						<div class="nano scrollable has-scrollbar" style="height: 0px;">
+							<div class="nano-content" tabindex="0" style="right: -17px;">
+								<ul class="head-list" id="mList">
+									
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Admin Test</div>
+											<div class="media-body">
+												<p id="para|53696|1664|1387" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Case #1664 has selected Alabama Colon &amp; Rectal Institute P.C.<br>No additional details provided</p>
+												<small>2023-02-02 05:15:52</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53696|1664|1387" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Admin Test</div>
+											<div class="media-body">
+												<p id="para|53677|1664|1387" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Case #1664 has selected EndoCentre at Quarterfield Station<br>No additional details provided</p>
+												<small>2023-02-02 05:15:10</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53677|1664|1387" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Care Coordinator Test</div>
+											<div class="media-body">
+												<p id="para|53658|1663|1378" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">A note has been added on case #1663 for patient Test Patient by Care Coordinator Test</p>
+												<small>2023-02-02 03:16:04</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53658|1663|1378" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Care Coordinator Test</div>
+											<div class="media-body">
+												<p id="para|53657|1663|1378" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Status change from Facility request to Scheduled on case #1663 by Care Coordinator Test</p>
+												<small>2023-02-02 03:13:42</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53657|1663|1378" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Admin Test</div>
+											<div class="media-body">
+												<p id="para|53656|1663|1378" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Admin Test has assigned case 1663 to Care Coordinator Test</p>
+												<small>2023-02-02 03:12:14</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53656|1663|1378" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Admin Test</div>
+											<div class="media-body">
+												<p id="para|53654|1663|1378" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Case #1663 has selected Green Imaging - Arizona Phoenix 19th Avenue<br>No additional details provided</p>
+												<small>2023-02-02 03:10:47</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53654|1663|1378" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>	
+									<li>
+										<p class="text-lg text-semibold mar-no text-main"><a href="../user/message.php"><i class="demo-pli-mail icon-lg icon-fw"></i> <strong>Read All Messages</strong></a></p>
+									</li>
+								</ul>
+							</div>
+						<div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div>
+					</div>
+				</li>
+				<li id="dropdown-user" class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+						<span class="ic-user pull-right"><i class="demo-pli-male"></i></span>
+					</a><div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default"><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+						</a><ul class="head-list"><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+							</a><li><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right"></a><a href="../user/message.php"><i class="demo-pli-male icon-lg icon-fw"></i> You have 6 messages.</a></li>
+							<li><a href="#"><i class="demo-pli-gear icon-lg icon-fw"></i>10.0.1.6</a></li>
+							<li><a href="#"><i class="demo-pli-gear icon-lg icon-fw"></i> Server Time 06:44:25</a></li>
+							<li><a href="../logout.php"><i class="demo-pli-computer-secure icon-lg icon-fw"></i> Lock screen</a></li>
+							<li><a href="../logout.php"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="aside-toggle">
+						<i class="demo-pli-dot-vertical"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<script>
+function goToMsgs(val){
+	var msgVal = val;
+	idValue = val.split("|");
+	var pos = idValue[0];
+	var markMsg = idValue[1];
+	var targetC = idValue[2];
+	var targetP = idValue[3];
+	if(pos=="profile"){}else{
+	var indicatorBtn = 'btn|'+markMsg+'|'+targetC+'|'+targetP;
+	document.getElementById(indicatorBtn).classList.remove("btn-danger");
+	document.getElementById(indicatorBtn).classList.add("btn-success");
+	}
+	$.ajax({
+			type: "POST",
+			url: "../ajaxControl.php",
+			data:{msgVal:msgVal},
+			dataType: 'json',
+			success: function(data){
+				var msg = data.msg;
+				var url = data.url;
+				console.log(msg);
+				var win = window.open(url,'_self');
+				win.focus();
+		}
+	});
+
+}
+
+
+
+
+
+
+
+</script>		<div class="boxed">
+			<div id="content-container">
+				<div id="page-head">
+					<ol class="breadcrumb">
+						<li><a href="../dashboard.php"><i class="demo-pli-home"></i></a></li>
+						<li><a href="#.php">Facility Search Tool</a></li>
+					</ol>
+				</div>
+				<div id="page-content" style="padding-top:0px">
+					<div class="fixed-fluid">
+						<div class="row">
+							<div class="col-md-12 alert alert-success" id="msg" style="display:none"></div>
+						</div>
+
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="panel" id="demo-panel-ref" style="padding-right:20px">
+									<div class="panel-heading">
+										<div class="panel-control">
+											<button class="btn btn-success" type="button" onclick="initMap()">Map Results</button>
+											<button class="btn btn-primary" type="button" onclick="sendList()">Send Email</button>
+											<button class="btn btn-info" type="button" onclick="viewListTable()">PDF</button>
+										</div>
+									</div>
+									<!--Panel body-->
+									<div class="panel-body">
+										<div class="row">
+											<h5>Search parameters</h5>
+											<p><em>Search times can vary</em></p>
+											<div class="form-group">
+												<div class="col-lg-12">
+														<div class="form-inline">
+														<select class="form-control input" id="parameterContract" style="width:8%;padding:2px">
+															<option value="N">Contract Type</option>
+															<option value="N">No Preference</option>
+															<option value="1">Contracted</option>
+															<option value="2">Single Case</option>
+														</select>
+														<select class="form-control input" id="parameterSpecialty" style="width:10%;padding:2px">
+															<option value="N">Specialty</option>
+															<option value="N">No Preference</option>
+															<option value="34">Anesthesiology</option><option value="21">Cardiology</option><option value="19">Cardiothoracic</option><option value="37">Colorectal</option><option value="28">Dental</option><option value="5">Dermatology</option><option value="30">Emergency Medicine</option><option value="10">ENT</option><option value="32">Family Medicine</option><option value="7">Gastroenterology</option><option value="1">General Surgery</option><option value="2">Gynecology</option><option value="23">Hepatology</option><option value="20">Imaging</option><option value="31">Internal Medicine</option><option value="35">Interventional Spine</option><option value="26">Maxillofacial</option><option value="24">Neurology</option><option value="8">Neurosurgery</option><option value="29">Obstetrics</option><option value="27">Oncology</option><option value="6">Ophthalmology</option><option value="9">Orthopedics</option><option value="22">Pain Management</option><option value="25">Pediatrics</option><option value="11">Plastic Surgery</option><option value="12">Podiatry</option><option value="33">Psychiatry</option><option value="18">Pulmonology</option><option value="13">Radiology</option><option value="38">Rehabilitation</option><option value="14">Urology</option><option value="15">Vascular</option>														</select>
+
+                                                                                                                                        <input class="form-control input" id="parameterCPTDisplay" style="width:8%;padding:2px" value="" placeholder="CPT or Text">
+                                                                       
+														<input type="hidden" class="form-control" id="parameterCPT" style="width:8%;padding:2px" value="N">
+
+														<select class="form-control input" id="parameterMiles" style="width:8%;padding:2px">
+															<option value="N">Distance</option>
+															<option value="N">No Preference</option>
+															<option value="5">5 Miles</option>
+															<option value="10">10 Miles</option>
+															<option value="15">15 Miles</option>
+															<option value="20">20 Miles</option>
+															<option value="25">25 Miles</option>
+															<option value="30">30 Miles</option>
+															<option value="40">40 Miles</option>
+															<option value="50">50 Miles</option>
+															<option value="75">75 Miles</option>
+															<option value="100">100 Miles</option>
+															<option value="150">150 Miles</option>
+															<option value="250">250 Miles</option>
+															<option value="350">350 Miles</option>
+															<option value="500">500 Miles</option>
+															<option value="750">750 Miles</option>
+														</select>
+														<select class="form-control input" id="parameterType" style="width:8%;padding:2px" onchange="pickerChange()">
+															<option value="N">Location</option>
+															<option value="N">No Preference</option>
+															<option value="1">Zip Code</option>
+															<option value="2">City</option>
+															<option value="3">State</option>
+															<option value="4">Address</option>
+														</select>
+														<select class="form-control input" id="statePicker" style="width:8%;padding:2px" disabled="">
+															<option value="N">State</option>
+															<option value="1">Alabama</option><option value="2">Alaska</option><option value="4">Arizona</option><option value="5">Arkansas</option><option value="6">California</option><option value="8">Colorado</option><option value="9">Connecticut</option><option value="10">Delaware</option><option value="11">District of Columbia</option><option value="12">Florida</option><option value="13">Georgia</option><option value="15">Hawaii</option><option value="16">Idaho</option><option value="17">Illinois</option><option value="18">Indiana</option><option value="19">Iowa</option><option value="20">Kansas</option><option value="21">Kentucky</option><option value="22">Louisiana</option><option value="23">Maine</option><option value="24">Maryland</option><option value="25">Massachusetts</option><option value="26">Michigan</option><option value="27">Minnesota</option><option value="28">Mississippi</option><option value="29">Missouri</option><option value="30">Montana</option><option value="31">Nebraska</option><option value="32">Nevada</option><option value="33">New Hampshire</option><option value="34">New Jersey</option><option value="35">New Mexico</option><option value="36">New York</option><option value="37">North Carolina</option><option value="38">North Dakota</option><option value="39">Ohio</option><option value="40">Oklahoma</option><option value="41">Oregon</option><option value="42">Pennsylvania</option><option value="72">Puerto Rico</option><option value="44">Rhode Island</option><option value="45">South Carolina</option><option value="46">South Dakota</option><option value="47">Tennessee</option><option value="48">Texas</option><option value="49">Utah</option><option value="50">Vermont</option><option value="78">Virgin Islands of the US</option><option value="51">Virginia</option><option value="53">Washington</option><option value="54">West Virginia</option><option value="55">Wisconsin</option><option value="56">Wyoming</option>														</select>
+														<input type="text" class="form-control input" style="width:20%;padding:2px" id="parameterText" onkeypress="handle(event)" placeholder="enter zip code">
+														<button type="button" class="btn btn btn-success" style="margin:2px -5px" onclick="searchStart(1)"><i class="fa fa-search"> </i> Search</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-lg-2">
+
+											</div>
+											<div class="col-lg-6">
+												<div id="returnCodes" style="display:none;padding:10px 10px 60px 10px"></div>
+											</div>
+										</div>
+
+
+
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="table-responsive">
+													<div id="searchOutput" style="display:none;margin-bottom:60px;padding:80px 10px 60px 10px"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							<div id="mape" style="min-height:800px;height:100%"></div>
+
+
+
+<div class="modal fade" id="nappyModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalTitle">Map</h4>
+        <button type="button" style="margin-top:-20px" class="close" data-dismiss="modal">
+          <i class="pci-cross pci-circle"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:0px 20px">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox-content" id="map" style="min-height:800px;height:100%"></div>
+					</div>
+				</div>
+			</div>
+      <div class="modal-footer">
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!----Appointment Modal for Notices ------------General Global------------------>
+
+
+
+<div class="modal fade" id="noticeModalApp" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalTitle">Send Facility List</h4>
+        <button type="button" style="margin-top:-20px" class="close" data-dismiss="modal">
+          <i class="pci-cross pci-circle"></i>
+        </button>
+      </div>
+      <div class="modal-body" style="padding:0px 20px">
+				<input class="form-control" id="appTpaId" value="1" disabled="" type="hidden">
+				<input class="form-control" id="appPatientId" value="1" disabled="" type="hidden">
+				<div class="row">
+					<h4 id="errorModalEmail" class="text-danger" style="padding:0px 0px 0px 20px;display:none"></h4>
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div id="noticeContent">
+								<div class="ibox-content" style="padding:0px 20px">
+
+									<div class="form-group" id="modalFacilityDropApp">
+										<select id="pickPatient" class="form-control" onchange="fillEmail(this.value)">
+											<option value="0">Select Patient</option>
+											<option value="1379"> ,    Select</option><option value="1380"> ,    Select</option><option value="1382"> ,    Select</option><option value="1383"> ,    Select</option><option value="1384"> ,    Select</option><option value="1386"> 222222,    Select</option><option value="710"> Allen Douglas,  Anna  Texas</option><option value="220"> Anderson Avary,  Columbia  Missouri</option><option value="667"> Barre Joy,  Marietta  Georgia</option><option value="281"> Bean Natasha,  South Bend  Indiana</option><option value="661"> Bednar Ruth,  Reading  Pennsylvania</option><option value="240"> Block Deborah,  Mishawaka  Indiana</option><option value="268"> Branstetter Lacy,  Hattiesburg  Mississippi</option><option value="708"> Cary Adam,  Jewett  Illinois</option><option value="520"> Childers Keith,  Decatur  Alabama</option><option value="296"> Chupp Vernon,  Bourbon  Indiana</option><option value="471"> Combs Steve,  Olive Branch  Mississippi</option><option value="163"> Confer Mike,  Red Lion  Pennsylvania</option><option value="233"> Craven Nancy,  Ephrata   Pennsylvania</option><option value="766"> Dainton Robert,  Osceola  Indiana</option><option value="612"> Defreuw Benedict,  Mishawaka  Indiana</option><option value="345"> Elliot Tiffany,  White Bluff  Tennessee</option><option value="286"> Fallin Timothy,  Gardendale  Alabama</option><option value="223"> Ginter Stephanie,   South Bend  Indiana</option><option value="177"> Gourley Wendall,  Hendersonville  Tennessee</option><option value="301"> Graver Robin,    Missouri</option><option value="221"> Grimmet Nathan,  Manchester  Missouri</option><option value="380"> Gross Ryan,  Oklahoma City  Select</option><option value="344"> Guibor Tina,  Hannibal  Missouri</option><option value="252"> Hernton Sheri,  Port Gibson  Mississippi</option><option value="633"> Horton Shemekica,    Mississippi</option><option value="397"> Ivery Julius,  New Orleans  Louisiana</option><option value="684"> Jarrett Ian,  Osceola  Indiana</option><option value="638"> Jenkins Shonna,  Alstyne  Texas</option><option value="581"> Johnson Bennett,  Onamia  Minnesota</option><option value="779"> Johnson Katie,  Mobile  Alabama</option><option value="452"> Jones Shannon,  Locust Grove  Georgia</option><option value="228"> Kaufman Kristine,  Mills River  North Carolina</option><option value="681"> Kaufman Nicholas,  Elkhart  Indiana</option><option value="361"> Kimmel Michael,  Bel Aire  Maryland</option><option value="187"> Kurtz Cherie ,  Lake Nebagamon  Wisconsin</option><option value="671"> Lerma Mariela,  Albuquerque  New Mexico</option><option value="170"> Lytle Carrie ,  Mishawaka  Indiana</option><option value="568"> Montoya Joshua,  Hannibal  Missouri</option><option value="330"> Morse Steve,  Jefferson City  Missouri</option><option value="687"> O'Brien Jon ,  Palmyra  Missouri</option><option value="264"> Orr Robert,  York  Pennsylvania</option><option value="723"> Peppers Chris,  South Bend  Indiana</option><option value="721"> Pfeifer Joseph,  St. Francis  Minnesota</option><option value="278"> Phillips Joshua,  Harrah  Oklahoma</option><option value="550"> Puri  Anita,  Grand Prairie  Texas</option><option value="373"> Raines Douglas,  Rogers  Arkansas</option><option value="423"> Rentshler Esther,  Boonville  Missouri</option><option value="154"> Rieff Rick,  South Bend  Indiana</option><option value="217"> Strike Brent,  Amity  Pennsylvania</option><option value="426"> Terrel John,  Columbia  Pennsylvania</option><option value="709"> Trees Jerry,  Wilmington  North Carolina</option><option value="614"> White Suzanne,  South Bend  Indiana</option><option value="527"> Wray Jonathan,  Greensboro  North Carolina</option><option value="660"> Yoder Terry,  Leola  Pennsylvania</option><option value="396"> Zimmerman Sharon,  Denver  Pennsylvania</option><option value="1385">2 1,    Alabama</option><option value="1349">Abbott Stephen,  FLORENCE  Mississippi</option><option value="704">Abdelmlak Eshak ,  Nashville  Tennessee</option><option value="1179">Abe Tamae,  Lititz  Pennsylvania</option><option value="1185">Aguilar San Juana 'Janie',  Oak Point  Texas</option><option value="928">Ahrens Russ,  Three Rivers  Michigan</option><option value="545">Ainsworth Paul ,  Laurel  Mississippi</option><option value="585">Ainsworth Edward ,  Madison  Mississippi</option><option value="773">Ainsworth Christy ,  Madison  Mississippi</option><option value="737">Akanda Isaac ,    Pennsylvania</option><option value="176">Akhavan Mehdi,   Plano  Texas</option><option value="621">Alberts Margo ,  Fremont  Nebraska</option><option value="893">Alberts Douglas,  Fremont  Nebraska</option><option value="151">Albright  Drew,  South Bend  Indiana</option><option value="495">Aldridge Hallie ,  Batesville  Mississippi</option><option value="498">Allen Anna ,  Pylmouth  Indiana</option><option value="643">Allen Moneka ,  Bossier City  Louisiana</option><option value="841">Allen Dell,  South Bend  Indiana</option><option value="1079">Allen Lori,  Carmi  Illinois</option><option value="1128">Allen Madeline,  Clinton  Mississippi</option><option value="702">Allen-Parrott James ,  Woodstock  Georgia</option><option value="753">Allison Kameron ,  Flower Mound  Texas</option><option value="602">Amis Tammy ,  Madison  Mississippi</option><option value="1202">Amor Ron,  Walkerton  Indiana</option><option value="161">Anderson  Andrea,  Columbia  Missouri</option><option value="700">Anderson Jeanie ,  Greeley  Colorado</option><option value="873">Anderson Terri Beth,  Lititz  Pennsylvania</option><option value="1069">Anderson Braeden,  Columbia  Missouri</option><option value="688">Andrew Brian ,  Flowery Branch  Georgia</option><option value="1061">Andrews Michael,  Collierville  Tennessee</option><option value="1298">Anthony Jackson,  East Bend  North Carolina</option><option value="279">Appleton Trina ,  Pope  Mississippi</option><option value="347">Archer Matthew ,  Springdale  Arkansas</option><option value="359">Archer   Kerrie ,  Springdale  Arkansas</option><option value="1193">Arroyos Melissa,  Garland  Texas</option><option value="953">Arterberry Kristalyn,  Booneville  Missouri</option><option value="933">Arvin Candace,  Chesterton  Indiana</option><option value="1229">aTester aNewTestPerson,  Chico  California</option><option value="604">Austin Meridith ,  Bartlett  Tennessee</option><option value="975">Ayala Jorge,  MIdletown  Delaware</option><option value="735">Baddley Ashley ,  Paw Paw  Michigan</option><option value="305">Bader Dina ,  Hoboken  New Jersey</option><option value="274">Bailey Caleb ,  Mishawaka  Indiana</option><option value="333">Bailey Sherri ,  South Bend  Indiana</option><option value="746">Bailey Faith ,  Mishawaka  Indiana</option><option value="954">Bailey Amber,  Goshen  Indiana</option><option value="1042">Bailey Caleb,  Mishawaka  Indiana</option><option value="1060">Bailey Caleb,  Mishawaka  Indiana</option><option value="1257">Bailey Keith,  Mishawaka  Indiana</option><option value="1302">Bailey Heather,  Pleasant Garden  North Carolina</option><option value="1341">Bailey Julian,  FORT WORTH  Texas</option><option value="759">Bakalian Ron ,  Wayne  New Jersey</option><option value="547">Barker Kim ,  Nashville  Tennessee</option><option value="387">Barnes Timothy,  Ashland City  Tennessee</option><option value="558">Barnes Walter ,  O'Fallon  Missouri</option><option value="1022">Barnes Michael ,  Goshen  Indiana</option><option value="1146">Barnes Michael,  Silver Creek  Mississippi</option><option value="734">Barrera Edmundo ,  Houston  Texas</option><option value="639">Barringer Jeffrey ,  Cave Springs   Arkansas</option><option value="546">Baylor Terry ,  Washburn  Tennessee</option><option value="849">Beaird Brian,  Jonesboro  Arkansas</option><option value="887">Beaird Brian,  Jonesboro  Arkansas</option><option value="322">Beans Lisa ,  New Oxford  Pennsylvania</option><option value="1189">Beardslee Suzanne,  Lexington  Michigan</option><option value="578">Belawski Leslie ,  Clarksville  Tennessee</option><option value="1319">Bell Deborah,  Indiana  Indiana</option><option value="560">Belle Erin ,  Thompsontown  Pennsylvania</option><option value="562">Beltran Elizabeth ,  Casper  Wyoming</option><option value="645">Benedict Cynthia ,  Rocheport  Missouri</option><option value="823">Bennett David,  Mishawaka  Indiana</option><option value="831">Benz Joseph,  Waxhaw  North Carolina</option><option value="321">Bergen Beth ,  South Bend  Indiana</option><option value="521">Berson Brian ,  Wayne  Pennsylvania</option><option value="832">Bingham Michael,  Florence  Mississippi</option><option value="719">Bishop Robin ,  Mishawaka  Indiana</option><option value="1149">Bishop Brian,  South Bend  Indiana</option><option value="180">Bissinger Amanda ,  Flowery Branch  Georgia</option><option value="1234">Bixby Kevin,  High Pointe  North Carolina</option><option value="1235">Bixby Bonnie,  High Point  North Carolina</option><option value="394">Blanchard Kimberly ,  Cypress  Texas</option><option value="1044">Blocker Cary,  North Richland Hills  Texas</option><option value="815">Blount Vickie,  Canton  Mississippi</option><option value="184">Blow Laura ,  Altamont  New York</option><option value="1004">Blumentritt Daniel,  South Bend  Indiana</option><option value="461">Bobo Ronnie ,  Courtland  Mississippi</option><option value="877">Bobo Ronnie,  Courtland  Mississippi</option><option value="169">Bockhold George ,  Savannah  Georgia</option><option value="992">Boehm Clinton ,  Rolla  Missouri</option><option value="178">Booth Timothy ,  Leland  North Carolina</option><option value="254">Booth Timothy ,  Raleigh  North Carolina</option><option value="1287">Bordwell Jennifer ,  Waynesville  Missouri</option><option value="606">Borke Terrence ,  Lincoln  Nebraska</option><option value="1095">Bounds John,  Niles  Michigan</option><option value="686">Bourgeois Cheryl ,  Bay St. Louis  Mississippi</option><option value="476">Bowser Nicole ,  Adrian  Pennsylvania</option><option value="1340">Boyle Ewald,  NEW ORLEANS  Louisiana</option><option value="926">Brake April,  Sun City Center  Florida</option><option value="1215">Bramblett Tommie,  Horn Lake  Mississippi</option><option value="292">Breaux Christopher,  Maurice  Louisiana</option><option value="565">Brentlinger Ronald ,  Granger  Indiana</option><option value="747">Bresina Gerri ,  Chippewa Falls  Wisconsin</option><option value="729">Bright Deborah ,  Acworth  Georgia</option><option value="1161">Brioli Mario,  Mishawaka  Indiana</option><option value="1176">Broadway Jerry,  Quitman  Mississippi</option><option value="191">Brown Bradley ,  Broken Bow  Oklahoma</option><option value="257">Brown Brooke ,  Broken Bow  Oklahoma</option><option value="1124">Brown Richard,  Gardners  Pennsylvania</option><option value="437">Brownbridge Michael ,  Mishawaka  Indiana</option><option value="1260">Brunner Charles,  Mishawaka  Indiana</option><option value="956">Bryce Michelle,  La Vernia  Texas</option><option value="226">Budlong Callie,  Lakeland  Tennessee</option><option value="1221">Buishe Kelly,  Magnolia   Texas</option><option value="1246">Burciaga Christina,  Hanford   California</option><option value="295">Burks Thomas ,  Osceola  Indiana</option><option value="1307">Burks Thomas,  Osceola  Indiana</option><option value="1308">Burks Sheri,  Osceola  Indiana</option><option value="320">Burmeister Nicky ,  Madisonville  Louisiana</option><option value="316">Buschjost Ryan ,  Rolla  Missouri</option><option value="379">Butler Joseph ,  Thomasville  North Carolina</option><option value="300">Butts Lori ,  Palmyra  Missouri</option><option value="1154">Bylak Diana,  Hobart  Indiana</option><option value="1245">Cabrera Monica ,  Downey  California</option><option value="388">Calhoun Sandra,  Clarksville  Tennessee</option><option value="528">Campuzano Dora ,  Houston  Texas</option><option value="1111">Cannon Kristen,  Hummelstown  Pennsylvania</option><option value="1204">Cannon Kristen ,  Hummelstown  Pennsylvania</option><option value="1222">Carlson Forrest,  Danville  Indiana</option><option value="1335">Caroll Elsa,   VERONA  Pennsylvania</option><option value="1250">Carrick Brent,  New Paris  Indiana</option><option value="938">Carrie Boots,  Granger  Indiana</option><option value="788">Carroll Jillian,  Knoxville  Tennessee</option><option value="1049">Carroll Todd,  Carmel  Indiana</option><option value="1285">Carroll Todd,  Carmel  Indiana</option><option value="494">Carter Lauren ,  Memphis  Tennessee</option><option value="880">Carter  Manuel,  Detroit  Michigan</option><option value="489">Caruso Christopher ,  Fenton  Missouri</option><option value="943">Caruthers Ronald,  Fairland  Indiana</option><option value="629">Cary Kerri ,  Skiatook  Oklahoma</option><option value="258">Case Kevin ,   Van Alstyne  Texas</option><option value="921">case test1,    Select</option><option value="395">Casper Jessica ,  Osceola  Indiana</option><option value="552">Cassidy David ,  Pleasant Shade  Tennessee</option><option value="556">Castle  Robert ,  Rolla  Missouri</option><option value="875">Castro Erick,  Porter  Texas</option><option value="1192">Causey John ,  Jackson  Mississippi</option><option value="1258">Causey John,  Jackson  Mississippi</option><option value="960">Cavanaugh Rebecca,  Morton  Mississippi</option><option value="363">Chambers Theodore,  Mishawaka  Indiana</option><option value="781">Chang Touchinoo ,  Sterling Heights  Michigan</option><option value="1156">Childers Vickie,  Richland  Mississippi</option><option value="607">Childress John ,  Mishawaka  Indiana</option><option value="999">childress maureen,  Mishawaka  Indiana</option><option value="1227">Childress John,  Mishawaka  Indiana</option><option value="514">Chileski Jeffrey ,  St. Marys  Pennsylvania</option><option value="1331">Christensen Don,  Michigan City  Indiana</option><option value="282">Claeys Michael ,  Mishawaka  Indiana</option><option value="622">Clark Gabriel ,  Fort Wayne  Indiana</option><option value="650">Clark Sally ,  Birmingham  Alabama</option><option value="1030">Clark Michael ,  mishawaka  Indiana</option><option value="912">Claybrooks Warren ,  Stoneville  North Carolina</option><option value="362">Cline Dale ,  Greencastle  Pennsylvania</option><option value="1034">Cline Dale,  Greencastle  Pennsylvania</option><option value="324">Cochran Cynthia ,  Mishawaka  Indiana</option><option value="610">Cockayne Virginia ,  Ridgeland  Mississippi</option><option value="405">Coffman Dennis ,  Pierceton  Indiana</option><option value="829">Coldren Yvonne,  Glenmoore  Pennsylvania</option><option value="399">Coleman Natasha ,  Swainsboro  Georgia</option><option value="222">Combs David ,  Mishawaka  Indiana</option><option value="1084">Combs Randy,  Phoenix  Arizona</option><option value="1177">Conley Charles,  York  Pennsylvania</option><option value="243">Conti  Marcus ,  Matthews  North Carolina</option><option value="600">Conti  Frank ,  Savannah  Tennessee</option><option value="488">Cook Loretta,  Riegelwood  North Carolina</option><option value="1197">Coombs Dennis,    Select</option><option value="1072">Cooper Felisia,  West Point  Mississippi</option><option value="922">Corbett Ryan,  Granger  Indiana</option><option value="412">Corbin Stephan ,  Belchertown  Massachusetts</option><option value="275">Costa Mike ,  Aurora  Illinois</option><option value="595">Cotilla Carmen ,  Dassel  Minnesota</option><option value="501">Courtney Michelle ,  New Market  Tennessee</option><option value="712">Craig Kristen ,  Manchester  Connecticut</option><option value="342">Crasi Rosemarie,  Franklin  Ohio</option><option value="843">Craven Mitchell,  Wakarusa  Indiana</option><option value="175">Crawford Jacob ,  Mishawaka  Indiana</option><option value="771">Crayon Kerry ,  Weldon Spring  Missouri</option><option value="504">Creer Bryant,  Spanish Fork  Utah</option><option value="537">Cripps Jerry ,  Pineville  Louisiana</option><option value="1025">Cruz Johnathon,  Egan  Minnesota</option><option value="1306">Cruz Lino,  Ceres   California</option><option value="1290">Crynes Avelia,  Oklahoma City  Oklahoma</option><option value="182">Culberson   Nathan,  154 W. Peel Road  Georgia</option><option value="758">Cummings Thomas ,  Topeka  Kansas</option><option value="408">Cummins Dan ,  Springdale  Arkansas</option><option value="826">Cunningham Justin,  Trumann  Arizona</option><option value="204">Curle Kailah ,  Mason  Tennessee</option><option value="1157">Curle Kailah,  Springville  Alabama</option><option value="846">Curtis Mark,  Osceola  Indiana</option><option value="882">Cyrier Todd,  Mishawaka   Indiana</option><option value="1347">Dach Nora,  MODESTO  California</option><option value="1101">Dahl Kim,  Peoria   Arizona</option><option value="203">Dale Lesa,  Mobile  Alabama</option><option value="357">Daniel Kevin ,  Franklin  Tennessee</option><option value="837">Daniels Shelly,  Walden  Tennessee</option><option value="1209">David Lucy,  Birmingham  Alabama</option><option value="592">Davidson Patricia ,  State College  Pennsylvania</option><option value="199">Davis Robin ,  Bassfield,  Mississippi</option><option value="276">Davis Nannie,  Chicora  Pennsylvania</option><option value="571">Davis William ,  Vicksburg  Mississippi</option><option value="583">Davis Glenn ,  Elkton  Virginia</option><option value="655">Davis Andrew ,  McCalla  Alabama</option><option value="865">Davis Jayden,  Osceola  Indiana</option><option value="1123">Davis Tyler,  Columbia  Missouri</option><option value="208">Dawson Jennifer ,  Columbia  Missouri</option><option value="584">Decraene Derrick ,  Edwardsburg  Michigan</option><option value="962">Defulio Alicia,  Barrington  New Jersey</option><option value="287">Dehart James ,   Blue Ridge  Virginia</option><option value="323">Deka Patrick ,  South Bend  Indiana</option><option value="964">Del'Real Marco,  Phoenix  Arizona</option><option value="457">Delacruz Johanna ,  San Antonio  Texas</option><option value="780">Delacruz Maria ,  Corpus Christi  Michigan</option><option value="946">DeLeon Jaime,  Winston Salem  North Carolina</option><option value="1232">Delmont Stephen ,  Wyoming  Minnesota</option><option value="952">DelReal Jose,    Select</option><option value="814">Demarest Brian,  Mandeville  Louisiana</option><option value="1230">Denny  Elizabeth,  Bedford  Texas</option><option value="778">Dewitt Shelly ,  Clarksville  Tennessee</option><option value="435">Dickey David ,  Jackson  Tennessee</option><option value="1352">Dietrich Evalyn,  ORLANDO  Florida</option><option value="1387">Dima test Dima,    Select</option><option value="472">Dinkins David ,  Winston-Salem  North Carolina</option><option value="654">Disalvo Joseph ,  Buckfield  Maine</option><option value="1066">Distler Michael,  Meta  Missouri</option><option value="1166">Distler Michael,  Meta  Missouri</option><option value="450">Dixson Brandon ,  Oklahoma City  Oklahoma</option><option value="915">Dobbins Colton,  Houston  Texas</option><option value="631">Dodd Hanna ,  Encinitas  California</option><option value="145">Dolly Thomas,  Mishawaka  Indiana</option><option value="897">Domazet Ethan,  Valparaiso  Indiana</option><option value="1239">Donnell Denise,  Houghson  California</option><option value="1313">Donnell Denise,  Hughson  California</option><option value="549">Doochin Michael ,  Nashville  Tennessee</option><option value="1137">Doot Timothy,  Sturgis  Michigan</option><option value="941">Dorbandt Alana,  Plano  Texas</option><option value="190">Dougherty Jack ,  Mishawaka  Indiana</option><option value="618">Dozier Jamee ,  Springdale  Arkansas</option><option value="611">Drzewiecki Kari ,  Nappanee  Indiana</option><option value="1130">Drzewiecki Michael,  Granger  Indiana</option><option value="896">Dubbs Anthony,  LaPorte  Indiana</option><option value="193">Dugger   Tammie,  Batesville  Mississippi</option><option value="637">Dunker Kelsey ,  Shipshewana  Indiana</option><option value="1088">Dunker Matthew,  LaGrange  Indiana</option><option value="1155">Dunlap Timothy ,  Dillsburg  Pennsylvania</option><option value="1286">Dutschmann Greg,  Crawford  Texas</option><option value="1089">Duttenhaver Alisha ,  Edwardsburg  Michigan</option><option value="338">Dzielski Daniel ,  Reidsville  Alaska</option><option value="1338">Ebert Ray,  RALEIGH  North Carolina</option><option value="762">Echols Lydia ,  Columbia  Mississippi</option><option value="456">Ecotrell Perry ,  Huntersville  North Carolina</option><option value="194">Edgerly Jason ,  New Holland  Pennsylvania</option><option value="159">Edwards Lance ,  Millersburg  Pennsylvania</option><option value="861">Edwards Jennie,    Select</option><option value="1262">Edwards MaryBeth,  Horn Lake  Mississippi</option><option value="400">Eller   Melissa ,   Ligonier,  Pennsylvania</option><option value="1218">Ellerman Kelly,  San Juan Capistrano  California</option><option value="937">Ellsworth Randy ,  Mishawaka  Indiana</option><option value="284">Elson David ,  Florence  Mississippi</option><option value="369">Elwood  Kristy ,  Ringgold  Georgia</option><option value="564">Ennis Franklin,  Elkhart  Indiana</option><option value="1136">Enos Jennifer,  Huntsville  Arkansas</option><option value="172">Errington Barbara ,  Crystal Springs  Mississippi</option><option value="253">Errington James ,  Crystal Springs  Mississippi</option><option value="848">Esh Gregory,  New Holland  Pennsylvania</option><option value="1247">Estep Anthony ,  Warsaw  Indiana</option><option value="608">Evans James ,  Athens  Georgia</option><option value="919">Everly Tammie,  Trail Creek  Indiana</option><option value="1180">Everly Michael,  Trail Crek  Indiana</option><option value="1312">Ewald Derek ,  Elkhart  Indiana</option><option value="605">Fahrenkrog Paul ,  Elkhart  Indiana</option><option value="1242">Fairley Laquana,  Gaupier  Mississippi</option><option value="486">Farley Gloria ,  Mount Royal  New Jersey</option><option value="674">Faulkner Grady ,  Mishawaka  Indiana</option><option value="991">Fedora Punky,  Sun City Center  Florida</option><option value="304">Fee Michael ,  Liberty   North Carolina</option><option value="1102">Feikert Kyle ,  Carlsbad  California</option><option value="510">Ferraro Debra ,  Clinton Township  Michigan</option><option value="1086">Fine Jennifer,  Westville  Indiana</option><option value="299">Finley Chris ,  Oklahoma City  Oklahoma</option><option value="1150">Fisette John,  Granger  Indiana</option><option value="715">Fish Eric ,  Walkertown  North Carolina</option><option value="888">Fisher Alex,  Granger  Indiana</option><option value="731">Fitzpatrick Gretchen ,  Justin  Texas</option><option value="1152">Fitzpatrick Terri,  Michigan City  Indiana</option><option value="675">Folmar Timothy ,  Saint Clair  Michigan</option><option value="827">Forbes Lisa,  Hallsville  Missouri</option><option value="157">Foreman Charles ,  Warsaw  Indiana</option><option value="876">Fougerousse Tracy,  Rogers  Arkansas</option><option value="135">Fowler Joseph,  Marion  Kentucky</option><option value="265">Fox Bryan ,  Mishawaka  Indiana</option><option value="497">Fox Tracey ,  Osceola  Indiana</option><option value="402">Franks Julie ,  Savannah  Tennessee</option><option value="1003">Frazier Chris ,  Memphis  Tennessee</option><option value="389">Fredericks Allison ,  Johnson City  Tennessee</option><option value="354">Friberg Scott ,  Forest Lake  Minnesota</option><option value="764">Fterigiotis Nicholas ,  Osceola  Indiana</option><option value="672">Fulkroad Michelle ,  Millersburg  Pennsylvania</option><option value="294">Fuller Joyce ,  Lexington  South Carolina</option><option value="1112">Fuller Tim,  Nappanee  Indiana</option><option value="1288">Fulton William,  Laurel  Mississippi</option><option value="714">Funderburk Sharon ,  Raleigh  North Carolina</option><option value="620">Galletti Ashtin ,  Mishawaka  Indiana</option><option value="303">Gant Melvin,  Memphis  Tennessee</option><option value="858">Gantt Kenneth,  Eden  North Carolina</option><option value="1282">Garcia, Jr.  Daniel,  Atoka  Tennessee</option><option value="148">Gardner  Nathan,  Edmond  Oklahoma</option><option value="925">Gardner Casey,  Thomasville  North Carolina</option><option value="971">Gargis Douglas,  South Bend  Indiana</option><option value="1001">Gargis Elizabeth,  South Bend  Indiana</option><option value="711">Garley Jamie ,  Madison  Mississippi</option><option value="997">Garner Joseph,  Memphis  Tennessee</option><option value="613">Garnerway Quentin ,  Kerens  Texas</option><option value="164">Garoutte Jane ,  Elkhart  Indiana</option><option value="502">Gary Estella ,  Grenada  Mississippi</option><option value="1377">Gately Thomas ,  LaPorte  Indiana</option><option value="404">Gentzhorn Michael ,  Elkhart  Indiana</option><option value="317">George Lisa ,  Cleveland  Tennessee</option><option value="743">George Frances ,  Vicksburg  Mississippi</option><option value="886">George Bethany,  Idaho Falls  Idaho</option><option value="1151">Gerald James,  GRanger  Indiana</option><option value="173">Giannuzzi Jessica ,  Elkhart  Indiana</option><option value="596">Giaquinto Catherine ,  Northvale  New Jersey</option><option value="165">Gibson Frank ,  Winston-Salem  North Carolina</option><option value="487">Gilstrap Bob ,  Madison  Mississippi</option><option value="1028">Gingerich Peter,  Elkart  Indiana</option><option value="440">Glass Megan ,  Covington  Louisiana</option><option value="1104">Glowe Michael ,  Fraser  Michigan</option><option value="393">Gluck Michele,  York  Pennsylvania</option><option value="358">Godshall James ,  Souderton  Pennsylvania</option><option value="776">Godwin Kimberlly ,  Earleville  Maryland</option><option value="331">Goldman Sue ,  St. Augustine  Florida</option><option value="525">Goldman Suzanne  ,  St. Augustine  Florida</option><option value="809">Gonzalez Jose,  Elkhart  Indiana</option><option value="1226">Gonzalez Enciso Pedro,  Elkhart  Indiana</option><option value="438">Goode Joan ,  Cresco  Pennsylvania</option><option value="312">Goodwin Amy,  High Point,  Alaska</option><option value="598">Gordon Mandy ,  Mount Pleasant  North Carolina</option><option value="996">Gorski Thomas,  Middleberry  Indiana</option><option value="1109">Gorski Thomas,  Middleberry  Indiana</option><option value="1207">Goss Tracy,  Randleman  North Carolina</option><option value="588">Graham John ,  Lititz  Pennsylvania</option><option value="782">Graham William ,  Granger  Indiana</option><option value="706">Grant Joseph ,  Van Wert  Ohio</option><option value="559">Gray Teddy ,  Mayflower  Arkansas</option><option value="447">Green Rodney ,  Tremont  Mississippi</option><option value="1023">Green Vanessa,  Greensboro  North Carolina</option><option value="1050">Greenwaldt Joan,  Florence  Mississippi</option><option value="1174">Gregory Charles,  Hurst  Texas</option><option value="981">Gridley Gary,  South Bend  Indiana</option><option value="648">Griffith Kay ,  Jacksonville  North Carolina</option><option value="601">Griffiths Lauren ,  Shiremanstown  Pennsylvania</option><option value="225">Grimaldi Lynette ,  Dacula  Georgia</option><option value="881">Grintz David,  Knightdale  North Carolina</option><option value="144">Grischkowsky James ,  Pocatello  Idaho</option><option value="480">Griska Michelle ,  Monroe  Georgia</option><option value="1162">Gromek Joseph,  Portage  Indiana</option><option value="231">Grott Richard ,  Union Mills  Indiana</option><option value="1167">Grube Kenneth ,  Stokesdale  North Carolina</option><option value="1295">Guess Marvin,  Brandon  Mississippi</option><option value="212">Guevara Jesus ,  Houston  Texas</option><option value="311">Gurney Ed ,   Kingwood  Texas</option><option value="536">Gurney Judith ,  Houston  Texas</option><option value="410">Guthrey Daniel ,  Cullman   Alabama</option><option value="664">Guyer Daniel ,  Kernersville  North Carolina</option><option value="139">Hackman Paul,  Denver  Pennsylvania</option><option value="978">Haen Heidi ,  Bixby  Oklahoma</option><option value="249">Hagler James,  Bloomingdale  Georgia</option><option value="1106">Hagley Peggy ,  Forney  Texas</option><option value="439">Haimbaugh Russell ,  Mishawaka  Indiana</option><option value="573">Haley Pauline ,  Erdenheim  Pennsylvania</option><option value="657">Halterman Brad ,  Rolla  Missouri</option><option value="1142">Hamby Anita ,  Mendenhall  Mississippi</option><option value="420">Hamilton Shauna ,  Blue Springs  Missouri</option><option value="374">Hamm  Edwin "Keith",  Hohenwald  Tennessee</option><option value="636">Hammer Christine ,  Rochester  Indiana</option><option value="302">Hammond Amy ,  Lancaster  California</option><option value="935">Hance James,  New Orleans  Louisiana</option><option value="215">Hankins Cory ,  Batesville  Mississippi</option><option value="696">Hanks Crystal ,  Greensboro  North Carolina</option><option value="383">Hansen Steven ,  Fuquay-Varina  North Carolina</option><option value="1336">Harber Antonietta,  RALEIGH  North Carolina</option><option value="153">Harden Kimberly,  Memphis   Tennessee</option><option value="591">Harrelson Jim ,  Columbia  Missouri</option><option value="677">Harris Travoski ,  Swainsboro  Georgia</option><option value="526">Hartfield Elaine ,  Hattiesburg  Mississippi</option><option value="944">Harting Jay,  Silver Lake  Indiana</option><option value="234">Haskin   Christy,  Bartlett  Tennessee</option><option value="250">Haskin Willie ,  Bartlett  Tennessee</option><option value="1188">Hayden Paul,  Atoka  Tennessee</option><option value="690">Hayes Michael ,  South Haven  Michigan</option><option value="1252">Heckman Lisa,  South Bend  Indiana</option><option value="1210">Heeter Karen,  Boiling Springs  Pennsylvania</option><option value="1225">Heffley Timothy ,  Lanaster  Pennsylvania</option><option value="255">Helgeson Jillian ,  Clear Lake  Wisconsin</option><option value="689">Henke Jeffrey ,  Granger  Indiana</option><option value="1006">Henke Jeffrey ,  Granger  Indiana</option><option value="627">Henson Robert ,  Harrisburg  Pennsylvania</option><option value="774">Herr Allen ,  Goshen  Indiana</option><option value="931">Herr Allen ,  Goshen  Indiana</option><option value="248">Herrin Tim ,  Davenport  Iowa</option><option value="384">Herring Anthony ,  Lewisburg  Tennessee</option><option value="149">Hess Jennifer,  Milton  Pennsylvania</option><option value="466">Hess Amanda,  Granger  Indiana</option><option value="717">Hess Angela ,  Mishawaka  Indiana</option><option value="692">Hester Brian ,  South Bend  Indiana</option><option value="644">Heywood Kevin ,  Grensboro  North Carolina</option><option value="1008">Hiatt Eric,  Osceola  Indiana</option><option value="360">Hicks Earl ,  Fleetwood  North Carolina</option><option value="967">Higashi Masahiro,  Fremont  Nebraska</option><option value="1277">Higgins Benjamin,  Mishawaka  Indiana</option><option value="493">Hill Ricky ,  VIvian  Louisiana</option><option value="1373">Hill Lauryn,  MODESTO  California</option><option value="603">Hitt Susan ,  Augusta  Kansas</option><option value="523">Hixenbaugh Gregg ,  Mishawaka  Indiana</option><option value="479">Hobbs Kyle ,  Gettysburg  Pennsylvania</option><option value="308">Hobby Thomas ,  Lyles  Tennessee</option><option value="291">Hoffman Les ,  Germantown  Tennessee</option><option value="580">Hoffman Louis ,  Summerfield  North Carolina</option><option value="884">Hogg Walter,  Hickory  Mississippi</option><option value="364">Hoh Richard,  Boyertown  Pennsylvania</option><option value="246">Holland Nya ,  Saint Simons Island  Georgia</option><option value="326">Holland  Jeffrey ,  South Bend  Indiana</option><option value="625">Hooter Darrin ,  Covington  Louisiana</option><option value="1255">Hoover Sam,  Middlebury  Indiana</option><option value="421">Horwitz Jacob ,  Marysville  Pennsylvania</option><option value="732">Hotchkiss Greg ,  Lewisville  Texas</option><option value="140">Howerton Stephanie ,  Kirksville  Missouri</option><option value="431">Hubanks Donny ,  Reagan  Tennessee</option><option value="990">Hubbard Carolyn,  McLeansville  North Carolina</option><option value="262">Huber Marcia,  Palmyra  Mississippi</option><option value="267">Hubert Ashley ,  Gilbert  Arizona</option><option value="575">Huckaby Lila ,  Clinton  Tennessee</option><option value="994">Hughes Travis,  Antwerp  Ohio</option><option value="270">Huguenin Elaine ,   Albuquerque,  New Mexico</option><option value="155">Hundl Michael ,  Kingwood  Texas</option><option value="207">Hunt John ,  Carolina Beach  North Carolina</option><option value="733">Hunt Janice ,  Southaven  Mississippi</option><option value="1271">Hurstel Joseph,  Mishawaka  Indiana</option><option value="428">Husereau Kathi ,  Sherman   Texas</option><option value="589">Huth Cole ,  Buchanan  Michigan</option><option value="1297">Hylton  Bobby,  Boonville  North Carolina</option><option value="481">Imler William ,  Annville  Pennsylvania</option><option value="619">Isbell Sherri Isbell,  Trussville  Alabama</option><option value="467">Isle Gary ,  Mishawaka  Indiana</option><option value="136">Jachimski Janice ,  Roanoke  Virginia</option><option value="1000">Janney Barbara,  Reedsville  North Carolina</option><option value="889">Jarrett Janel,  Goshen  Indiana</option><option value="739">Jenkins Mark ,   Van Alstyne  Texas</option><option value="763">Jobe Patricia ,  Starkville  Mississippi</option><option value="150">Johnson Lee ,  Richland  Mississippi</option><option value="192">Johnson   Joan,  Victoria  Minnesota</option><option value="198">Johnson Roman ,  Granger  Indiana</option><option value="511">Johnson Amanda ,  Biloxi  Mississippi</option><option value="669">Johnson Brandon ,  Rolla  Missouri</option><option value="670">Johnson Henry ,  Madison  Mississippi</option><option value="767">Johnson Scott ,  New Chicago  Indiana</option><option value="1026">Johnson Maria,  Vadnais Heights  Minnesota</option><option value="1354">Johnston Nikolas,  SAINT JOSEPH  Michigan</option><option value="216">Jones Richard  ,  Brandon  Mississippi</option><option value="218">Jones Steve ,  Waynesboro  Mississippi</option><option value="272">Jones Nicholas ,  Portland  Oregon</option><option value="306">Jones Bryan ,  West Monroe  Louisiana</option><option value="378">Jones Jennifer ,  Wildwood  Missouri</option><option value="540">Jones Brandy ,  Natchez  Mississippi</option><option value="576">Jones Sandra ,  Southaven  Mississippi</option><option value="1017">Jones Sara,  South Bend  Indiana</option><option value="1289">Jones David,  Marion  Kentucky</option><option value="745">Jordahl Eric ,  Stacy  Minnesota</option><option value="463">Kagarise Dan ,  South Bend  Indiana</option><option value="590">Kagarise Karen ,  South Bend  Indiana</option><option value="574">Kann Korey ,  Carlisle  Pennsylvania</option><option value="1267">Kanney Susan,  La Porte  Indiana</option><option value="137">Kappan Michael,  Streetsboro  Ohio</option><option value="1205">Karr Katherine ,  Lake Ozark  Missouri</option><option value="630">Kast Denise ,  Blaine  Minnesota</option><option value="923">Kaufman shelby,  elkhart  Indiana</option><option value="1093">Kaufman Katelyn,  Enola  Pennsylvania</option><option value="1108">Kaufman Shelby ,  Elkhart  Indiana</option><option value="451">Keene Emma ,    Indiana</option><option value="695">Keener Brent ,  Akron  Pennsylvania</option><option value="309">Kelley Cody ,  Niles  Michigan</option><option value="314">Kelley Richard,  Streetsboro  Ohio</option><option value="478">Kelley Niurice ,  Waverly  Tennessee</option><option value="1213">Kellogg Shannon,  South Haven  Michigan</option><option value="224">Kelly Tom ,  Streetsboro  Ohio</option><option value="1082">Kelly Shaffer,  Mechanicsburg  Pennsylvania</option><option value="1214">Kemrer Brian,  Columbia  Pennsylvania</option><option value="1269">Kendall Jared,  Union  Michigan</option><option value="517">Kesler William ,  Pauling  Ohio</option><option value="756">Kile Susan ,  Mishawaka  Indiana</option><option value="543">King Linda ,  Madison  Mississippi</option><option value="917">King Kenneth,  Asheboro  North Carolina</option><option value="490">Kinney-McMullan Karen ,  Lebanon  Pennsylvania</option><option value="235">Kitch Jeff ,  Columbia  Missouri</option><option value="1037">Kluck Logan,  Owensboro  Kentucky</option><option value="665">Knape Phyllis ,  Defiance  Ohio</option><option value="1181">Knaub Devin,  Lewisberry  Pennsylvania</option><option value="872">Kocher Reta,  Olney  Illinois</option><option value="1148">Konowal Joseph ,  Norristown  Pennsylvania</option><option value="534">Kopec Rosemary ,  Granger  Indiana</option><option value="949">Kopec Karl,  Granger  Indiana</option><option value="297">Kowall Mike ,  Stow  Ohio</option><option value="229">Kriner David,  Elizabethtown  Pennsylvania</option><option value="1342">Kshlerin Lauren,  LOUISVILLE  Kentucky</option><option value="375">Kurtz William ,  Lake Nebagamon  Wisconsin</option><option value="1240">Kuta Cherie,  Mechanicsburg  Pennsylvania</option><option value="594">Kyle Shari ,  Rolla  Missouri</option><option value="522">Laganella Joseph,  Philadelphia  Pennsylvania</option><option value="202">LaMorte Jody ,  Mesa  Arizona</option><option value="979">Lane rachel,  Grapevine  Texas</option><option value="1143">Lane Paul,  Columbia  Missouri</option><option value="1208">Lane Jeffrey ,  Cohutta  Georgia</option><option value="929">Langston Paul ,  Knoxville  Tennessee</option><option value="698">Laning Michael ,  Talbott  Tennessee</option><option value="1051">Larson Tracy,  Dresser  Wisconsin</option><option value="679">Laudeman Eric ,  Mishawaka  Indiana</option><option value="280">Law Robert ,  Painesville  Ohio</option><option value="1141">Leach Glenda,  Middletown  Pennsylvania</option><option value="1036">Leader Conner,  Mishawaka  Indiana</option><option value="1056">Lee Timothy,  Bogue Chitto  Mississippi</option><option value="418">Legg Debra ,  Jasper  Alabama</option><option value="587">Lewis Doris ,  Jackson  Mississippi</option><option value="725">Lewis Rosemary ,  Columbia  Missouri</option><option value="1278">Lichnerowicz Ruth ,  South Bend  Indiana</option><option value="1055">Liddell Clifford,  Bellvue  Nebraska</option><option value="1059">Lightfoot Dovie,  Rowlett  Texas</option><option value="1170">Lipkins Jimmy,  South Bend  Indiana</option><option value="1172">Lipkins Jimmy,  South Bend  Indiana</option><option value="377">Littlefield Larry ,  Cambridge  Minnesota</option><option value="470">Littrell Andrew ,  Belle  Missouri</option><option value="1304">Livingston Ashley,  Statesville  North Carolina</option><option value="716">Lockerby Daniel ,  LaGrange  North Carolina</option><option value="572">Logan James ,  Greensboro  North Carolina</option><option value="924">Lollar Cameron "Katie",  Flowood  Mississippi</option><option value="515">Long David ,  Johnstown  Pennsylvania</option><option value="1309">Long Don,  Valparaiso  Indiana</option><option value="1183">Loposay Suzanne,  Knightdale  North Carolina</option><option value="382">Losinski Kyle ,  Grosse Pointe Woods  Michigan</option><option value="542">Lotz Shannon ,  Osceola  Indiana</option><option value="370">Lovella Donald ,  Chandler  Arizona</option><option value="415">Lovella Tina ,  Chandler  Arizona</option><option value="851">Lozada Andre,  Pasadena  Texas</option><option value="570">Lugo Rene ,  Kingwood  Texas</option><option value="616">Lumley Leah ,  Wrightsville  Georgia</option><option value="892">Lumsden Charles,  Troutville  Virginia</option><option value="932">Luper Richard,  Broken Bow  Oklahoma</option><option value="343">Lutz Debra ,  Edwardsburg  Michigan</option><option value="783">Lutz Richard ,  Edwardsburg  Michigan</option><option value="496">Lydon Diane ,  Prosper  Texas</option><option value="232">Lytle Michael ,  Mishawaka  Indiana</option><option value="238">Macon Susan,  Brandon   Mississippi</option><option value="983">Macon Joseph,  Brandon  Mississippi</option><option value="713">Magee Debra ,  South Haven,  Mississippi</option><option value="285">Magnuson Amanda ,  Mishawaka  Indiana</option><option value="676">Majewski Angela ,  Osceola  Indiana</option><option value="1134">Majewski David ,  Osceola  Indiana</option><option value="947">Mancuso David,  Hitchcock  Texas</option><option value="624">Mangum Stacy ,  Jackson  Mississippi</option><option value="840">Maples Paul,  Warsaw  Indiana</option><option value="988">Maples Paul,  Warsaw  Indiana</option><option value="1099">Mark Donald ,  Plymouth  Indiana</option><option value="271">Marshall   Anita,  Hannibal  Missouri</option><option value="353">Martin Teddy,  Osceola  Indiana</option><option value="839">Martinez Jennifer,  Dunnellon  Florida</option><option value="1110">Matherne Travis,  Walker  Louisiana</option><option value="626">Mauk Matthew ,  Wynonna Lake  Indiana</option><option value="1330">Maxwell II Willie,    Indiana</option><option value="1092">McAlpin Deanna,  Atoka  Tennessee</option><option value="213">McCaffrey Karen ,  New Market  Tennessee</option><option value="283">McCann Carline ,  Granger  Indiana</option><option value="1160">McClary Danny ,  Hoover   Alabama</option><option value="483">McCormick Mark ,  Madison  Mississippi</option><option value="371">Mcdaniel Thomas ,  Morristown  Tennessee</option><option value="1127">McDonnieal Lisa,  Corinth  Mississippi</option><option value="683">McGann Kevin ,  Osceola  Indiana</option><option value="791">Mcgee Crystal ,  Cumberland Furnace  Tennessee</option><option value="263">McGeorge Carla ,   Ashland  Missouri</option><option value="325">Mcintire Tina ,  Tippecanoe  Indiana</option><option value="179">McKeag Kristen ,  Verona  Pennsylvania</option><option value="436">McKenzie Lisa ,  Atlanta  Missouri</option><option value="634">McKenzie Paje ,  Southaven  Mississippi</option><option value="538">McKinney Dalano ,  Portsmouth  Virginia</option><option value="368">McLain Susan ,  South Bend  Indiana</option><option value="1032">Mclain Earl,  La Porte  Indiana</option><option value="209">McLaughlin Kelly ,  Charlotte  North Carolina</option><option value="401">McLendon William,  Wrightsville,  Georgia</option><option value="484">McLeod Brent ,  Gilbert  Arizona</option><option value="181">McLeskey Steve ,  Clarksville  Tennessee</option><option value="705">McRee Joseph ,  Hernando  Mississippi</option><option value="367">Meade Michelle ,  Sterling  Colorado</option><option value="724">Meade James ,  Metter  Georgia</option><option value="1091">Medlin Kristin,  Greensboro  North Carolina</option><option value="760">Mercado Expedito ,  Cinnaminson  New Jersey</option><option value="499">Mertz Sandra ,  Lancaster  Pennsylvania</option><option value="506">Metka Edward ,  Fort Wayne  Indiana</option><option value="1355">Metz Ilene,  CAPE GIRARDEAU  Missouri</option><option value="288">Michaud Cathy ,  Litchfield  Minnesota</option><option value="512">Middleton Janet ,  QUITMAN  Mississippi</option><option value="828">Middleton Lucius,  Pachuta  Mississippi</option><option value="728">Mielnik Kathy ,  Eau Claire  Wisconsin</option><option value="328">Miller Brian  ,  Middlebury  Indiana</option><option value="392">Miller Catherine ,  South Bend  Indiana</option><option value="609">Miller Cheryl ,  Cassopolis  Michigan</option><option value="742">Miller Lori ,  Blue Springs  Mississippi</option><option value="1002">Miller Cheryl,  Cassopolis  Michigan</option><option value="1194">Miller Geraldine,  Harrisburg  Pennsylvania</option><option value="1311">Miller Timothy,  Canton  Mississippi</option><option value="186">Milligan   Brandon,  Norman  Oklahoma</option><option value="407">Milligan Sandra ,  Oklahoma City  Oklahoma</option><option value="1007">Miltenberger Londa,  Niles  Michigan</option><option value="1029">Miner Kyle,  New Carlisle  Indiana</option><option value="966">Mitchell Jason ,  Robbins  North Carolina</option><option value="1009">Mitschelen Michael,  Nappanee  Indiana</option><option value="1248">Moak Paul,  Ridgeland  Mississippi</option><option value="1253">Moak Paul ,  Ridgeland  Mississippi</option><option value="230">Mooney Dave ,  Dillsburg  Pennsylvania</option><option value="519">Moore Roger ,  Bossier City  Louisiana</option><option value="642">Moran Michael ,  San Antonio  Texas</option><option value="152">Moreno David ,  Channelview  Texas</option><option value="652">Morgan Kevin ,  Boyceville  Wisconsin</option><option value="628">Morris Ann ,  Southaven  Mississippi</option><option value="659">Morris Lori ,  Bartlett  Tennessee</option><option value="430">Morrison Lisa ,  Cleveland  Tennessee</option><option value="555">Morrison Jeff ,  Fulton  Illinois</option><option value="1220">Mort Randy,  Keymar  Maryland</option><option value="890">Mosley Rozzie "Eve" ,  Statesboro  Georgia</option><option value="319">Moss Brian ,  Hannibal  Missouri</option><option value="718">Moss Teresa ,  Fort Wayne  Indiana</option><option value="787">Moss Ricky,  White Bluff  Tennessee</option><option value="1158">Moss Bradley,  Yazoo City  Mississippi</option><option value="699">Mottola Joseph ,  Lititz  Pennsylvania</option><option value="599">Moyer Lea ,  Hamburg  Pennsylvania</option><option value="1291">Mudica Sarah,  Bremen  Indiana</option><option value="318">Muehlemann Zachary ,  Wildwood  Missouri</option><option value="385">Mulvihill Crystal ,  Northfield  Minnesota</option><option value="867">Mumbi Lani,  Cedar Rapids  Iowa</option><option value="1279">Mumford Richard,  Middletown  Delaware</option><option value="449">Mungo Eric ,  Huntersville  North Carolina</option><option value="376">Mussler Katherine  ,  Durham   North Carolina</option><option value="351">Myers Randal ,  Misawaka  Indiana</option><option value="1085">Myers Jared,  Elkhart  Indiana</option><option value="1237">Myers Michael,  Chesterton  Indiana</option><option value="1249">Myers Michael,  Chesterton  Indiana</option><option value="987">Nedimyer Douglas,  Stevens  Pennsylvania</option><option value="146">Neff Ray ,  Milford  Indiana</option><option value="617">Negelein Barbara ,  Bartlet  Tennessee</option><option value="722">Nelson Vincent ,  Reagan  Tennessee</option><option value="784">Nolen John ,  Oxford  Mississippi</option><option value="195">Norris Jeff,  Columbia  Missouri</option><option value="818">Norris Ronnie ,  North Royalton  Ohio</option><option value="1063">Norris Donald,  Woodlawn  Tennessee</option><option value="817">Norvell Mike ,  Springfield  Missouri</option><option value="455">Nowacki Shelley ,  Mishawaka  Indiana</option><option value="593">Obrien Michael,  Grand Junction  Michigan</option><option value="1033">Obrien Michael ,  Grand Junction   Michigan</option><option value="350">Ogle Jack,  Benbrook  Texas</option><option value="807">Oliva Raul,  Las Vegas   Nevada</option><option value="403">Olsen Karen ,  Rogers  Arkansas</option><option value="201">Olson   Kristen,  Philadelphia  Missouri</option><option value="244">Onabule Jelili ,  Stockbridge  Georgia</option><option value="200">Ortolano DeeAnn,  Las Vegas  Nevada</option><option value="656">Osborn Kent ,  Mishawaka  Indiana</option><option value="1217">Overcash Ron,  Newport  North Carolina</option><option value="703">Pack Lorin ,  Idaho Falls  Idaho</option><option value="870">Page Benjamin,  Cabot  Arizona</option><option value="963">Page Ben "Casey",  Cabot  Arkansas</option><option value="1165">Palmer John,  Bremen  Indiana</option><option value="183">Panaccio John ,  Williamsport  Pennsylvania</option><option value="1090">Parisio Anthony,  COlumbia  Missouri</option><option value="168">Parker Magaly ,  Houston  Texas</option><option value="821">Parker Scott,  Mishawaka  Indiana</option><option value="1233">Parkerson Stanley,  Baton Rouge  Louisiana</option><option value="1378">Patient Test,    Select</option><option value="852">Patterson Kendra,  Plymouth  Indiana</option><option value="856">Patterson Kendra,  Plymouth  Indiana</option><option value="1035">Patterson Kelly,  Summerfield  North Carolina</option><option value="340">Pattico Juanita ,  Nappanee  Indiana</option><option value="1198">Paul Tom,  Belflower  California</option><option value="691">Pavleje John ,  Spring Hill  Tennessee</option><option value="1144">Penrod Brian,  Lepaz  Indiana</option><option value="864">Perez Jose,  Merced  California</option><option value="469">Perry  Ecotrel ,  Huntersville  North Carolina</option><option value="1182">Persyn Jeff,  Osceola  Indiana</option><option value="868">Peter Grace,  Chattanooga  Tennessee</option><option value="1191">Peter Maureen,  East Bethel  Minnesota</option><option value="236">Peters Dennis ,  Manheim  Pennsylvania</option><option value="673">Peters Mary ,  Clarksville  Maryland</option><option value="454">Petzold John ,  Goshen  Connecticut</option><option value="1256">Piceno Florentino ,  Modesto  California</option><option value="1259">Piceno Florentino ,  Modesto  California</option><option value="649">Pierce Doris ,  Windsor  Colorado</option><option value="825">Pierce David,  Bremen  Indiana</option><option value="417">Pineda Gerardo ,  Riverview  Florida</option><option value="1293">Pittman Melanee,  Pearl  Mississippi</option><option value="982">Pitts Wendell,  STar  Mississippi</option><option value="460">Plummer Jay ,  Mishawaka  Indiana</option><option value="694">Pollock Jarrod ,  Houston  Texas</option><option value="685">Pope Christopher ,  Tulsa  Oklahoma</option><option value="866">Poplai Deepak,  Asheville  North Carolina</option><option value="227">Porter  Megan ,  South Bend  Indiana</option><option value="1339">Pouros Lila,  JACKSON  Mississippi</option><option value="529">Powers Mary Beth ,  Coopersburg  Pennsylvania</option><option value="936">Pratt Cody,  Elkhart  Indiana</option><option value="339">Prevost Randy ,  Albany  Louisiana</option><option value="332">Price Ruben ,  Yazoo City  Mississippi</option><option value="445">Price  Charlotte,  Goose Creek  South Carolina</option><option value="1105">Price Michael ,  East Bend  North Carolina</option><option value="1087">pt test,    Select</option><option value="544">Pudguski Stanley ,  Reading  Pennsylvania</option><option value="1153">Pugh Peggy,  Hickory  Mississippi</option><option value="680">Pulliam Heather ,  Reidsville  North Carolina</option><option value="1080">Quarles Kathy,  Camp Hill  Pennsylvania</option><option value="859">Raghuwanski Nitendra,    Select</option><option value="863">Raghuwanski Nitendra,    Select</option><option value="206">Raines Kathy ,  Rogers  Arkansas</option><option value="658">Rasmussen Becky ,  Gilbert  Arizona</option><option value="769">Rasmussen Kent ,  Gilbert  Arizona</option><option value="507">Ratiff Erica ,  Syracuse  Indiana</option><option value="508">Ray Cathy ,  Southaven  Mississippi</option><option value="1305">Ray Joni ,  Osceola  Indiana</option><option value="635">Reading Patricia ,  Schuylkill Haven  Pennsylvania</option><option value="768">Reardon Christina ,  Penfield  Pennsylvania</option><option value="751">Reese Justyne ,  Clayton  Georgia</option><option value="757">Reese Amber ,  Clayton  Georgia</option><option value="970">Reichmuth Steve ,  Oakdale  California</option><option value="836">Reigert Mary,  Gansevoort  New York</option><option value="260">Remmert Michael ,   Port Orang  Florida</option><option value="874">Renault Kevin,  Houston  Texas</option><option value="424">Rentschler Esther ,  Boonville  Missouri</option><option value="1076">Reynolds Shane,  Mishawaka  Indiana</option><option value="214">Richards Ethan ,  Hattiesburg  Mississippi</option><option value="416">Richards Karen ,  South Bend  Indiana</option><option value="442">Richards Raquel ,  Pierceton  Indiana</option><option value="474">Richards Craig ,  Dayton  Ohio</option><option value="1075">Richards Karen,  South Bend  Indiana</option><option value="336">Richardson Alexandra ,  South Bend  Indiana</option><option value="335">Richey Mark ,  Dayton  Tennessee</option><option value="390">Ricker  Delores ,  Brandon  Mississippi</option><option value="448">Ricker Stephen ,  Brandon  Mississippi</option><option value="833">Ricker Aaron,  Lonoke  Arizona</option><option value="219">Ries Brandon ,  Chandler  Arizona</option><option value="842">Riggs Chris,  Milford  Indiana</option><option value="1175">Riley Donna,  Broken  Bow  Oklahoma</option><option value="569">Ring Donna ,  Watkinsville  Georgia</option><option value="1294">Risher Christopher,  Forest  Mississippi</option><option value="693">Rissley Miranda ,  Georgetown Township  Michigan</option><option value="582">Ritchie Christopher ,  Palmyra  Pennsylvania</option><option value="427">Rivera Vera ,  Leesburg  Florida</option><option value="432">Rivera Robert ,  Leesburg  Select</option><option value="434">Robbins Wilson ,  New Melle  Missouri</option><option value="993">Robbins Linda,  High Pointe  North Carolina</option><option value="266">Roberts David ,  Clarksville  Tennessee</option><option value="492">Roberts Sandi ,  Elkhart  Indiana</option><option value="1203">Roderick Barbara,  Strawberry Plains  Tennessee</option><option value="939">Rodgers Bradly,  Paris  Texas</option><option value="948">Rodgers Patsy,  PAris  Texas</option><option value="310">Roe Jennifer,  Blandon  Pennsylvania</option><option value="1292">Rollins Gina,  Verona  Mississippi</option><option value="205">Romain   Myrna ,  Ponchatoula  Louisiana</option><option value="1027">Roop Diana,  Mishawaka  Indiana</option><option value="261">Ross Donna ,  Harrah  Oklahoma</option><option value="1280">Ross Jill,  Florence  Mississippi</option><option value="156">Rothove Elizabeth ,  Freeburg  Missouri</option><option value="899">Rummer Linda,  Wasrsaw  Indiana</option><option value="1351">Runte Noah,  PHOENIX  Arizona</option><option value="772">Ruprecht Lee ,  Port Huron  Michigan</option><option value="720">Rushing Matthew ,  Olive Branch  Mississippi</option><option value="548">Russell Misty ,  White Bluff   Tennessee</option><option value="984">Russell Duane,  warsaw  Indiana</option><option value="138">Rutovic Bogoljub ,  Scherereville  Indiana</option><option value="730">Ryan John ,  Elkhart  Indiana</option><option value="907">Ryan Tim,  Mishawaka   Indiana</option><option value="1168">Ryan Mark,  Granger  Indiana</option><option value="1169">Ryan Jamie,  Granger  Indiana</option><option value="1236">Sackman Deborah,  Jefferson City  Missouri</option><option value="651">Salinas Laurie ,  Paulding  Ohio</option><option value="1261">Sanford Jessie,  Seminary  Mississippi</option><option value="838">Sarullo Chloe,  Madison  Mississippi</option><option value="847">Sarullo Chloe,  Madison  Mississippi</option><option value="998">Sarullo sherena,  Madison  Mississippi</option><option value="957">Satterfield Justin ,  Statham  Georgia</option><option value="1241">Satterfield  Jessica,  Rolla  Missouri</option><option value="1356">Sauer Vita,  GREENVILLE  South Carolina</option><option value="566">Sauter Lindsey ,  Osceola  Indiana</option><option value="459">Schabbel Jennifer,  South Bend  Indiana</option><option value="1135">Schidler  Marcy,  Mishawaka  Indiana</option><option value="1357">Schinner Faye,  KNOXVILLE  Tennessee</option><option value="738">Schisler Bob ,  Cromwell  Indiana</option><option value="158">Schmitt Richard ,  LaPorte  Indiana</option><option value="666">Schmitt JoEllen ,  LaPorte  Indiana</option><option value="293">Schmittou Michael ,  Hohenwald  Tennessee</option><option value="1281">Schmucker Kara,  Elkhart  Indiana</option><option value="313">Schneider Carl ,  Naperville  Illinois</option><option value="189">Schrader   James,  Mishawaka  Indiana</option><option value="1057">Schrader Joseph,  Mishawaka  Indiana</option><option value="465">Schramm Connie ,   Ocean Side  California</option><option value="1283">Schultz Kaitlyn,  La Porte  Indiana</option><option value="539">Schumacher Wesley,  Camp Hill  Pennsylvania</option><option value="736">Scoles Brenda,  Grand Junction  Tennessee</option><option value="1024">Scott Jessica ,  South Bend  Indiana</option><option value="916">Seabolt Kelly,  Elkhart  Indiana</option><option value="505">Severns Adam ,  Mishawaka  Indiana</option><option value="1018">Sewell Janice ,  Lakeland   Florida</option><option value="1098">Shackleford Anthony ,  Mount Airy  Maryland</option><option value="185">Shaffner Leonard ,  Summerfield  North Carolina</option><option value="1371">Shakur Tupac,  INDIANAPOLIS  Indiana</option><option value="1005">Shank Kimberly,   Dry Run  Pennsylvania</option><option value="1196">Shank Kimberly ,  Dry Run  Pennsylvania</option><option value="663">Shanks Jennifer ,  Tomball  Texas</option><option value="816">Sheffel Jason,  Byhalia   Mississippi</option><option value="513">Sherman Dustin ,  Reidsville  North Carolina</option><option value="1216">Sherts Kenneth,  Conestoga  Pennsylvania</option><option value="822">Shivers Charles,  Columbia  Missouri</option><option value="918">Sholl Matthew ,  Sturgis  Michigan</option><option value="381">Short Jonah ,  Middlebury  Indiana</option><option value="533">Shumaker Roger ,  La Porte  Indiana</option><option value="531">Siade Scott ,  South Bend  Indiana</option><option value="1219">Sibley  Thomas ,  Niles  Michigan</option><option value="726">Sidden Marty ,  King  North Carolina</option><option value="976">Sieradzki Mike ,  Union  Michigan</option><option value="167">Simmons Michael ,  High Point  North Carolina</option><option value="352">Simmons   William ,  Rolla  Missouri</option><option value="441">Simmons Rhonda ,  Chattanooga  Tennessee</option><option value="567">Simon Scott ,  Birmingham  Alabama</option><option value="951">Simonis Gregory ,  Defiance  Ohio</option><option value="1190">Skerski Walter,  Jacksonville  North Carolina</option><option value="174">Skinner  Tim ,  Mason  Ohio</option><option value="425">Sloan Meredith ,  Greer  South Carolina</option><option value="1372">Smalls Biggie,  RIPLEY  Mississippi</option><option value="245">Smith Helen ,  Hixson  Tennessee</option><option value="646">Smith Thomas ,  York  Pennsylvania</option><option value="830">Smith Robert,  Milford  Indiana</option><option value="844">Smith Jodi,  Amory  Mississippi</option><option value="959">Smith Andrew,  Richmond  Michigan</option><option value="977">Smith Tamisa,  WIggins  Mississippi</option><option value="985">Smith Jody,  Amory  Mississippi</option><option value="1038">Smith Brandon,  Corpus Christi  Texas</option><option value="1265">Smith Michelle,  Goshen  Indiana</option><option value="647">Smucker Todd ,  Goshen  Indiana</option><option value="986">Snider Jordan,    Select</option><option value="857">Soliday Dan,    Select</option><option value="862">Soliday Dan,    Select</option><option value="1145">Soto Ada,  New Iberia  Louisiana</option><option value="422">Spaulding Natalie ,  Knoxville  Tennessee</option><option value="443">Spurr Michael ,  La Porte  Indiana</option><option value="641">Stanley Gary ,  Elkhart  Indiana</option><option value="464">Starrett Ryan ,  Wakarusa  Indiana</option><option value="653">Stein Kevin ,  Nile  Michigan</option><option value="1058">Stein Kevin ,  Niles  Michigan</option><option value="524">Stenson Kristy ,  White Bluff  Tennessee</option><option value="188">Stevens Jodie ,  Chuckey  Tennessee</option><option value="419">Stevens Scott ,  Apison  Tennessee</option><option value="577">Stevens Julie ,  Howe  Texas</option><option value="462">Stevenson David ,  Wakarusa  Indiana</option><option value="845">Stevenson Felicia,  Memphis   Tennessee</option><option value="834">Stewart Frieda,  Colony  Oklahoma</option><option value="1113">Stewart Mark,  Madison  Mississippi</option><option value="1178">Stewart Suzanne,  Madison  Mississippi</option><option value="327">Stieber Martin,  Clinton Township  Michigan</option><option value="1097">Stock Andrew ,  Cissna Park  Illinois</option><option value="682">Strawderman Shawn ,  Jefferson City  Missouri</option><option value="453">Sturdivant Cynthia ,  Glendora  Mississippi</option><option value="433">Sturgeon William ,    Missouri</option><option value="678">Sumrall David ,  Pell City  Alabama</option><option value="1171">Swenson-Accardi Pamela,  Forest Lake  Minnesota</option><option value="914">Swift Gary ,  Broken Bow  Oklahoma</option><option value="740">Symes Eric ,  Tupelo  Mississippi</option><option value="586">Szatowski Gregory ,  Dothan  Alabama</option><option value="346">Tacker Randy ,  Millington  Tennessee</option><option value="940">Tacker Sarah ,  Millington  Tennessee</option><option value="256">Taggert Paul ,  Howe  Texas</option><option value="290">Taylor Sherri ,  Grapevine  Texas</option><option value="334">Taylor Brenda ,  Columbia  Missouri</option><option value="341">Taylor Eugene ,  West Harrison  Indiana</option><option value="632">Taylor Ivy ,  Lake Stevens  Washington</option><option value="697">Taylor Don ,  Portal  Georgia</option><option value="1071">Taylor Ann,  Mishawaka  Indiana</option><option value="1173">Taylor Anna Marie,  Waynsville  Missouri</option><option value="1228">Taylor Zachary,  Mishawaka  Indiana</option><option value="1299">Taylor Jennifer,  Greensboro  North Carolina</option><option value="860">Templin Peggy,  Lebanon  Pennsylvania</option><option value="1381">test test,    Select</option><option value="945">Thoma Lillian ,  Quakertown  Pennsylvania</option><option value="162">Thompson  Keith,  Mendenhall  Mississippi</option><option value="386">Thompson Curtis ,  Spartanburg  South Carolina</option><option value="777">Thompson Cynthia ,  Valparaiso  Indiana</option><option value="171">Thomson  Donald,  Laquey  Missouri</option><option value="365">Tidwell Christy ,  Dickson  Tennessee</option><option value="391">Tilley David ,  Rutledge  Tennessee</option><option value="1184">Tipps James,  Azle  Texas</option><option value="535">Titus Mike ,  Elkhart  Indiana</option><option value="750">Titus Mary ,  Elkhart  Indiana</option><option value="579">Tobolski James ,  Mishawaka  Indiana</option><option value="141">Todd Daniel ,  Three Oaks  Michigan</option><option value="1107">Townes – Twilley Sharonda ,  Grenada  Mississippi</option><option value="468">Treber Steve ,  Mishawaka  Indiana</option><option value="623">Treece James ,  Pensacola  Florida</option><option value="1045">Treece James,  Opelika  Alabama</option><option value="1268">Trimboli Nancy,  Mishawaka  Indiana</option><option value="1053">Trimm Candyse,  Fort WAyne  Indiana</option><option value="1200">Tripp Matthew,  Taylorsville  Utah</option><option value="337">Troney Amanda,  Mt Olive  Mississippi</option><option value="458">Turaski Delia ,  Friendsville  Tennessee</option><option value="355">Turpin Ron ,  Jonesboro  Arkansas</option><option value="429">Tyler Jeremy ,  Wakarusa  Indiana</option><option value="349">Unger Georgiann ,  Topton  Pennsylvania</option><option value="477">Valdes Tony ,  Brandon  Florida</option><option value="1270">Van Nevel Joe,  South Bend  Indiana</option><option value="1054">Van Tornhout Brett ,  Lakeville  Indiana</option><option value="289">Van Zant Zane ,  Mishawaka  Indiana</option><option value="518">Vandall Gregory ,  South Bend  Indiana</option><option value="273">Vandolah Justin ,  Kirksville  Missouri</option><option value="307">VanSomeren Lois ,  Amery  Wisconsin</option><option value="1223">Vardaman Kurtis,  Nappanee  Indiana</option><option value="406">Vargas Ricci ,  Hatifield  Pennsylvania</option><option value="372">Vera Patricia ,   Howe  Texas</option><option value="475">Vestal Jeffrey ,  Greensboro  North Carolina</option><option value="1337">Veum Paige,  VERONA  Pennsylvania</option><option value="315">Vogel Louis ,  Mishawaka  Indiana</option><option value="473">Vogel Valeen,  South Bend  Indiana</option><option value="1238">Vogel Victoria,  Mishawaka  Indiana</option><option value="298">Voight Gene ,  Owings Mills  Maryland</option><option value="551">VonBehren Joshua ,  Anna  Texas</option><option value="1163">Wadley Marcia,  memphis  Tennessee</option><option value="1164">Wagner  Marsha ,  Beavertown  Pennsylvania</option><option value="516">Wall Randy ,  Clarksville  Tennessee</option><option value="1073">Wallace James,  Mishawaka  Indiana</option><option value="1264">Wallace Jason,  Elkhart  Indiana</option><option value="854">Waltrip Bradley,  Raymore  Missouri</option><option value="597">Warmoth Carol ,  Mishawaka  Indiana</option><option value="398">Warren Jack ,  Azle  Texas</option><option value="414">Watkins Willard ,  Sicklerville  New Jersey</option><option value="761">Watson Keith ,  Macomb  Michigan</option><option value="356">Wayland Kimberly ,  Fayette  Missouri</option><option value="277">Weaver Deborah ,  Elkhart  Indiana</option><option value="615">Weaver Barbara ,  Denver  Pennsylvania</option><option value="927">Weaver Nathaniel,  York  Pennsylvania</option><option value="239">Weeks Ryan ,  Souderton  Pennsylvania</option><option value="210">Weil Steven ,  Aurora  Illinois</option><option value="1206">Weis Karen,  Millbrook  New York</option><option value="251">Welborn Linda ,  Colbert  Georgia</option><option value="411">Welborn Linda ,  Colbert   Georgia</option><option value="329">Wellman Chrystal ,  Palmyra  Missouri</option><option value="143">Wells Rokeshia ,  Sumrall  Mississippi</option><option value="701">Wertenberger Doug ,  Sabetha  Kansas</option><option value="727">Wharton Carla ,  Memphis   Arkansas</option><option value="755">Wheeler Corey ,  Woodlawn  Illinois</option><option value="1159">Whiddon Patricia,  Lawtey  Florida</option><option value="961">Whitbeck Becky,  Kewanna  Indiana</option><option value="1263">Whitbeck Russell,  Kewanna  Select</option><option value="541">White Nicole ,  Osceola  Indiana</option><option value="1100">White Justin ,  Geismar  Louisiana</option><option value="1129">White Rhonda,  Pineville  Missouri</option><option value="563">Whiteford Scott ,  Granger  Indiana</option><option value="444">Whitlock Cristal ,  Chikamauga  Georgia</option><option value="561">Whitlock Austin ,  Chickamauga  Georgia</option><option value="269">Whitty Roger ,  Orlando  Florida</option><option value="668">Wicks John ,  South Haven  Minnesota</option><option value="1211">Wieberg George ,  Columbia  Missouri</option><option value="482">Wiesjahn James ,  Mishawaka  Indiana</option><option value="147">Wilkinson Craig ,  Kernersville  Alaska</option><option value="1243">Wilkinson Heather,  Kernersville  North Carolina</option><option value="1301">Wilkinson Thomas,  Greensboro  North Carolina</option><option value="640">Willett Maria ,  Charlotte  Tennessee</option><option value="166">Williams Carlene,  Madison  Select</option><option value="744">Williams Joe ,  Kosciusko  Mississippi</option><option value="871">Williams Melvin,  Madison  Mississippi</option><option value="930">Williams Matthew,  Columbia  Pennsylvania</option><option value="1103">Williams Matthew ,  Windchester  Virginia</option><option value="1195">Williams Kimberly,  Kosciusko  Mississippi</option><option value="1254">Williams  Magan ,  New Albany  Mississippi</option><option value="885">Williams, Jr. Darrell,  Van Alstyne  Texas</option><option value="1187">Willis Doug,  Wentzille  Missouri</option><option value="237">Wilson Steven ,  Statesboro  Georgia</option><option value="413">Wilson Mary ,  Hollandale  Mississippi</option><option value="500">Wimbish Sandra ,  Albuquerque  Alaska</option><option value="903">Wimbish John ,  Albuquerque  New Mexico</option><option value="754">Winter-Haines Dawn ,  Boonsboro  Maryland</option><option value="835">Winters Margaret,  Kosciusko  Mississippi</option><option value="1224">Wirths Edward,  Columbia  Missouri</option><option value="965">Wise Elizabeth,  Goshen  Indiana</option><option value="1039">Wise Garrett,  Goshen   Indiana</option><option value="1131">Wise Marci,  Mishawaka  Indiana</option><option value="491">Wiskur Clayton ,  Concordia  Missouri</option><option value="1094">Wisser Katelyn,  Trail Creek  Indiana</option><option value="942">Withers Jason,  Roselle  Illinois</option><option value="749">Witherspoon Eugene ,  Hernando  Mississippi</option><option value="1231">Witherspoon Eugene,  Hernando  Mississippi</option><option value="1010">Witkowski Kenneth  ,  North Liberty  Indiana</option><option value="662">Witmer John ,  Lancaster  Pennsylvania</option><option value="1296">Witten Donna,  Abington  Pennsylvania</option><option value="1353">Wiza Barry,  CHICAGO  Illinois</option><option value="748">Wood James ,  Florence  Mississippi</option><option value="765">Woods Mary ,  Olive Branch  Mississippi</option><option value="1096">Woods Melissa,  South Bend  Indiana</option><option value="883">Wopperer Nicholas,  Amherst  New York</option><option value="142">Workman Tony,  Denton  North Carolina</option><option value="1251">Worley Henry,  New Orleans   Louisiana</option><option value="1310">Worsham Penne,  Pearl  Mississippi</option><option value="348">Wright  William ,  Lawrenceville  Georgia</option><option value="366">Wright Elizabeth ,  Bella Vista  Arkansas</option><option value="446">Wright Mary,  Wapakoneta  Ohio</option><option value="1199">Wright Jack,  Leola  Pennsylvania</option><option value="1266">Wright Angelia ,  Maiden  North Carolina</option><option value="409">Wyrick Karen ,  Mishawaka  Indiana</option><option value="1052">Yates James ,  Molina  Colorado</option><option value="241">Yoder Kayla ,  Osceola  Indiana</option><option value="824">Young Sammy,  South Bend  Indiana</option><option value="770">Zaklukiewicz David ,  Spring Hill  Florida</option><option value="557">Zamora Susan ,  South Bend  Indiana</option><option value="242">Zarate Steven ,  Houston  Texas</option><option value="509">Zeller Douglas ,  Rosharon  Texas</option>										</select>
+									</div>
+									<hr>
+									<h5 style="margin-top:20px;">Email To:</h5>
+									<div class="input-group mar-btm">
+										<span class="input-group-addon">TO: </span>
+										<input type="text" id="emailTo" class="form-control" value="" placeholder="email address">
+									</div>
+									<div class="input-group mar-btm">
+										<span class="input-group-addon">Cc: </span>
+										<input type="text" id="emailCc" class="form-control" value="" placeholder="not required">
+									</div>
+									<div class="input-group mar-btm">
+										<span class="input-group-addon">Subject: </span>
+										<input type="text" id="emailsub" class="form-control" value="" placeholder="Subject">
+									</div>
+									<div class="input-group mar-btm">
+										<span class="input-group-addon">Message: </span>
+										<textarea id="emailMsg" rows="6" class="form-control" value=""></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+      <div class="modal-footer">
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="sendFacilityList()">Create &amp; Send Facility List</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+<!--MAIN NAVIGATION-->
+<nav id="mainnav-container">
+    <div id="mainnav">
+        <!--It will only appear on small screen devices.-->
+        <div class="mainnav-brand">
+            <a href="../dashboard.php" class="brand"><img src="../img/client/pmds_web_panel_bmc_c.fw.png" alt="PriceMDs" class="brand-icon"></a>
+            <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
+        </div>
+        <!--Menu-->
+        <div id="mainnav-menu-wrap">
+            <div class="nano has-scrollbar">
+                <div class="nano-content" tabindex="0" style="right: -17px;">
+                    <!--Profile Widget-->
+                    <div id="mainnav-profile" class="mainnav-profile">
+                        <div class="profile-wrap text-center">
+                            <div class="pad-btm"><img class="img-circle img-md" id="profilePic" src="../img/profile-photos/1.png" alt="Profile Picture"></div>
+                            <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                <span class="pull-right dropdown-toggle"><i class="dropdown-caret"></i></span>
+                                <p class="mnp-name">Admin Test</p>
+                            </a>
+                        </div>
+                        <div id="profile-nav" class="collapse list-group bg-trans">
+                            <a href="../user/profile.php" class="list-group-item"><i class="demo-pli-male icon-lg icon-fw"></i> View Profile</a>
+                            <a href="../user/message.php" class="list-group-item"><i class="demo-pli-male icon-lg icon-fw"></i> Messages</a>
+                            <p class="list-group-item"><i class="demo-pli-information icon-lg icon-fw"></i><a href="mailto:alivingston@pricemds.com?subject=Ask an Expert">Ask an Expert</a>
+                            </p>
+                            <p class="list-group-item"><i class="demo-pli-information icon-lg icon-fw"></i><a href="mailto:jkomar@iasun.com?subject=Technical HELP">Tech Help</a></p>
+                            <a href="../logout.php" class="list-group-item"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a>
+                        </div>
+                    </div>
+                    <div id="mainnav-shortcut" class="hidden">
+                        <ul class="list-unstyled shortcut-wrap">
+                            <li class="col-xs-3" data-content="My Profile" data-original-title="" title="">
+                                <a class="shortcut-grid" href="../user/profile.php">
+                                    <div class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="demo-pli-male"></i></div>
+                                </a>
+                            </li>
+                            <li class="col-xs-3" data-content="Lock Screen" data-original-title="" title="">
+                                <a class="shortcut-grid" href="../logout.php">
+                                    <div class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="demo-pli-lock-2"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="mainnav-menu" class="list-group">
+                        <li class="list-header">Navigation</li>
+                        <li>
+                                        <a href="../dashboard.php" aria-expanded="false">
+                                            <i class="demo-psi-home icon-lg"></i>
+                                            <span class="menu-title">Dashboard</span></a></li><li>
+                                        <a href="../facility/facilitySearch.php" aria-expanded="false">
+                                            <i class="fa fa-search"></i>
+                                            <span class="menu-title">PriceMDs Directory Search</span></a></li><li class="active">
+                                        <a href="" aria-expanded="true">
+                                            <i class="demo-pli-boot-2"></i>
+                                            <span class="menu-title">Case Management</span><i class="arrow"></i></a><ul class="collapse in" aria-expanded="true" style=""><li><a href="../case/careCoordinator.php">Care Coordination</a></li><li><a href="../case/patients.php">Patients</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-pen-5"></i>
+                                            <span class="menu-title">Client Management</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../admin/clients.php">Clients</a></li><li><a href="../admin/clients.php">Add New Client</a></li><li><a href="../admin/clients.php">Add New Employer Group</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-receipt-4"></i>
+                                            <span class="menu-title">Procedure &amp; Specialties</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../admin/cpt2.php">CPT &amp; Specialty</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-bar-chart"></i>
+                                            <span class="menu-title">Reporting</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../reporting/clientReports.php">Client</a></li><li><a href="../reporting/globalReports.php">Global Admin</a></li><li><a href="../reporting/report.php">Charts</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-repair"></i>
+                                            <span class="menu-title">Facility &amp; Physicians</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../facilities/facility.php">Facility</a></li><li><a href="../physicians/physicians.php">Physicians</a></li><li><a href="../facilities/downloadCSVFacility.php">Download Facilities</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-warning-window"></i>
+                                            <span class="menu-title">Groups</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../groups/affiliateGroup.php">Affiliate Groups</a></li><li><a href="../groups/physicianGroup.php">Physician Groups</a></li><li><a href="../groups/surgicalGroup.php">Surgical Groups</a></li><li><a href="../admin/groups.php">Groups</a></li></ul></li><li>
+                                        <a href="" aria-expanded="false">
+                                            <i class="demo-pli-computer-secure"></i>
+                                            <span class="menu-title">Administrator</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../admin/usersAdmin.php">User Management</a></li><li><a href="../admin/assignments.php">Case Assign</a></li><li><a href="../admin/adminGlobal.php">Global View</a></li><li><a href="../admin/archive.php">Archive</a></li><li><a href="../admin/messageSystem.php">Messaging</a></li></ul>                    </li></ul>
+                </div>
+            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 1051px; transform: translate(0px, 0px);"></div></div></div>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    function prepareDown() {
+        $("#downModal").modal('show');
+    }
+</script>
+
+<!--END MAIN NAVIGATION-->
+
+<div class="modal fade" id="downModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Download Preparing</h5>
+                <button type="button" style="margin-top:-20px" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div style="padding:20px">
+                                <p>The CSV is now being created, you will receive a dialog box asking where to save the
+                                    download. You can save it anywhere on your computer</p>
+                                <p>Depending on the quantity of facilities within the system this can take over a minute
+                                    to compile and present the list for download.</p>
+                                <p>Close this window when completed and open up the downloaded CSV to view the
+                                    facilities.</p>
+
+                                <div style="margin:0px;margin:auto;text-align:center">
+                                    <img src="https://crustbuster.com/wp-content/plugins/super-forms/assets/images/spinner-2x.gif">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+			<aside id="aside-container">
+	<div id="aside">
+		<div class="nano has-scrollbar">
+			<div class="nano-content" tabindex="0" style="right: -17px;">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="#demo-asd-tab-1" data-toggle="tab"><i class="demo-pli-speech-bubble-7 icon-lg" onclick="clearSideBarElements()"></i>Message</a></li>
+					<li><a href="#demo-asd-tab-2" data-toggle="tab"><i class="demo-pli-information icon-lg icon-fw" onclick="clearSideBarElements()"></i> Notes</a></li>
+					<li><a href="#demo-asd-tab-3" data-toggle="tab"><i class="demo-pli-wrench icon-lg icon-fw" onclick="clearSideBarElements()"></i> Settings</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="demo-asd-tab-1">
+						<p class="pad-all text-main text-sm text-uppercase text-bold">
+							<span class="pull-right badge badge-warning">3</span> Users
+						</p>
+						<div class="list-group bg-trans">
+							<a href="#" class="list-group-item">
+								<div class="media-left pos-rel">
+									<img class="img-circle img-xs" src="../img/profile-photos/1.png" alt="Profile Picture">
+									<i class="badge badge-warning badge-stat badge-icon pull-left"></i>
+								</div>
+								<div class="media-body">
+									<span class="pull-right badge badge-success">Online</span><p class="mar-no text-main">Admin Test</p>
+									<small class="text-muteds">Idle</small>
+								</div>
+							</a>
+							<div class="list-group bg-trans">
+								<div class="list-group-item">
+									<div class="sidebar-title"><h3><i class="fa fa-comments-o"></i> Site Messaging</h3></div>
+									<div class="sidebar-message">
+										<div class="media-body">
+											<div id="MessagingMsg" style="display:none;color:#red"></div>
+											<label class="control-label" style="margin-top:10px">To</label>
+											<select class="form-control valid" id="messageTo">
+												<option value="N">Select</option>
+												<option value="338">Admin , PriceMDs</option><option value="343">Binyamin , Shaun</option><option value="361">Bragonier , Chad</option><option value="340">Buls , Rachel</option><option value="413">Cobaugh , Rebekah</option><option value="360">Coleman , Cindy</option><option value="425">Collier , Renee</option><option value="357">Cordero , Andrea</option><option value="345">Damavandi , Moshe</option><option value="325">Davis , Will</option><option value="363">Deletetsky , Eric</option><option value="341">Fishkin , Libby</option><option value="346">Fowler , Cayli</option><option value="371">Galloway , Kyle</option><option value="418">Gofen , Evgeny</option><option value="342">Goldblatt , Leah</option><option value="404">Goodman , Kim</option><option value="332">Grossman , Maximillian</option><option value="367">Grossman , Marc</option><option value="354">Grossman , Donna </option><option value="329">Grott , Melissa</option><option value="324">Hammons , Lindsay</option><option value="323">Iarossi , Corte</option><option value="385">Jakubowicz , Shirel</option><option value="326">Jaramillo , Mary Lou</option><option value="353">Karasik , Lisa </option><option value="347">Kirkham , Rachel</option><option value="298">Komar , John</option><option value="350">Livingston , Ashley</option><option value="389">Martinez , Natalie</option><option value="415">Matthews , Corey</option><option value="327">McIntosh , Holley</option><option value="300">McRoy , Kissner</option><option value="407">Navigator/Imaging Case , Nurse</option><option value="422">Palshin , Alexey</option><option value="334">Panella , Dante</option><option value="396">Panella , Payton</option><option value="405">Phipps , Jeff</option><option value="423">Phipps , Jeffery</option><option value="359">Quinn , John</option><option value="339">Quinn , Caitlin</option><option value="391">Quinones , Melqui</option><option value="388">Satorius , Jennifer</option><option value="420">Sokolova , Anastasiya</option><option value="358">Stenson , Carlene</option><option value="328">Stuart  , Ashley</option><option value="424">Talbert , Rick</option><option value="429">Test , Admin</option><option value="430">Test , Net Dev</option><option value="428">Test , Care Coordinator</option><option value="426">Test , Nurse</option><option value="431">Test , Client Admin</option><option value="432">Test , Developer</option><option value="435">Test , Client service</option><option value="370">Thompson , Cindy </option><option value="333">Tsolakakis , Nick</option><option value="406">Vernikoff , Lila</option><option value="344">Wasserman , Shoshana</option><option value="362">Wheeler , Melissa</option><option value="414">Wilkinson , Daniela</option><option value="408">Winston , Kat</option><option value="335">Winston , Kathy</option><option value="419">Zhiharev , Sergey</option>											</select>
+											<div class="form-group">
+												<label>Message</label><textarea id="message" class="form-control" placeholder="Your message" rows="3"></textarea>
+											</div>
+											<button class="btn btn-success btn-block" value="SIDE|1" onclick="sendGlobalMessage(this.value)" ;="">Send</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<p class="pad-all text-main text-sm text-uppercase text-bold">News</p>
+						<div class="pad-hor">
+							<small><em>Last Update : Dec 12, 2021<br>build 11AWS132021</em></small>
+						</div>
+					</div>
+					<!--Second tab -->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<div class="tab-pane fade" id="demo-asd-tab-2">
+						<div class="list-group bg-trans">
+							<div class="list-group-item">
+								<div class="sidebar-title"><h3><i class="fa fa-cube"></i> Private Notes</h3></div>
+								<div class="sidebar-message">
+									<div class="media-body">
+										<div id="NotesMsg" style="display:none;color:#red"></div>
+										<div class="form-group">
+											<label>Subject</label>
+											<input type="text" id="sideBarNoteSubject" class="form-control" placeholder="Subject">
+										</div>
+										<div class="form-group">
+											<label>Notes</label><textarea id="sideBarNotes" class="form-control" placeholder="Your note" rows="3"></textarea>
+										</div>
+										<button class="btn btn-success btn-block" onclick="addNotes()" ;="">Save</button>
+									</div>
+								</div>
+								<div class="sidebar-message">
+									<div id="sideBarNotesRetrieved"></div>
+								</div>
+							</div>
+						</div>
+					<hr>
+					<div class="text-center">
+						<div><i class="demo-pli-old-telephone icon-3x"></i></div>
+							Support?
+							<p class="text-lg text-semibold text-main"> (813) 818-4531 </p>
+							<small><em>We are here 24/7</em></small>
+						</div>
+					</div>
+					<!--Third tab (Settings)-->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<!--Third tab (Settings)-->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<div class="tab-pane fade" id="demo-asd-tab-3">
+					
+					
+					
+					
+					</div>
+				</div>
+			</div>
+		<div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 1051px; transform: translate(0px, 0px);"></div></div></div>
+	</div>
+</aside>
+<!--END ASIDE-->
+
+
+<script>
+
+function sendGlobalMessage(val){
+	var	idValue = val.split("|");
+	var process = idValue[0];
+	var msgType = idValue[1];
+	var sendMessage = val;
+
+console.log("sendGlobalMessage");
+console.log(val);
+console.log(429);
+
+	switch(process){
+		case "SIDE":
+console.log("in SWitch");
+			document.getElementById("MessagingMsg").innerHTML = "";
+			var messageTo = document.getElementById("messageTo").value;
+			var messageFrom = "429";
+			var message = document.getElementById("message").value;
+
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("MessagingMsg").style.display = 'block';
+						document.getElementById("MessagingMsg").style.color = 'red';
+						document.getElementById("MessagingMsg").innerHTML = msg;
+					}else{
+						document.getElementById("MessagingMsg").style.display = 'block';
+						document.getElementById("MessagingMsg").style.color = 'green';
+						document.getElementById("MessagingMsg").innerHTML = msg;
+						document.getElementById("message").value ='';
+					}
+				}
+			});
+		break;
+		case "OUT":
+			var messageTo = document.getElementById("messageToProfile").value;
+			var messageFrom = "429";
+			var message = document.getElementById("messageProfile").value;
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorMsgProfile").style.display = 'block';
+						document.getElementById("errorMsgProfile").innerHTML = msg;
+					}else{
+						document.getElementById("errorMsgProfile").style.display = 'none';
+						document.getElementById("errorMsgProfile").innerHTML = '';
+						$("#newProfileMessage").modal('hide');
+						getMessagingList(val);
+					}
+				}
+			});
+		break;
+		case "ADDnote":
+console.log("in SWitch-ADD");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						$("#noteModal").modal('hide');
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+		break;
+		case "EDITnote":
+console.log("in SWitch-EDIT");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						$("#noteModal").modal('hide');
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+		break;
+		case "DELETEnote":
+console.log("in SWitch-DELETE");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+
+
+
+
+		break;
+
+
+	}
+}
+
+
+
+
+
+
+
+function getSideBarNotesList(){
+	document.getElementById("sideBarNotes").innerHTML = "";
+	var getNotesList = "429";
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:'SideBarNotesList='+getNotesList,
+		success: function(data){
+			$("#sideBarNotesRetrieved").html(data);
+		}
+	});
+}
+
+function addNotes(){
+	document.getElementById("NotesMsg").innerHTML = "";
+	document.getElementById("NotesMsg").style.display = 'none';
+	var sideBarNotes = document.getElementById("sideBarNotes").value;
+	var sideBarNoteSubject = document.getElementById("sideBarNoteSubject").value;
+	var idUser = "429";
+	var saveSideBarNote = "1";
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:{saveSideBarNote:saveSideBarNote,idUser:idUser,sideBarNotes:sideBarNotes,sideBarNoteSubject:sideBarNoteSubject},
+		dataType: 'json',
+		success: function(data){
+			var msg = data.msg;
+			var alarm = data.alarm;
+			if(alarm==2){
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'red';
+				document.getElementById("NotesMsg").innerHTML = msg;
+			}else{
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'green';
+				document.getElementById("NotesMsg").innerHTML = msg;
+				document.getElementById("sideBarNotes").value ='';
+				document.getElementById("sideBarNoteSubject").value ='';
+				getSideBarNotesList();
+			}
+		}
+	});
+}
+
+function clearSideBarElements(){
+console.log("CLEAR");
+	document.getElementById("NotesMsg").innerHTML = ' ';
+	document.getElementById("NotesMsg").style.display = 'none';
+	document.getElementById("sideBarNotes").value = ' ';
+	document.getElementById("sideBarNoteSubject").value = ' ';
+	document.getElementById("MessagingMsg").innerHTML = ' ';
+	document.getElementById("message").value ='';
+}
+
+function deleteSideBarNote(noteId){
+	var deleteSideBarNoteFrom = noteId;
+console.log(deleteSideBarNoteFrom);
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:{deleteSideBarNoteFrom:deleteSideBarNoteFrom},
+		dataType: 'json',
+		success: function(data){
+			var msg = data.msg;
+			var alarm = data.alarm;
+			console.log(msg);
+			if(alarm==2){
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'red';
+				document.getElementById("NotesMsg").innerHTML = msg;
+			}else{
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'green';
+				document.getElementById("NotesMsg").innerHTML = msg;
+				document.getElementById("sideBarNotes").value ='';
+				document.getElementById("sideBarNoteSubject").value ='';
+				getSideBarNotesList();
+			}
+		}
+	});
+}
+</script>
+
+
+
+
+
+
+		</div>
+		<footer id="footer">
+	<div class="hide-fixed pull-right pad-rgt">Version <strong>3.1.0 </strong> | build 11AWS132021</div>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<p class="pad-lft">© 2021 PriceMDs</p>
+</footer>
+	</div>
+
+<script>
+
+parameterCPTDisplay.addEventListener("input", function (e) {
+	var SearchValue = document.getElementById("parameterCPTDisplay").value;
+	var newSearch = SearchValue .replace("+","_");
+	document.getElementById("returnCodes").innerHTML = '';
+	document.getElementById("returnCodes").style.display = 'block';
+console.log(newSearch);
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:'codesSearch2='+newSearch,
+		success: function(data){
+			$("#returnCodes").html(data);
+		}
+	});
+});
+
+function addCPTSearch(val){
+	var	data = val.split("|");
+	var id = data[0];
+	var cpt = data[1];
+	document.getElementById("parameterCPT").value=id;
+	document.getElementById("returnCodes").innerHTML = '';
+	document.getElementById("returnCodes").style.display = 'none';
+	document.getElementById("parameterCPTDisplay").value= cpt;
+}
+
+function pickerChange(){
+	var process = document.getElementById("parameterType").value;
+//console.log(process);
+	switch(process){
+		case "N":
+			document.getElementById("statePicker").disabled = true;
+			document.getElementById("parameterText").placeholder = '';
+		break;
+		case "1":
+			document.getElementById("statePicker").disabled = true;
+			document.getElementById("parameterText").placeholder = 'Zip Code';
+		break;
+		case "2":
+			document.getElementById("statePicker").disabled = false;
+			document.getElementById("parameterText").placeholder = 'City';
+		break;
+		case "3":
+			document.getElementById("statePicker").disabled = false;
+			document.getElementById("parameterText").placeholder = 'State';
+		break;
+		case "4":
+			document.getElementById("statePicker").disabled = false;
+			document.getElementById("parameterText").placeholder = 'Address';
+		break;
+	}
+}
+
+
+function createCSV(){
+	var url = "csv.php";
+		var win = window.open(url, '_blank');
+		win.focus();
+}
+
+
+
+function handle(e){
+	if(e.keyCode === 13){
+		e.preventDefault();
+		searchStart(1);
+	}
+}
+
+/*
+
+function editFacility(theId){
+	console.log("here");
+	document.getElementById("editFacility").style.display = 'block';
+}
+function closeFaciity(){
+	document.getElementById("editFacility").style.display = 'none';
+}
+*/
+
+function initMap(){
+	$("#nappyModal").modal('show');
+
+	var latCenter =	document.getElementById("latCenter").value;
+	var lngCenter =	document.getElementById("lngCenter").value;
+	var zoomy = document.getElementById("zoomLevel").value;
+console.log("zoomy");
+	var zoomy = parseInt(zoomy);
+	var map = new google.maps.Map(document.getElementById('map'),{
+		center: new google.maps.LatLng(latCenter , lngCenter),
+		zoom: zoomy
+	});
+	var mapData =	document.getElementById("theMapData").value;
+	console.log(mapData);
+	mapArr = mapData.split('~');
+	mapArr.forEach(function(mapper){
+		mapSplit = mapper.split('|');
+		var id = mapSplit[0];
+		var name = mapSplit[1];
+		var address = mapSplit[2];
+		var cityState = mapSplit[3];
+		var phone = mapSplit[4];
+		var lat = parseFloat(mapSplit[5]);
+		var lng = parseFloat(mapSplit[6]);
+		var contentString = '<div><h4>' +name+'</h4><p>' + address + cityState + '<b>'+phone +'</b></p></div>';
+		var point = new google.maps.LatLng(lat,lng);
+		var pointed = {lat:lat,lng:lng};
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+		var marker = new google.maps.Marker({
+			map: map,
+			position:point,
+			title:name
+		});
+		marker.addListener('click', function() {
+			infowindow.open(map, marker);
+		});
+	});
+}
+
+function viewList(){
+	var getFacilitiesListView = document.getElementById("theMapData").value;
+console.log(getFacilitiesListView);
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:{getFacilitiesListView:getFacilitiesListView},
+		dataType: 'json',
+		success: function(data){
+		var url = data.url;
+console.log(url);
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+	});
+}
+
+function viewListTable(){
+	var getFacilitiesListViewTable = document.getElementById("theMapData").value;
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:{getFacilitiesListViewTable:getFacilitiesListViewTable},
+		dataType: 'json',
+		success: function(data){
+		var url = data.url;
+console.log(url);
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+	});
+}
+
+
+function fillEmail(){
+	var getPatientEmail = document.getElementById("pickPatient").value;
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:{getPatientEmail:getPatientEmail},
+		dataType: 'json',
+		success: function(data){
+		var email = data.email;
+		document.getElementById("emailTo").value = email;
+		document.getElementById("emailsub").value = 'Facility List';
+
+	}
+	});
+}
+
+function clearEmail(){
+	document.getElementById("errorModalEmail").innerHTML = '';
+	document.getElementById("errorModalEmail").style.display ='none';
+	document.getElementById("pickPatient").value = '0';
+	document.getElementById("emailTo").value = '';
+	document.getElementById("emailCc").value = '';
+	document.getElementById("emailsub").value = '';
+	document.getElementById("emailMsg").value = '';
+}
+
+function sendFacilityList(){
+	var getDataForPDFemail = document.getElementById("theMapData").value;
+	var patientId = document.getElementById("pickPatient").value;
+	var emailTo = document.getElementById("emailTo").value;
+	var emailCc = document.getElementById("emailCc").value;
+	var emailsub = document.getElementById("emailsub").value;
+	var emailMsg = document.getElementById("emailMsg").value;
+	var sendPatientEmail = 1;
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:{sendPatientEmail:sendPatientEmail,emailTo:emailTo,emailCc:emailCc,emailsub:emailsub,emailMsg:emailMsg,getDataForPDFemail:getDataForPDFemail,patientId:patientId},
+		dataType: 'json',
+		success: function(data){
+		var msg = data.msg;
+		var alarm = data.alarm;
+console.log(msg);
+		if(alarm==2){
+			document.getElementById("errorModalEmail").style.display ='block';
+			document.getElementById("errorModalEmail").innerHTML = msg;
+		}else{
+			$("#noticeModalApp").modal('hide');
+		}
+	}
+	});
+}
+
+function sendList(){
+	clearEmail();
+	$("#noticeModalApp").modal('show');
+/*
+alert('Not ready for that just yet, finish testing please');
+
+
+noticeModalApp
+
+
+	var getFacilitiesListViewTable = document.getElementById("theMapData").value;
+	$.ajax({
+		type: "POST",
+		url: "facititiesAjax.php",
+		data:{getFacilitiesListViewTable:getFacilitiesListViewTable},
+		dataType: 'json',
+		success: function(data){
+		var url = data.url;
+console.log(url);
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
+	});
+*/
+}
+
+function searchStart(startSearchFacility){
+	document.getElementById("searchOutput").innerHTML = '';
+	document.getElementById("searchOutput").innerHTML = '<div style=\"text-align:center;padding-top:60px\"><img src=\"img/loading.gif\"></div>';
+	document.getElementById("map").innerHTML = '';
+	var parameterContract = document.getElementById("parameterContract").value;
+	var parameterSpecialty = document.getElementById("parameterSpecialty").value;
+	var parameterCPT = document.getElementById("parameterCPT").value;
+	var parameterMiles = document.getElementById("parameterMiles").value;
+	var parameterType = document.getElementById("parameterType").value;
+	var statePicker = document.getElementById("statePicker").value;
+	var parameterText = document.getElementById("parameterText").value;
+
+console.log("parameterSpecialty");
+console.log(parameterSpecialty);
+console.log("parameterCPT");
+console.log(parameterCPT);
+console.log("parameterType");
+console.log(parameterType);
+
+
+	if( (parameterMiles != "N") && (parameterType == "N") ){
+		alert ("You cannot set a miles parameter without a location");
+	}
+
+	if(parameterType==4){
+		var parameterText = document.getElementById('parameterText').value;
+		addStringLen = parameterText.length;
+		if(statePicker=="N"){
+			var msg = '<div class="col-md-12"><h4 style="color:red;text-align:center;padding-top:30px">Please select a <b>State</b> to qualify address</h4></div>';
+			document.getElementById('searchOutput').style.display = 'block';
+			document.getElementById('searchOutput').innerHTML = msg;
+		}else{
+			if(addStringLen<6){
+				var msg = '<div class="col-md-12"><h4 style="color:red;text-align:center;padding-top:30px">There seems to be an error in the address, I cannot reconcile what is in the text box.</h4></div>';
+				document.getElementById('searchOutput').style.display = 'block';
+				document.getElementById('searchOutput').innerHTML = msg;
+			}else{
+
+
+		getAddressData=1;
+		$.ajax({
+			type: "POST",
+			url: "searcher.php",
+			data:{getAddressData:getAddressData,statePicker:statePicker,parameterText:parameterText},
+			dataType: 'json',
+			success: function(data){
+				var address = data.address;
+				var msg = data.msg;
+
+
+					var geocoder;
+					geocoder = new google.maps.Geocoder();
+
+
+					geocoder.geocode({'address':address},function(results, status){
+						console.log(results[0]);
+						if(status == 'OK'){
+							var lat = results[0].geometry.location.lat();
+							var lng = results[0].geometry.location.lng();
+							console.log(lat);
+							console.log(lng);
+							document.getElementById("searchOutput").style.display = 'block';
+
+							$.ajax({
+								type: "POST",
+								url: "searcher.php",
+								data:{startSearchFacility:startSearchFacility,parameterCPT:parameterCPT,parameterSpecialty:parameterSpecialty,parameterMiles:parameterMiles,parameterType:parameterType,
+											parameterText:parameterText,parameterContract:parameterContract,statePicker:statePicker,lat:lat,lng:lng},
+								success: function(data){
+									console.log("parameterText");
+									document.getElementById("searchOutput").style.display = 'block';
+									document.getElementById("searchOutput").innerHTML = '';
+									document.getElementById("searchOutput").innerHTML = data;
+									$('#liveSearch').DataTable();
+									$('.dataTables_filter input[type="search"]').css(
+									{'width':'450px','display':'inline-block'});
+									//$("#searchOutput").append(data);
+								}
+							});
+						}else{
+							var msg = '<div class="col-md-12"><h3 style="color:red;text-align:center;padding-top:30px">Geocode was not successful for the following reason:' + status + '</h3></div>';
+							document.getElementById('searchOutput').style.display = 'block';
+							document.getElementById('searchOutput').innerHTML = msg;
+						}
+					});
+
+				}
+			});
+
+
+
+		}
+}
+/*
+				var geocoder;
+				geocoder = new google.maps.Geocoder();
+				var address = document.getElementById('parameterText').value;
+
+				geocoder.geocode({'address':address},function(results, status){
+					console.log(results[0]);
+					if(status == 'OK'){
+						var lat = results[0].geometry.location.lat();
+						var lng = results[0].geometry.location.lng();
+						console.log(lat);
+						console.log(lng);
+						document.getElementById("searchOutput").style.display = 'block';
+
+						$.ajax({
+							type: "POST",
+							url: "searcher.php",
+							data:{startSearchFacility:startSearchFacility,parameterCPT:parameterCPT,parameterSpecialty:parameterSpecialty,parameterMiles:parameterMiles,parameterType:parameterType,
+										parameterText:parameterText,parameterContract:parameterContract,statePicker:statePicker,lat:lat,lng:lng},
+							success: function(data){
+								console.log("parameterText");
+								document.getElementById("searchOutput").style.display = 'block';
+								document.getElementById("searchOutput").innerHTML = '';
+								document.getElementById("searchOutput").innerHTML = data;
+								$('#liveSearch').DataTable();
+								$('.dataTables_filter input[type="search"]').css(
+								{'width':'450px','display':'inline-block'});
+								//$("#searchOutput").append(data);
+							}
+						});
+					}else{
+						var msg = '<div class="col-md-12"><h3 style="color:red;text-align:center;padding-top:30px">Geocode was not successful for the following reason:' + status + '</h3></div>';
+						document.getElementById('searchOutput').style.display = 'block';
+						document.getElementById('searchOutput').innerHTML = msg;
+					}
+				});
+*/
+	}else{
+		lat = "N";lng="N";
+				document.getElementById("searchOutput").style.display = 'block';
+
+		$.ajax({
+			type: "POST",
+			url: "searcher.php",
+			data:{startSearchFacility:startSearchFacility,parameterCPT:parameterCPT,parameterSpecialty:parameterSpecialty,parameterMiles:parameterMiles,parameterType:parameterType,
+						parameterText:parameterText,parameterContract:parameterContract,statePicker:statePicker,lat:lat,lng:lng},
+			success: function(data){
+				document.getElementById("searchOutput").style.display = 'block';
+				document.getElementById("searchOutput").innerHTML = '';
+				document.getElementById("searchOutput").innerHTML = data;
+				console.log(data);
+				$('#liveSearch').DataTable();
+				$('.dataTables_filter input[type="search"]').css(
+				{'width':'450px','display':'inline-block'});
+				//$("#searchOutput").append(data);
+			}
+		});
+
+
+	}
+
+
+
+
+}
+</script>
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/nifty.min.js"></script>
+	<script src="../js/demo/nifty-demo.min.js"></script>
+	<script src="../plugins/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="../plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+	<script src="../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../js/demo/tables-datatables.js"></script>
+	<script src="../js/plugins/dropzone/dropzone.js"></script>
+	<script src="../plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+	<script src="../timeManager.js"></script>
+	<script src="../polling.js"></script>
+	<script src="../js/management.js"></script>
+	<script src="../js/jsError.js"></script>
+
+	<script>$(document).ready(function() {getSideBarNotesList();});</script>
+	<script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdhrirT_hROLNwIHXRxkItMoJDl1n3cUU"></script>
+
+
+<div class="mainnav-backdrop"></div></div><div id="demo-nifty-settings" class="demo-nifty-settings"><button id="demo-set-btn" class="btn"><i class="demo-psi-gear"></i></button><div id="demo-set-content" class="demo-set-content"></div></div></body></html>

@@ -1,0 +1,826 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="index, follow">
+	<title>Groups</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/nifty.css" rel="stylesheet">
+	<link href="../css/demo/nifty-demo-icons.min.css" rel="stylesheet">
+	<link href="../plugins/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<!--Pace - Page Load Progress Par [OPTIONAL]-->
+	<link href="../plugins/pace/pace.min.css" rel="stylesheet">
+	<script src="../plugins/pace/pace.min.js"></script>
+	<!--Demo [ DEMONSTRATION ]-->
+	<link href="../css/demo/nifty-demo.min.css" rel="stylesheet">
+	<!--Bootstrap Datepicker [ OPTIONAL ]-->
+	<link href="../plugins/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+	<link href="../plugins/summernote/summernote.min.css" rel="stylesheet">
+	<link href="../plugins/animate-css/animate.min.css" rel="stylesheet">
+	<link href="../img/favicon150.png" rel="icon" type="image/png">
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/nifty.min.js"></script>
+	<!--  <script src="../js/demo/nifty-demo.min.js"></script>-->
+	<script src="../plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+	<script src="../plugins/bootbox/bootbox.min.js"></script>
+	<script src="../js/demo/ui-modals.js"></script>
+	<link href="../plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+	<link href="../plugins/datatables/extensions/Responsive/css/responsive.dataTables.min.css" rel="stylesheet">
+	<script src="groups.js"></script>
+
+</head>
+<body class="  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+	<div id="container" class="effect aside-float aside-bright mainnav-lg">
+		<header id="navbar">
+	<input type="hidden" id="msgTotal" value="1">	<div id="navbar-container" class="boxed">
+		<div class="navbar-header">
+			<a href="index.html" class="navbar-brand"><img src="../admin/logo/667/pmds_web_panel_bmc_c.fw.png" alt="PriceMDs" class="brand-icon" style="width:200px"></a>
+		</div>
+		<div class="navbar-content">
+			<ul class="nav navbar-top-links">
+				<li class="tgl-menu-btn"><a class="mainnav-toggle" href="#"><i class="demo-pli-list-view"></i></a></li>
+			</ul>
+			<ul class="nav navbar-top-links">
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						<i class="demo-pli-bell"></i><span id="badge" class="badge badge-header badge-danger">1</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right msgInternal-lg">
+						<div class="nano scrollable has-scrollbar" style="height: 0px;">
+							<div class="nano-content" tabindex="0" style="right: -17px;">
+								<ul class="head-list" id="mList">
+									
+									<li class="msgPad">
+										<div class="media" style="padding:0px">
+											<div class="media-left msgSender-lg">Admin Test</div>
+											<div class="media-body">
+												<p id="para|53655|1663|1378" class="mar-no text-wrap text-main text-semibold" onclick="goToMsgs(this.id)" style="cursor:pointer">Admin Test has assigned case #1663 to your account</p>
+												<small>2023-02-02 03:12:14</small>
+											</div>
+											<div class="media-right"> 
+												<button id="btn|53655|1663|1378" class="inline btn btn-sm btn-circle btn-danger" value="1" onclick="goToMsgs(this.id)"></button>
+											</div>
+										</div>
+									</li>
+									<li class="divider"></li>	
+									<li>
+										<p class="text-lg text-semibold mar-no text-main"><a href="../user/message.php"><i class="demo-pli-mail icon-lg icon-fw"></i> <strong>Read All Messages</strong></a></p>
+									</li>
+								</ul>
+							</div>
+						<div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 20px; transform: translate(0px, 0px);"></div></div></div>
+					</div>
+				</li>
+				<li id="dropdown-user" class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+						<span class="ic-user pull-right"><i class="demo-pli-male"></i></span>
+					</a><div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default"><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+						</a><ul class="head-list"><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+							</a><li><a href="#" data-toggle="dropdown" class="dropdown-toggle text-right"></a><a href="../user/message.php"><i class="demo-pli-male icon-lg icon-fw"></i> You have 1 messages.</a></li>
+							<li><a href="#"><i class="demo-pli-gear icon-lg icon-fw"></i>10.0.1.6</a></li>
+							<li><a href="#"><i class="demo-pli-gear icon-lg icon-fw"></i> Server Time 08:20:27</a></li>
+							<li><a href="../logout.php"><i class="demo-pli-computer-secure icon-lg icon-fw"></i> Lock screen</a></li>
+							<li><a href="../logout.php"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="aside-toggle">
+						<i class="demo-pli-dot-vertical"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<script>
+function goToMsgs(val){
+	var msgVal = val;
+	idValue = val.split("|");
+	var pos = idValue[0];
+	var markMsg = idValue[1];
+	var targetC = idValue[2];
+	var targetP = idValue[3];
+	if(pos=="profile"){}else{
+	var indicatorBtn = 'btn|'+markMsg+'|'+targetC+'|'+targetP;
+	document.getElementById(indicatorBtn).classList.remove("btn-danger");
+	document.getElementById(indicatorBtn).classList.add("btn-success");
+	}
+	$.ajax({
+			type: "POST",
+			url: "../ajaxControl.php",
+			data:{msgVal:msgVal},
+			dataType: 'json',
+			success: function(data){
+				var msg = data.msg;
+				var url = data.url;
+				console.log(msg);
+				var win = window.open(url,'_self');
+				win.focus();
+		}
+	});
+
+}
+
+
+
+
+
+
+
+</script>		<div class="boxed">
+			<div id="content-container">
+				<div id="page-head">
+					<ol class="breadcrumb">
+						<li><a href="dashboard.php"><i class="demo-pli-home"></i></a></li>
+						<li><a href="#.php">Groups</a></li>
+					</ol>
+				</div>
+				<div id="page-content" style="padding-top:0px">
+					<div class="fixed-fluid">
+						<div class="row wrapper border-bottom page-heading">
+							<div class="col-md-12 alert alert-success" id="msg" style="display:none"></div>
+						</div>
+					</div>
+					<div class="col-lg-12">
+						<div class="tab-base">
+							<ul class="nav nav-tabs">
+								<li class="active"><a data-toggle="tab" href="#tab-1" aria-expanded="true">Physicians</a></li>
+								<li class=""><a data-toggle="tab" href="#tab-2" aria-expanded="false">Surgery</a></li>
+								<li class=""><a data-toggle="tab" href="#tab-3" aria-expanded="false">Affiliated</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="tab-1" class="tab-pane active">
+									<div class="panel">
+					    			<div class="panel-heading">
+					        		<h3 class="panel-title">Physicians Group</h3>
+					    			</div>
+										<div class="panel-body">
+											<div class="row">
+												<div id="PHYtbl_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="PHYtbl_length"><label>Show <select name="PHYtbl_length" aria-controls="PHYtbl" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="PHYtbl_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="PHYtbl" style="width: 450px; display: inline-block;"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="PHYtbl" class="table table-hover table-responsive table-striped table-bordered dataTable no-footer" style="padding-top:10px" cellspacing="0" cellpadding="2" role="grid" aria-describedby="PHYtbl_info">
+													<thead>
+														<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="PHYtbl" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Id: activate to sort column descending" style="width: 237.719px;">Id</th><th class="sorting" tabindex="0" aria-controls="PHYtbl" rowspan="1" colspan="1" aria-label="Group Name: activate to sort column ascending" style="width: 1257.28px;">Group Name</th></tr>
+													</thead>
+													<tbody>
+														
+														
+														
+														
+														
+														
+													<tr role="row" class="odd">
+															<td class="sorting_1">22</td>
+															<td>Gastroenterology Associates P.A</td>
+														</tr><tr role="row" class="even">
+															<td class="sorting_1">23</td>
+															<td>OSS Health</td>
+														</tr><tr role="row" class="odd">
+															<td class="sorting_1">24</td>
+															<td>Urology Associates, P.C.</td>
+														</tr><tr role="row" class="even">
+															<td class="sorting_1">25</td>
+															<td>South Bend Orthopaedic Associates</td>
+														</tr><tr role="row" class="odd">
+															<td class="sorting_1">26</td>
+															<td>Norman Gastroenterology Associates</td>
+														</tr></tbody>
+												</table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="PHYtbl_info" role="status" aria-live="polite">Showing 1 to 5 of 5 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="PHYtbl_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="PHYtbl_previous"><a href="#" aria-controls="PHYtbl" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="PHYtbl" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="PHYtbl_next"><a href="#" aria-controls="PHYtbl" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>											</div>
+										</div>
+									</div>
+								</div>
+								<div id="tab-2" class="tab-pane">
+									<div class="panel">
+					    			<div class="panel-heading">
+					        		<h3 class="panel-title">Surgery Groups</h3>
+					    			</div>
+										<div class="panel-body">
+											<div class="row">
+												<div id="SURGtbl_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="SURGtbl_length"><label>Show <select name="SURGtbl_length" aria-controls="SURGtbl" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="SURGtbl_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="SURGtbl" style="width: 450px; display: inline-block;"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="SURGtbl" class="table table-hover table-responsive table-striped table-bordered dataTable no-footer" style="padding-top:10px" cellspacing="0" cellpadding="2" role="grid" aria-describedby="SURGtbl_info">
+													<thead>
+														<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="SURGtbl" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Id: activate to sort column descending" style="width: 0px;">Id</th><th class="sorting" tabindex="0" aria-controls="SURGtbl" rowspan="1" colspan="1" aria-label="Group Name: activate to sort column ascending" style="width: 0px;">Group Name</th></tr>
+													</thead>
+													<tbody>
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+														
+												<tr role="row" class="odd">
+														<td class="sorting_1">38</td>
+														<td>Surgery Partners</td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">39</td>
+														<td>Alabama Colon &amp; Rectal Institue P.C</td>
+													</tr><tr role="row" class="odd">
+														<td class="sorting_1">40</td>
+														<td>ASD Management</td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">41</td>
+														<td>Gastro One</td>
+													</tr><tr role="row" class="odd">
+														<td class="sorting_1">42</td>
+														<td>Gastroenterology Associates of Columbus</td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">43</td>
+														<td>GI Associates</td>
+													</tr><tr role="row" class="odd">
+														<td class="sorting_1">44</td>
+														<td>Hattiesburg G.I Associates</td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">45</td>
+														<td>Health Crest Surgical Partners</td>
+													</tr><tr role="row" class="odd">
+														<td class="sorting_1">46</td>
+														<td>Mississippi Sports Medicine</td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">47</td>
+														<td>Objective Surgical</td>
+													</tr></tbody>
+											</table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="SURGtbl_info" role="status" aria-live="polite">Showing 1 to 10 of 28 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="SURGtbl_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="SURGtbl_previous"><a href="#" aria-controls="SURGtbl" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="SURGtbl" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button "><a href="#" aria-controls="SURGtbl" data-dt-idx="2" tabindex="0">2</a></li><li class="paginate_button "><a href="#" aria-controls="SURGtbl" data-dt-idx="3" tabindex="0">3</a></li><li class="paginate_button next" id="SURGtbl_next"><a href="#" aria-controls="SURGtbl" data-dt-idx="4" tabindex="0">Next</a></li></ul></div></div></div></div>										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="tab-3" class="tab-pane">
+								<div class="panel">
+					    		<div class="panel-heading">
+					       		<h3 class="panel-title">Affiliated Groups</h3>
+					    		</div>
+									<div class="panel-body">
+										<div class="row">
+											<div id="AFFtbl_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="AFFtbl_length"><label>Show <select name="AFFtbl_length" aria-controls="AFFtbl" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-6"><div id="AFFtbl_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="AFFtbl" style="width: 450px; display: inline-block;"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="AFFtbl" class="table table-hover table-responsive table-striped table-bordered dataTable no-footer" style="padding-top:10px" cellspacing="0" cellpadding="2" role="grid" aria-describedby="AFFtbl_info">
+												<thead>
+													<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="AFFtbl" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Id: activate to sort column descending" style="width: 0px;">Id</th><th class="sorting" tabindex="0" aria-controls="AFFtbl" rowspan="1" colspan="1" aria-label="Group Name: activate to sort column ascending" style="width: 0px;">Group Name</th></tr>
+												</thead>
+												<tbody>
+													
+													
+													
+												<tr role="row" class="odd">
+														<td class="sorting_1">7</td>
+														<td>Green Imaging </td>
+													</tr><tr role="row" class="even">
+														<td class="sorting_1">9</td>
+														<td>Covenant Physician Partners</td>
+													</tr></tbody>
+											</table></div></div><div class="row"><div class="col-sm-5"><div class="dataTables_info" id="AFFtbl_info" role="status" aria-live="polite">Showing 1 to 2 of 2 entries</div></div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="AFFtbl_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="AFFtbl_previous"><a href="#" aria-controls="AFFtbl" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="AFFtbl" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="AFFtbl_next"><a href="#" aria-controls="AFFtbl" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div></div>										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<aside id="aside-container">
+	<div id="aside">
+		<div class="nano has-scrollbar">
+			<div class="nano-content" tabindex="0" style="right: -17px;">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="#demo-asd-tab-1" data-toggle="tab"><i class="demo-pli-speech-bubble-7 icon-lg" onclick="clearSideBarElements()"></i>Message</a></li>
+					<li><a href="#demo-asd-tab-2" data-toggle="tab"><i class="demo-pli-information icon-lg icon-fw" onclick="clearSideBarElements()"></i> Notes</a></li>
+					<li><a href="#demo-asd-tab-3" data-toggle="tab"><i class="demo-pli-wrench icon-lg icon-fw" onclick="clearSideBarElements()"></i> Settings</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="demo-asd-tab-1">
+						<p class="pad-all text-main text-sm text-uppercase text-bold">
+							<span class="pull-right badge badge-warning">3</span> Users
+						</p>
+						<div class="list-group bg-trans">
+							<a href="#" class="list-group-item">
+								<div class="media-left pos-rel">
+									<img class="img-circle img-xs" src="../img/profile-photos/1.png" alt="Profile Picture">
+									<i class="badge badge-warning badge-stat badge-icon pull-left"></i>
+								</div>
+								<div class="media-body">
+									<span class="pull-right badge badge-success">Online</span><p class="mar-no text-main">Care Coordinator Test</p>
+									<small class="text-muteds">Idle</small>
+								</div>
+							</a>
+							<div class="list-group bg-trans">
+								<div class="list-group-item">
+									<div class="sidebar-title"><h3><i class="fa fa-comments-o"></i> Site Messaging</h3></div>
+									<div class="sidebar-message">
+										<div class="media-body">
+											<div id="MessagingMsg" style="display:none;color:#red"></div>
+											<label class="control-label" style="margin-top:10px">To</label>
+											<select class="form-control valid" id="messageTo">
+												<option value="N">Select</option>
+												<option value="338">Admin , PriceMDs</option><option value="343">Binyamin , Shaun</option><option value="361">Bragonier , Chad</option><option value="340">Buls , Rachel</option><option value="413">Cobaugh , Rebekah</option><option value="360">Coleman , Cindy</option><option value="425">Collier , Renee</option><option value="357">Cordero , Andrea</option><option value="345">Damavandi , Moshe</option><option value="325">Davis , Will</option><option value="363">Deletetsky , Eric</option><option value="341">Fishkin , Libby</option><option value="346">Fowler , Cayli</option><option value="371">Galloway , Kyle</option><option value="418">Gofen , Evgeny</option><option value="342">Goldblatt , Leah</option><option value="404">Goodman , Kim</option><option value="332">Grossman , Maximillian</option><option value="367">Grossman , Marc</option><option value="354">Grossman , Donna </option><option value="329">Grott , Melissa</option><option value="324">Hammons , Lindsay</option><option value="323">Iarossi , Corte</option><option value="385">Jakubowicz , Shirel</option><option value="326">Jaramillo , Mary Lou</option><option value="353">Karasik , Lisa </option><option value="347">Kirkham , Rachel</option><option value="298">Komar , John</option><option value="350">Livingston , Ashley</option><option value="389">Martinez , Natalie</option><option value="415">Matthews , Corey</option><option value="327">McIntosh , Holley</option><option value="300">McRoy , Kissner</option><option value="407">Navigator/Imaging Case , Nurse</option><option value="422">Palshin , Alexey</option><option value="334">Panella , Dante</option><option value="396">Panella , Payton</option><option value="405">Phipps , Jeff</option><option value="423">Phipps , Jeffery</option><option value="359">Quinn , John</option><option value="339">Quinn , Caitlin</option><option value="391">Quinones , Melqui</option><option value="388">Satorius , Jennifer</option><option value="420">Sokolova , Anastasiya</option><option value="358">Stenson , Carlene</option><option value="328">Stuart  , Ashley</option><option value="424">Talbert , Rick</option><option value="429">Test , Admin</option><option value="430">Test , Net Dev</option><option value="428">Test , Care Coordinator</option><option value="426">Test , Nurse</option><option value="431">Test , Client Admin</option><option value="432">Test , Developer</option><option value="435">Test , Client service</option><option value="370">Thompson , Cindy </option><option value="333">Tsolakakis , Nick</option><option value="406">Vernikoff , Lila</option><option value="344">Wasserman , Shoshana</option><option value="362">Wheeler , Melissa</option><option value="414">Wilkinson , Daniela</option><option value="408">Winston , Kat</option><option value="335">Winston , Kathy</option><option value="419">Zhiharev , Sergey</option>											</select>
+											<div class="form-group">
+												<label>Message</label><textarea id="message" class="form-control" placeholder="Your message" rows="3"></textarea>
+											</div>
+											<button class="btn btn-success btn-block" value="SIDE|1" onclick="sendGlobalMessage(this.value)" ;="">Send</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<p class="pad-all text-main text-sm text-uppercase text-bold">News</p>
+						<div class="pad-hor">
+							<small><em>Last Update : Dec 12, 2021<br>build 11AWS132021</em></small>
+						</div>
+					</div>
+					<!--Second tab -->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<div class="tab-pane fade" id="demo-asd-tab-2">
+						<div class="list-group bg-trans">
+							<div class="list-group-item">
+								<div class="sidebar-title"><h3><i class="fa fa-cube"></i> Private Notes</h3></div>
+								<div class="sidebar-message">
+									<div class="media-body">
+										<div id="NotesMsg" style="display:none;color:#red"></div>
+										<div class="form-group">
+											<label>Subject</label>
+											<input type="text" id="sideBarNoteSubject" class="form-control" placeholder="Subject">
+										</div>
+										<div class="form-group">
+											<label>Notes</label><textarea id="sideBarNotes" class="form-control" placeholder="Your note" rows="3"></textarea>
+										</div>
+										<button class="btn btn-success btn-block" onclick="addNotes()" ;="">Save</button>
+									</div>
+								</div>
+								<div class="sidebar-message">
+									<div id="sideBarNotesRetrieved"></div>
+								</div>
+							</div>
+						</div>
+					<hr>
+					<div class="text-center">
+						<div><i class="demo-pli-old-telephone icon-3x"></i></div>
+							Support?
+							<p class="text-lg text-semibold text-main"> (813) 818-4531 </p>
+							<small><em>We are here 24/7</em></small>
+						</div>
+					</div>
+					<!--Third tab (Settings)-->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<!--Third tab (Settings)-->
+					<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+					<div class="tab-pane fade" id="demo-asd-tab-3">
+					
+					
+					
+					
+					</div>
+				</div>
+			</div>
+		<div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 916px; transform: translate(0px, 0px);"></div></div></div>
+	</div>
+</aside>
+<!--END ASIDE-->
+
+
+<script>
+
+function sendGlobalMessage(val){
+	var	idValue = val.split("|");
+	var process = idValue[0];
+	var msgType = idValue[1];
+	var sendMessage = val;
+
+console.log("sendGlobalMessage");
+console.log(val);
+console.log(428);
+
+	switch(process){
+		case "SIDE":
+console.log("in SWitch");
+			document.getElementById("MessagingMsg").innerHTML = "";
+			var messageTo = document.getElementById("messageTo").value;
+			var messageFrom = "428";
+			var message = document.getElementById("message").value;
+
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("MessagingMsg").style.display = 'block';
+						document.getElementById("MessagingMsg").style.color = 'red';
+						document.getElementById("MessagingMsg").innerHTML = msg;
+					}else{
+						document.getElementById("MessagingMsg").style.display = 'block';
+						document.getElementById("MessagingMsg").style.color = 'green';
+						document.getElementById("MessagingMsg").innerHTML = msg;
+						document.getElementById("message").value ='';
+					}
+				}
+			});
+		break;
+		case "OUT":
+			var messageTo = document.getElementById("messageToProfile").value;
+			var messageFrom = "428";
+			var message = document.getElementById("messageProfile").value;
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorMsgProfile").style.display = 'block';
+						document.getElementById("errorMsgProfile").innerHTML = msg;
+					}else{
+						document.getElementById("errorMsgProfile").style.display = 'none';
+						document.getElementById("errorMsgProfile").innerHTML = '';
+						$("#newProfileMessage").modal('hide');
+						getMessagingList(val);
+					}
+				}
+			});
+		break;
+		case "ADDnote":
+console.log("in SWitch-ADD");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						$("#noteModal").modal('hide');
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+		break;
+		case "EDITnote":
+console.log("in SWitch-EDIT");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						$("#noteModal").modal('hide');
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+		break;
+		case "DELETEnote":
+console.log("in SWitch-DELETE");
+			var subject = document.getElementById("noteSubject").value;
+			var note  = document.getElementById("noteValue").value;
+			var sendMessage = val+'|'+subject+'|'+note;
+			var messageTo = "1";
+			var messageFrom = "1";
+			var message = "1"
+			$.ajax({
+				type: "POST",
+				url: "../ajaxControl.php",
+				data:{sendMessage:sendMessage,messageTo:messageTo,message:message,messageFrom:messageFrom},
+				dataType: 'json',
+				success: function(data){
+					var msg = data.msg;
+					var alarm = data.alarm;
+					console.log(msg);
+					if(alarm==2){
+						document.getElementById("errorModalNotes").style.display = 'block';
+						document.getElementById("errorModalNotes").innerHTML = msg;
+					}else{
+						document.getElementById("errorModalNotes").style.display = 'none';
+						document.getElementById("errorModalNotes").innerHTML = '';
+						getNotesRefreshPMD();
+						getNotesRefreshClient();
+					}
+				}
+			});
+
+
+
+
+		break;
+
+
+	}
+}
+
+
+
+
+
+
+
+function getSideBarNotesList(){
+	document.getElementById("sideBarNotes").innerHTML = "";
+	var getNotesList = "428";
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:'SideBarNotesList='+getNotesList,
+		success: function(data){
+			$("#sideBarNotesRetrieved").html(data);
+		}
+	});
+}
+
+function addNotes(){
+	document.getElementById("NotesMsg").innerHTML = "";
+	document.getElementById("NotesMsg").style.display = 'none';
+	var sideBarNotes = document.getElementById("sideBarNotes").value;
+	var sideBarNoteSubject = document.getElementById("sideBarNoteSubject").value;
+	var idUser = "428";
+	var saveSideBarNote = "1";
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:{saveSideBarNote:saveSideBarNote,idUser:idUser,sideBarNotes:sideBarNotes,sideBarNoteSubject:sideBarNoteSubject},
+		dataType: 'json',
+		success: function(data){
+			var msg = data.msg;
+			var alarm = data.alarm;
+			if(alarm==2){
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'red';
+				document.getElementById("NotesMsg").innerHTML = msg;
+			}else{
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'green';
+				document.getElementById("NotesMsg").innerHTML = msg;
+				document.getElementById("sideBarNotes").value ='';
+				document.getElementById("sideBarNoteSubject").value ='';
+				getSideBarNotesList();
+			}
+		}
+	});
+}
+
+function clearSideBarElements(){
+console.log("CLEAR");
+	document.getElementById("NotesMsg").innerHTML = ' ';
+	document.getElementById("NotesMsg").style.display = 'none';
+	document.getElementById("sideBarNotes").value = ' ';
+	document.getElementById("sideBarNoteSubject").value = ' ';
+	document.getElementById("MessagingMsg").innerHTML = ' ';
+	document.getElementById("message").value ='';
+}
+
+function deleteSideBarNote(noteId){
+	var deleteSideBarNoteFrom = noteId;
+console.log(deleteSideBarNoteFrom);
+	$.ajax({
+		type: "POST",
+		url: "../ajaxControl.php",
+		data:{deleteSideBarNoteFrom:deleteSideBarNoteFrom},
+		dataType: 'json',
+		success: function(data){
+			var msg = data.msg;
+			var alarm = data.alarm;
+			console.log(msg);
+			if(alarm==2){
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'red';
+				document.getElementById("NotesMsg").innerHTML = msg;
+			}else{
+				document.getElementById("NotesMsg").style.display = 'block';
+				document.getElementById("NotesMsg").style.color = 'green';
+				document.getElementById("NotesMsg").innerHTML = msg;
+				document.getElementById("sideBarNotes").value ='';
+				document.getElementById("sideBarNoteSubject").value ='';
+				getSideBarNotesList();
+			}
+		}
+	});
+}
+</script>
+
+
+
+
+
+
+  
+		
+<!--MAIN NAVIGATION-->
+<nav id="mainnav-container">
+    <div id="mainnav">
+        <!--It will only appear on small screen devices.-->
+        <div class="mainnav-brand">
+            <a href="../dashboard.php" class="brand"><img src="../img/client/pmds_web_panel_bmc_c.fw.png" alt="PriceMDs" class="brand-icon"></a>
+            <a href="#" class="mainnav-toggle"><i class="pci-cross pci-circle icon-lg"></i></a>
+        </div>
+        <!--Menu-->
+        <div id="mainnav-menu-wrap">
+            <div class="nano has-scrollbar">
+                <div class="nano-content" tabindex="0" style="right: -17px;">
+                    <!--Profile Widget-->
+                    <div id="mainnav-profile" class="mainnav-profile">
+                        <div class="profile-wrap text-center">
+                            <div class="pad-btm"><img class="img-circle img-md" id="profilePic" src="../img/profile-photos/1.png" alt="Profile Picture"></div>
+                            <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                <span class="pull-right dropdown-toggle"><i class="dropdown-caret"></i></span>
+                                <p class="mnp-name">Care Coordinator Test</p>
+                            </a>
+                        </div>
+                        <div id="profile-nav" class="collapse list-group bg-trans">
+                            <a href="../user/profile.php" class="list-group-item"><i class="demo-pli-male icon-lg icon-fw"></i> View Profile</a>
+                            <a href="../user/message.php" class="list-group-item"><i class="demo-pli-male icon-lg icon-fw"></i> Messages</a>
+                            <p class="list-group-item"><i class="demo-pli-information icon-lg icon-fw"></i><a href="mailto:alivingston@pricemds.com?subject=Ask an Expert">Ask an Expert</a>
+                            </p>
+                            <p class="list-group-item"><i class="demo-pli-information icon-lg icon-fw"></i><a href="mailto:jkomar@iasun.com?subject=Technical HELP">Tech Help</a></p>
+                            <a href="../logout.php" class="list-group-item"><i class="demo-pli-unlock icon-lg icon-fw"></i> Logout</a>
+                        </div>
+                    </div>
+                    <div id="mainnav-shortcut" class="hidden">
+                        <ul class="list-unstyled shortcut-wrap">
+                            <li class="col-xs-3" data-content="My Profile" data-original-title="" title="">
+                                <a class="shortcut-grid" href="../user/profile.php">
+                                    <div class="icon-wrap icon-wrap-sm icon-circle bg-mint"><i class="demo-pli-male"></i></div>
+                                </a>
+                            </li>
+                            <li class="col-xs-3" data-content="Lock Screen" data-original-title="" title="">
+                                <a class="shortcut-grid" href="../logout.php">
+                                    <div class="icon-wrap icon-wrap-sm icon-circle bg-purple"><i class="demo-pli-lock-2"></i></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul id="mainnav-menu" class="list-group">
+                        <li class="list-header">Navigation</li>
+                        <li>
+                                        <a href="../dashboard.php">
+                                            <i class="demo-psi-home icon-lg"></i>
+                                            <span class="menu-title">Dashboard</span></a></li><li>
+                                        <a href="../facility/facilitySearch.php">
+                                            <i class="fa fa-search"></i>
+                                            <span class="menu-title">PriceMDs Directory Search</span></a></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-boot-2"></i>
+                                            <span class="menu-title">Case Management</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../case/patients.php">Patients</a></li></ul></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-pen-5"></i>
+                                            <span class="menu-title">Client Management</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../admin/clients.php">Clients</a></li><li><a href="../admin/clients.php">Add New Client</a></li><li><a href="../admin/clients.php">Add New Employer Group</a></li></ul></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-receipt-4"></i>
+                                            <span class="menu-title">Procedure &amp; Specialties</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../admin/cpt2.php">CPT &amp; Specialty</a></li></ul></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-bar-chart"></i>
+                                            <span class="menu-title">Reporting</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../reporting/clientReports.php">Client</a></li><li><a href="../reporting/globalReports.php">Global Admin</a></li><li><a href="../reporting/report.php">Charts</a></li></ul></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-repair"></i>
+                                            <span class="menu-title">Facility &amp; Physicians</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../facilities/facility.php">Facility</a></li><li><a href="../physicians/physicians.php">Physicians</a></li></ul></li><li>
+                                        <a href="">
+                                            <i class="demo-pli-warning-window"></i>
+                                            <span class="menu-title">Groups</span><i class="arrow"></i></a><ul class="collapse" aria-expanded="false"><li><a href="../groups/affiliateGroup.php">Affiliate Groups</a></li><li><a href="../groups/physicianGroup.php">Physician Groups</a></li><li><a href="../groups/surgicalGroup.php">Surgical Groups</a></li><li><a href="../admin/groups.php">Groups</a></li></ul>                    </li></ul>
+                </div>
+            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 916px; transform: translate(0px, 0px);"></div></div></div>
+        </div>
+    </div>
+</nav>
+
+<script type="text/javascript">
+    function prepareDown() {
+        $("#downModal").modal('show');
+    }
+</script>
+
+<!--END MAIN NAVIGATION-->
+
+<div class="modal fade" id="downModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Download Preparing</h5>
+                <button type="button" style="margin-top:-20px" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div style="padding:20px">
+                                <p>The CSV is now being created, you will receive a dialog box asking where to save the
+                                    download. You can save it anywhere on your computer</p>
+                                <p>Depending on the quantity of facilities within the system this can take over a minute
+                                    to compile and present the list for download.</p>
+                                <p>Close this window when completed and open up the downloaded CSV to view the
+                                    facilities.</p>
+
+                                <div style="margin:0px;margin:auto;text-align:center">
+                                    <img src="https://crustbuster.com/wp-content/plugins/super-forms/assets/images/spinner-2x.gif">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+	</div>
+	<footer id="footer">
+	<div class="hide-fixed pull-right pad-rgt">Version <strong>3.1.0 </strong> | build 11AWS132021</div>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<p class="pad-lft">© 2021 PriceMDs</p>
+</footer>
+	<button class="scroll-top btn"><i class="pci-chevron chevron-up"></i></button>
+<div class="mainnav-backdrop"></div><div class="mainnav-backdrop"></div></div>
+
+<script>
+	$(document).ready(function(){
+	getSideBarNotesList();
+	$('#PHYtbl').DataTable();
+	$('#SURGtbl').DataTable();
+	$('#AFFtbl').DataTable();
+  $('.dataTables_filter input[type="search"]').css(
+     {'width':'450px','display':'inline-block'}
+  );
+
+	});
+</script>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/nifty.min.js"></script>
+
+<script src="../plugins/datatables/media/js/jquery.dataTables.js"></script>
+<script src="../plugins/datatables/media/js/dataTables.bootstrap.js"></script>
+<script src="../plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+<script src="../timeManager.js"></script>
+
+
+
+<script src="../polling.js"></script>
+
+
+
+
+</body></html>
