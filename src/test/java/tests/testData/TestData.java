@@ -16,7 +16,7 @@ public class TestData {
 
     }
 
-    public class roleCredentials {
+    public static class roleCredentials {
         public static final String[][]
                 roleCredentials =
                 {
@@ -30,7 +30,7 @@ public class TestData {
                 };
     }
 
-    public class roleMenu {
+    public static class roleMenu {
         public static final String[][]
                 roleMenu =
                 {
