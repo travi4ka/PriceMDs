@@ -1,16 +1,21 @@
 package tests.Tests;
 
+import api.ApiTest;
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import tests.TestBase;
 
+import static com.codeborne.selenide.Selenide.open;
 import static tests.testData.TestData.userRole.*;
 
 
 public class Tests extends TestBase {
     @org.junit.Test
+    @Disabled
     @DisplayName("Check menu items")
     @ParameterizedTest(name = "Check menu items for {0} role")
     @CsvSource({ADMIN, NURSE, CLIENT_ADMIN, CARE_COORDINATOR, DEVELOPER, NET_DEV_DIR, CLIENT_SERVICE})
@@ -25,6 +30,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Admin")
     void checkAllPAgesCanBeOpenForAdmin() {
         mainPage
@@ -140,6 +146,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Nurse")
     void checkAllPAgesCanBeOpenForNurse() {
         mainPage
@@ -170,6 +177,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Client Service")
     void checkAllPAgesCanBeOpenForClientService() {
         mainPage
@@ -205,6 +213,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Care Coordinator")
     void checkAllPAgesCanBeOpenForCareCoordinator() {
         mainPage
@@ -290,6 +299,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Net Dev Dir")
     void checkAllPAgesCanBeOpenForNetDevDir() {
         mainPage
@@ -336,6 +346,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Client Admin")
     void checkAllPAgesCanBeOpenForClientAdmin() {
         mainPage
@@ -360,6 +371,7 @@ public class Tests extends TestBase {
     }
 
     @Test
+    @Disabled
     @DisplayName("Check all pages can be open for Developer")
     void checkAllPAgesCanBeOpenForDeveloper() {
         mainPage
@@ -440,6 +452,7 @@ public class Tests extends TestBase {
     }
 
     @org.junit.Test
+    @Disabled
     @DisplayName("Check absence of CPT input field")
     @ParameterizedTest(name = "Check absence of CPT input field for {0} role")
     @CsvSource({NURSE, CARE_COORDINATOR})

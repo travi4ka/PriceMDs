@@ -5,6 +5,7 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.authorized.administrator.archive.Administrator_ArchivePage;
 import pages.authorized.administrator.caseAssign.Administrator_CaseAssignPage;
 import pages.authorized.administrator.globalView.Administrator_GlobalViewPage;
@@ -30,6 +31,8 @@ import pages.authorized.reporting.client.Reporting_ClientPage;
 import pages.authorized.reporting.globalAdmin.Reporting_GlobalAdminPage;
 import pages.authorized.searchFacility.SearchFacilityPage;
 import pages.unauthorized.mainPage.MainPage;
+
+import java.util.Map;
 
 public class TestBase {
     public Menu menu = new Menu();
@@ -61,9 +64,24 @@ public class TestBase {
     @BeforeEach
     public void beforeAll() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.baseUrl = "https://stage.pricemds.com/";
-        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = System.getProperty("baseUrl","https://stage.pricemds.com/");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
+        Configuration.browser = System.getProperty("browser","chrome");
+        switch (Configuration.browser) {
+            case "chrome" -> Configuration.browserVersion = "latest";
+            case "opera" -> Configuration.browserVersion = "latest";
+            case "safari" -> Configuration.browserVersion = "15.0";
+            case "firefox" -> Configuration.browserVersion = "109.0";
+        }
+        Configuration.remote = "http://localhost:4444/wd/hub";
+
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", false
+        ));
+        Configuration.browserCapabilities = capabilities;
     }
 
     @AfterEach
