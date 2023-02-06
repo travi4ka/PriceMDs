@@ -69,12 +69,12 @@ public class TestBase {
         Configuration.timeout = 10_000;
         Configuration.browser = System.getProperty("browser","chrome");
         switch (Configuration.browser) {
-            case "chrome" -> Configuration.browserVersion = "latest";
-            case "opera" -> Configuration.browserVersion = "latest";
+            case "chrome" -> Configuration.browserVersion = "100.0";
+            case "opera" -> Configuration.browserVersion = "85.0";
             case "safari" -> Configuration.browserVersion = "15.0";
-            case "firefox" -> Configuration.browserVersion = "109.0";
+            case "firefox" -> Configuration.browserVersion = "98.0";
         }
-        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
