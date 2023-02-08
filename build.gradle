@@ -25,15 +25,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation (
-            'org.junit.jupiter:junit-jupiter:5.9.2',
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.9.1',
             'com.codeborne:selenide:6.11.0',
+            'com.github.javafaker:javafaker:1.0.2',
+            'io.rest-assured:rest-assured:5.3.0',
             'io.qameta.allure:allure-selenide:2.20.1',
-            'com.opencsv:opencsv:5.7.1',
             'org.slf4j:slf4j-simple:2.0.6')
-    testImplementation 'org.testng:testng:7.1.0'
-    testImplementation 'io.rest-assured:rest-assured:5.3.0'
-    testImplementation 'junit:junit:4.13.1'
 }
 
 tasks.withType(JavaCompile).configureEach {
@@ -44,6 +42,120 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
 }
 
+task regress_all(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param")
+    }
+}
+
+task smoke_all(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param")
+    }
+}
+
+task smoke_nurse(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
+    }
+}
+
+task regress_nurse(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
+    }
+}
+
+task smoke_admin(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task regress_admin(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task smoke_careCoordinator(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task regress_careCoordinator(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task smoke_clientAdmin(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task regress_clientAdmin(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task smoke_clientService(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task regress_clientService(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+    }
+}
+
+task smoke_developer(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
+    }
+}
+
+task regress_developer(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
+    }
+}
+
+task smoke_netDevDir(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke")
+        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
+    }
+}
+
+task regress_netDevDir(type: Test) {
+    useJUnitPlatform {
+        includeTags("Smoke", "Regression")
+        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
+    }
+}
+
 test {
     useJUnitPlatform()
 }
+sourceCompatibility = JavaVersion.VERSION_1_9
+targetCompatibility = JavaVersion.VERSION_1_9

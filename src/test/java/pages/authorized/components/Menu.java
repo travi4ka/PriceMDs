@@ -1,14 +1,11 @@
 package pages.authorized.components;
 
 import com.codeborne.selenide.SelenideElement;
-import com.opencsv.CSVReader;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;

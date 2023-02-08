@@ -3,8 +3,12 @@ package tests.testData;
 import static tests.testData.TestData.userRole.*;
 
 public class TestData {
+    public static final String
+            MAIN_URL = System.getProperty("baseUrl", "https://stage.pricemds.com/"),
+            MAIN_ADMIN_EMAIL = "sergey.zhiharev@mbicycle.com",
+            MAIN_ADMIN_PASSWORD = "Mbicycle1!";
 
-    public class userRole {
+    public static class userRole {
         public static final String
                 ADMIN = "ADMIN",
                 NURSE = "NURSE",
@@ -13,20 +17,19 @@ public class TestData {
                 NET_DEV_DIR = "NET_DEV_DIR",
                 CLIENT_ADMIN = "CLIENT_ADMIN",
                 DEVELOPER = "DEVELOPER";
-
     }
 
-    public static class roleCredentials {
+    public static class roleRoleId {
         public static final String[][]
-                roleCredentials =
+                roleRoleId =
                 {
-                        {ADMIN, "travatravi4ka+4@gmail.com", "Travi4ka1!"},
-                        {NURSE, "travatravi4ka+1@gmail.com", "Travi4ka1!"},
-                        {CLIENT_SERVICE, "travatravi4ka+2@gmail.com", "Travi4ka1!"},
-                        {CARE_COORDINATOR, "travatravi4ka+3@gmail.com", "Travi4ka1!"},
-                        {NET_DEV_DIR, "travatravi4ka+5@gmail.com", "Travi4ka1!"},
-                        {CLIENT_ADMIN, "travatravi4ka+6@gmail.com", "Travi4ka1!"},
-                        {DEVELOPER, "travatravi4ka+813@gmail.com", "Travi4ka1!"}
+                        {ADMIN, "4"},
+                        {NURSE, "1"},
+                        {CLIENT_SERVICE, "2"},
+                        {CARE_COORDINATOR, "3"},
+                        {NET_DEV_DIR, "5"},
+                        {CLIENT_ADMIN, "6"},
+                        {DEVELOPER, "813"}
                 };
     }
 

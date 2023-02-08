@@ -1,13 +1,14 @@
 package pages.unauthorized.mainPage;
 
 import com.codeborne.selenide.SelenideElement;
+import entities.user.User;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static tests.testData.TestData.roleCredentials.roleCredentials;
+import static tests.testData.TestData.*;
 
 
 public class MainPage {
@@ -18,20 +19,20 @@ public class MainPage {
             elementToCheckThatPageIsOpen = $(byText("Sign In to your account"));
 
     @Step("Enter email")
-    public MainPage enterEmail(String email) {
-        emailInput.setValue(email);
+    public MainPage enterEmail(String value) {
+        emailInput.setValue(value);
         return this;
     }
 
     @Step("Enter password")
-    public MainPage enterPassword(String password) {
-        passwordInput.setValue(password);
+    public MainPage enterPassword(String value) {
+        passwordInput.setValue(value);
         return this;
     }
 
     @Step("Open main page")
     public MainPage openPage() {
-        open("");
+        open(MAIN_URL);
         return this;
     }
 
@@ -47,13 +48,15 @@ public class MainPage {
         return this;
     }
 
-    public MainPage enterUserCredentials(String role) {
-        for (String[] line : roleCredentials) {
-            if (line[0].equals(role)) {
-                enterEmail(line[1]);
-                enterPassword(line[2]);
-            }
-        }
+    public MainPage enterUserCredentials(User user) {
+        enterEmail(user.getEmail());
+        enterPassword(user.getPassword());
+        return this;
+    }
+
+    public MainPage enterCredentialsForMainAdmin() {
+        enterEmail(MAIN_ADMIN_EMAIL);
+        enterPassword(MAIN_ADMIN_PASSWORD);
         return this;
     }
 }

@@ -2,10 +2,13 @@ package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import helpers.Attach;
+import entities.user.User;
+import io.qameta.allure.Attachment;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.authorized.administrator.archive.Administrator_ArchivePage;
 import pages.authorized.administrator.caseAssign.Administrator_CaseAssignPage;
@@ -35,7 +38,11 @@ import pages.unauthorized.mainPage.MainPage;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static tests.testData.TestData.MAIN_URL;
+
 public class TestBase {
+
     public Menu menu = new Menu();
     public MainPage mainPage = new MainPage();
     public DashboardPage dashboardPage = new DashboardPage();
@@ -61,13 +68,16 @@ public class TestBase {
     public ClientPage clientPage = new ClientPage();
     public ClientReportPage clientReportPage = new ClientReportPage();
     public ChartReportPage chartReportPage = new ChartReportPage();
+    public User user = new User();
 
     @BeforeEach
     public void beforeAll() {
-        Configuration.baseUrl = System.getProperty("baseUrl","https://stage.pricemds.com/");
+        Configuration.baseUrl = MAIN_URL;
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
-        Configuration.browser = System.getProperty("browser","chrome");
+        Configuration.browser = "chrome";
+       // Configuration.browserVersion = "15.0";
+        //       Configuration.browser = System.getProperty("browser","chrome");
 //        switch (Configuration.browser) {
 //            case "chrome": Configuration.browserVersion = "100.0"; break;
 //            case "opera": Configuration.browserVersion = "85.0"; break;
@@ -75,7 +85,7 @@ public class TestBase {
 //            case "firefox": Configuration.browserVersion = "98.0"; break;
 //        }
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
+      //  Configuration.remote = "http://localhost:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
@@ -86,13 +96,17 @@ public class TestBase {
 
     @BeforeEach
     void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @AfterEach
     void addAttachments() {
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
+        screenshotAs();
     }
+
+    @Attachment(value = "Screenshot", type = "image/png")
+    public static byte[] screenshotAs() {
+        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }
+
 }
