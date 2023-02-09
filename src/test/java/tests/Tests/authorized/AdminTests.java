@@ -1,4 +1,4 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -6,17 +6,24 @@ import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
 import static tests.testData.TestData.userRole.ADMIN;
-import static tests.testData.TestData.userRole.NURSE;
 
 @Tag("Admin")
+@DisplayName("Admin tests")
 public class AdminTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
     @DisplayName("Check menu items")
     void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(ADMIN);
+        user.createUsersWithRole(ADMIN);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(ADMIN);
+        user.deleteUser();
     }
 
     @Test
@@ -141,6 +148,17 @@ public class AdminTests extends TestBase {
     @Test
     @DisplayName("Check that DOB of patient displays on the patients case page")
     void checkDobShows() {
-        paramTests.checkDobShows(ADMIN);
+        user.createUsersWithRole(ADMIN);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickCaseManagement()
+                .clickCaseManagement_patients();
+        caseManagement_patientsPage
+                .checkPageIsOpen()
+                .checkDobDisplays();
+        user.deleteUser();
     }
 }

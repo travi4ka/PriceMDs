@@ -1,4 +1,4 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,14 +8,22 @@ import tests.TestBase;
 import static tests.testData.TestData.userRole.NURSE;
 
 @Tag("Nurse")
+@DisplayName("Nurse tests")
 public class NurseTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
     @DisplayName("Check menu items")
     void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(NURSE);
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(NURSE);
+        user.deleteUser();
     }
 
     @Test
@@ -55,13 +63,34 @@ public class NurseTests extends TestBase {
     @Test
     @DisplayName("Check absence of CPT input field")
     void checkAbsenceOfCptField() {
-        paramTests.checkAbsenceOfCptField(NURSE);
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickSearchFacilities();
+        searchFacilityPage
+                .checkPageIsOpen()
+                .checkAbsenceOfCptInputField();
+        user.deleteUser();
     }
 
     @Tag("Smoke")
     @Test
     @DisplayName("Check that DOB of patient displays on the patients case page")
     void checkDobShows() {
-        paramTests.checkDobShows(NURSE);
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickCaseManagement()
+                .clickCaseManagement_patients();
+        caseManagement_patientsPage
+                .checkPageIsOpen()
+                .checkDobDisplays();
+        user.deleteUser();
     }
 }

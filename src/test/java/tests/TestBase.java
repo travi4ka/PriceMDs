@@ -1,6 +1,8 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import entities.user.User;
 import io.qameta.allure.Attachment;
@@ -76,7 +78,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
         Configuration.browser = "chrome";
-       // Configuration.browserVersion = "15.0";
+        // Configuration.browserVersion = "15.0";
         //       Configuration.browser = System.getProperty("browser","chrome");
 //        switch (Configuration.browser) {
 //            case "chrome": Configuration.browserVersion = "100.0"; break;
@@ -85,7 +87,7 @@ public class TestBase {
 //            case "firefox": Configuration.browserVersion = "98.0"; break;
 //        }
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-      //  Configuration.remote = "http://localhost:4444/wd/hub";
+        //  Configuration.remote = "http://localhost:4444/wd/hub";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
@@ -102,6 +104,12 @@ public class TestBase {
     @AfterEach
     void addAttachments() {
         screenshotAs();
+
+        WebDriverRunner.clearBrowserCache();
+        Selenide.clearBrowserCookies();
+        Selenide.sessionStorage().clear();
+        Selenide.localStorage().clear();
+
     }
 
     @Attachment(value = "Screenshot", type = "image/png")

@@ -1,22 +1,29 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
-import static tests.testData.TestData.userRole.CLIENT_ADMIN;
 import static tests.testData.TestData.userRole.NET_DEV_DIR;
 
 @Tag("NetDevDir")
+@DisplayName("Network Development Director tests")
 public class NetDevDirTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
     @DisplayName("Check menu items")
     void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(NET_DEV_DIR);
+        user.createUsersWithRole(NET_DEV_DIR);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(NET_DEV_DIR);
+        user.deleteUser();
     }
 
     @Test
@@ -67,6 +74,4 @@ public class NetDevDirTests extends TestBase {
                 .checkPageIsOpen();
         user.deleteUser();
     }
-
-
 }

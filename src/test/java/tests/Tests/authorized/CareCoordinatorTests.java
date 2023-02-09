@@ -1,4 +1,4 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,14 +8,22 @@ import tests.TestBase;
 import static tests.testData.TestData.userRole.*;
 
 @Tag("CareCoordinator")
+@DisplayName("Care Coordinator tests")
 public class CareCoordinatorTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
     @DisplayName("Check menu items")
     void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(CARE_COORDINATOR);
+        user.createUsersWithRole(CARE_COORDINATOR);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(CARE_COORDINATOR);
+        user.deleteUser();
     }
 
     @Test
@@ -110,13 +118,34 @@ public class CareCoordinatorTests extends TestBase {
     @Test
     @DisplayName("Check absence of CPT input field")
     void checkAbsenceOfCptField() {
-        paramTests.checkAbsenceOfCptField(CARE_COORDINATOR);
+        user.createUsersWithRole(CARE_COORDINATOR);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickSearchFacilities();
+        searchFacilityPage
+                .checkPageIsOpen()
+                .checkAbsenceOfCptInputField();
+        user.deleteUser();
     }
 
     @Tag("Smoke")
     @Test
     @DisplayName("Check that DOB of patient displays on the patients case page")
     void checkDobShows() {
-        paramTests.checkDobShows(CARE_COORDINATOR);
+        user.createUsersWithRole(CARE_COORDINATOR);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickCaseManagement()
+                .clickCaseManagement_patients();
+        caseManagement_patientsPage
+                .checkPageIsOpen()
+                .checkDobDisplays();
+        user.deleteUser();
     }
 }

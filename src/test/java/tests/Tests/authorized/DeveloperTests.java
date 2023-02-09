@@ -1,4 +1,4 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -6,24 +6,30 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
-import static tests.testData.TestData.userRole.ADMIN;
 import static tests.testData.TestData.userRole.DEVELOPER;
 
 @Tag("Developer")
+@DisplayName("Developer tests")
+@Disabled
 public class DeveloperTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
-    @Disabled
     @DisplayName("Check menu items")
-    void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(DEVELOPER);
+     void checkMenuForAllRoles() {
+        user.createUsersWithRole(DEVELOPER);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(DEVELOPER);
+        user.deleteUser();
     }
 
     @Test
     @Tag("Smoke")
-    @Disabled
     @DisplayName("Check all pages can be open for Developer")
     void checkAllPAgesCanBeOpenForDeveloper() {
         user.createUsersWithRole(DEVELOPER);
@@ -107,9 +113,19 @@ public class DeveloperTests extends TestBase {
 
     @Tag("Smoke")
     @Test
-    @Disabled
     @DisplayName("Check that DOB of patient displays on the patients case page")
     void checkDobShows() {
-        paramTests.checkDobShows(ADMIN);
+        user.createUsersWithRole(DEVELOPER);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        menu
+                .clickCaseManagement()
+                .clickCaseManagement_patients();
+        caseManagement_patientsPage
+                .checkPageIsOpen()
+                .checkDobDisplays();
+        user.deleteUser();
     }
 }

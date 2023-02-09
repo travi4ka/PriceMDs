@@ -1,22 +1,29 @@
-package tests.Tests;
+package tests.Tests.authorized;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
-import static tests.testData.TestData.userRole.CARE_COORDINATOR;
 import static tests.testData.TestData.userRole.CLIENT_ADMIN;
 
 @Tag("ClientAdmin")
+@DisplayName("Client Admin tests")
 public class ClientAdminTests extends TestBase {
-    ParamTests paramTests = new ParamTests();
 
     @Test
     @Tag("Smoke")
     @DisplayName("Check menu items")
     void checkMenuForAllRoles() {
-        paramTests.checkMenuForAllRoles(CLIENT_ADMIN);
+        user.createUsersWithRole(CLIENT_ADMIN);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkMenu(CLIENT_ADMIN);
+        user.deleteUser();
     }
 
     @Test

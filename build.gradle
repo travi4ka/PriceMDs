@@ -45,112 +45,111 @@ tasks.withType(Test) {
 task regress_all(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param")
     }
 }
 
 task smoke_all(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param")
+        excludeTags("Regression")
     }
 }
 
 task smoke_nurse(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
+        excludeTags("Regression", "CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
     }
 }
 
 task regress_nurse(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
+        excludeTags("CareCoordinator", "ClientService", "ClientAdmin", "Admin", "NetDevDir", "Developer")
     }
 }
 
 task smoke_admin(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Regression", "CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task regress_admin(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+        excludeTags("CareCoordinator", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task smoke_careCoordinator(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Regression", "Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task regress_careCoordinator(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Admin", "ClientService", "ClientAdmin", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task smoke_clientAdmin(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Regression", "Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task regress_clientAdmin(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Admin", "ClientService", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task smoke_clientService(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Regression", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task regress_clientService(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
+        excludeTags("Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "Developer", "Nurse")
     }
 }
 
 task smoke_developer(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
+        excludeTags("Regression", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
     }
 }
 
 task regress_developer(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
+        excludeTags("Admin", "ClientAdmin", "CareCoordinator", "NetDevDir", "ClientService", "Nurse")
     }
 }
 
 task smoke_netDevDir(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke")
-        excludeTags("Regression", "Param", "Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
+        excludeTags("Regression", "Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
     }
 }
 
 task regress_netDevDir(type: Test) {
     useJUnitPlatform {
         includeTags("Smoke", "Regression")
-        excludeTags("Param", "Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
+        excludeTags("Admin", "ClientAdmin", "CareCoordinator", "Developer", "ClientService", "Nurse")
     }
 }
 
