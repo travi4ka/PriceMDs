@@ -2,7 +2,7 @@ package entities.user;
 
 import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
-import pages.authorized.components.Menu;
+import pages.components.Menu;
 import pages.unauthorized.mainPage.MainPage;
 
 import java.util.HashMap;
@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Selenide.$$;
 import static io.restassured.RestAssured.given;
 import static tests.testData.TestData.*;
 import static tests.testData.TestData.roleRoleId.roleRoleId;
+import static tests.testData.TestData.userRole.*;
 
 public class User {
     Faker faker = new Faker();
@@ -49,7 +50,7 @@ public class User {
     }
 
     @Step("Create user")
-    public void createUsersWithRole(String role) {
+    public User createUsersWithRole(String role) {
         for (String[] line : roleRoleId) {
             if (role.equals(line[0])) {
                 Map<String, String> map = new HashMap<>();
@@ -82,10 +83,11 @@ public class User {
                         .statusCode(200);
             }
         }
+        return this;
     }
 
     @Step("Delete user")
-    public void deleteUser() {
+    public User deleteUser() {
         MainPage mainPage = new MainPage();
         Menu menu = new Menu();
         mainPage
@@ -98,6 +100,7 @@ public class User {
         $("input[type='search']").setValue(email);
         $$("td").findBy(text(email)).shouldBe(visible).parent().$("button[value^='DELETE']").click();
         $("#delBtnModal").click();
+        return this;
     }
 
     String getTokenForAdmin() {
@@ -116,5 +119,16 @@ public class User {
                         .extract()
                         .cookie("PHPSESSID");
 
+    }
+
+    @Step("Select random role")
+    String selectRandomRole() {
+        return faker.options().option(NURSE, ADMIN, CARE_COORDINATOR, CLIENT_ADMIN, CLIENT_SERVICE, NET_DEV_DIR);
+    }
+
+    @Step("Create random user")
+    public User createRandomUser() {
+        createUsersWithRole(selectRandomRole());
+        return this;
     }
 }

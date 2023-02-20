@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class CaseManagement_PatientsPage {
     final SelenideElement
             table = $("#demo-dt-basic"),
-            dob = $x("//tr[@id='1']/td[4]"),
+            dob = $x("(//table[@id='demo-dt-basic']//tr)[2]/td[4]"),
             firstOpenFileButton = $x("(//*[@data-original-title='Open file'])[1]"),
             patientDob = $("#patient_dob");
 

@@ -23,7 +23,7 @@ import pages.authorized.clientAdminRoleSpecific.ChartReportPage;
 import pages.authorized.clientAdminRoleSpecific.ClientPage;
 import pages.authorized.clientAdminRoleSpecific.ClientReportPage;
 import pages.authorized.clientManagement.clients.ClientManagement_ClientsPage;
-import pages.authorized.components.Menu;
+import pages.components.Menu;
 import pages.authorized.dashboard.DashboardPage;
 import pages.authorized.facilityPhysicians.facility.FacilityPhysicians_FacilityPage;
 import pages.authorized.facilityPhysicians.physicians.FacilityPhysicians_PhysiciansPage;
@@ -36,6 +36,7 @@ import pages.authorized.reporting.charts.Reporting_ChartsPage;
 import pages.authorized.reporting.client.Reporting_ClientPage;
 import pages.authorized.reporting.globalAdmin.Reporting_GlobalAdminPage;
 import pages.authorized.searchFacility.SearchFacilityPage;
+import pages.unauthorized.mainPage.ForgotPasswordPage;
 import pages.unauthorized.mainPage.MainPage;
 
 import java.util.Map;
@@ -71,6 +72,7 @@ public class TestBase {
     public ClientReportPage clientReportPage = new ClientReportPage();
     public ChartReportPage chartReportPage = new ChartReportPage();
     public User user = new User();
+    public ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
 
     @BeforeEach
     public void beforeAll() {

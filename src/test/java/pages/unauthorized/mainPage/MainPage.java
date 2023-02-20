@@ -12,11 +12,18 @@ import static tests.testData.TestData.*;
 
 
 public class MainPage {
-    public static final SelenideElement
+    final SelenideElement
             emailInput = $("#userEmail"),
             passwordInput = $("#pwd"),
             sigInButton = $$("button").findBy(text("Sign In")),
+            forgotPasswordLink = $(byText("Forgot password ?")),
             elementToCheckThatPageIsOpen = $(byText("Sign In to your account"));
+
+    @Step("Click Forgot password")
+    public MainPage clickForgotPassword() {
+        forgotPasswordLink.click();
+        return this;
+    }
 
     @Step("Enter email")
     public MainPage enterEmail(String value) {
