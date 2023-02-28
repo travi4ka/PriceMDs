@@ -4,8 +4,10 @@ import static tests.testData.TestData.userRole.*;
 
 public class TestData {
     public static final String
+//            MAIN_URL = System.getProperty("baseUrl", "https://ccs.pricemds.com/"),
             MAIN_URL = System.getProperty("baseUrl", "https://stage.pricemds.com/"),
             MAIN_ADMIN_EMAIL = "sergey.zhiharev@mbicycle.com",
+//            MAIN_ADMIN_PASSWORD = "uE2g1d6a";
             MAIN_ADMIN_PASSWORD = "Mbicycle1!";
 
     public static class userRole {

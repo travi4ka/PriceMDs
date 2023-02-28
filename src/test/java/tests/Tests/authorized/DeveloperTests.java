@@ -124,8 +124,13 @@ public class DeveloperTests extends TestBase {
                 .clickCaseManagement()
                 .clickCaseManagement_patients();
         caseManagement_patientsPage
-                .checkPageIsOpen()
-                .checkDobDisplays();
+                .checkPageIsOpen();
+        String firstDOBOnTable = caseManagement_patientsPage.getDobOfFirstElementOnTheTable();
+        caseManagement_patientsPage
+                .clickFirstOpenFileButton();
+        caseManagement_patientsPage.newCaseTab
+                .checkThatOpen()
+                .checkDobDisplays(firstDOBOnTable);
         user.deleteUser();
     }
 }

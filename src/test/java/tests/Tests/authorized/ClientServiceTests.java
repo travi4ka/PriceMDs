@@ -1,6 +1,5 @@
 package tests.Tests.authorized;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -25,55 +24,6 @@ public class ClientServiceTests extends TestBase {
                 .checkThatPageIsOpen()
                 .checkMenu(CLIENT_SERVICE);
         user.deleteUser();
-    }
-
-    @Test
-    @Tag("Smoke")
-    @DisplayName("Check that table has column days/weeks/months")
-    void checkMenuHasColumnDaysWeeksMonth() {
-        user.createUsersWithRole(CLIENT_SERVICE);
-        mainPage
-                .openPage()
-                .enterUserCredentials(user)
-                .clickSignInButton();
-        dashboardPage
-                .checkThatPageIsOpen()
-                .checkDaysMonthsWeeksColumn();
-        user.deleteUser();
-    }
-
-    @Test
-    @Tag("Regression")
-    @Disabled
-    @DisplayName("Check that table can be sorted by days/weeks/months (ASC)")
-    void checkMenuCanBeSortedByDaysWeeksMonthAsc() {
-        //todo
-        mainPage
-                .openPage()
-                .enterCredentialsForMainAdmin()
-              //  .enterUserCredentials(user)
-                .clickSignInButton();
-        dashboardPage
-                .checkThatPageIsOpen()
-                .clickDaysWeeksMonthsColumn()
-                .checkThatColumnIsSortedByAsc();
-    }
-
-    @Test
-    @Tag("Regression")
-    @Disabled
-    @DisplayName("Check that table can be sorted by days/weeks/months (DESC)")
-    void checkMenuCanBeSortedByDaysWeeksMonthDesc() {
-        //todo
-        mainPage
-                .openPage()
-                .enterCredentialsForMainAdmin()
-                .clickSignInButton();
-        dashboardPage
-                .checkThatPageIsOpen()
-                .clickDaysWeeksMonthsColumn()
-                .clickDaysWeeksMonthsColumn();
-        dashboardPage.checkThatColumnIsSortedByDesc();
     }
 
     @Test

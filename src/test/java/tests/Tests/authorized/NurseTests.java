@@ -1,5 +1,6 @@
 package tests.Tests.authorized;
 
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -89,8 +90,63 @@ public class NurseTests extends TestBase {
                 .clickCaseManagement()
                 .clickCaseManagement_patients();
         caseManagement_patientsPage
-                .checkPageIsOpen()
-                .checkDobDisplays();
+                .checkPageIsOpen();
+        String firstDOBOnTable = caseManagement_patientsPage.getDobOfFirstElementOnTheTable();
+        caseManagement_patientsPage
+                .clickFirstOpenFileButton();
+        caseManagement_patientsPage.newCaseTab
+                .checkThatOpen()
+                .checkDobDisplays(firstDOBOnTable);
+        user.deleteUser();
+    }
+
+    @Test
+    @Tag("Smoke")
+    @DisplayName("Check that table has column days/weeks/months")
+    void checkMenuHasColumnDaysWeeksMonth() {
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .checkDaysMonthsWeeksColumn();
+        user.deleteUser();
+    }
+
+    @Test
+    @Tag("Smoke")
+    @Story("PRMD-35")
+    @DisplayName("Check that table can be sorted by days/weeks/months (ASC)")
+    void checkMenuCanBeSortedByDaysWeeksMonthAsc() {
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .clickDaysWeeksMonthsColumn()
+                .checkThatColumnIsSortedByAsc();
+        user.deleteUser();
+    }
+
+    @Test
+    @Tag("Smoke")
+    @Story("PRMD-35")
+    @DisplayName("Check that table can be sorted by days/weeks/months (DESC)")
+    void checkMenuCanBeSortedByDaysWeeksMonthDesc() {
+        user.createUsersWithRole(NURSE);
+        mainPage
+                .openPage()
+                .enterUserCredentials(user)
+                .clickSignInButton();
+        dashboardPage
+                .checkThatPageIsOpen()
+                .clickDaysWeeksMonthsColumn()
+                .clickDaysWeeksMonthsColumn();
+        dashboardPage.checkThatColumnIsSortedByDesc();
         user.deleteUser();
     }
 }
