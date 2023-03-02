@@ -39,13 +39,13 @@ public class TestData {
         public static final String[][]
                 roleMenu =
                 {
-                        {ADMIN, "Dashboard, PriceMDs Directory Search, Case Management, Care Coordination, Patients, Client Management, Clients, Add New Client, Add New Employer Group, Procedure & Specialties, CPT & Specialty, Reporting, Client, Global Admin, Charts, Facility & Physicians, Facility, Physicians, Download Facilities, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups, Administrator, User Management, Case Assign, Global View, Archive, Messaging"},
+                        {ADMIN, "Dashboard, PriceMDs Directory Search, Case Management, Care Coordination, Patients, Client Management, Clients, Add New Client, Procedure & Specialties, CPT & Specialty, Reporting, Client, Global Admin, Charts, Facility & Physicians, Facility, Physicians, Download Facilities, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups, Administrator, User Management, Case Assign, Global View, Archive, Messaging"},
                         {NURSE, "Dashboard, PriceMDs Directory Search, Case Management, Patients, Reporting, Client, Charts"},
-                        {CLIENT_SERVICE, "Dashboard, PriceMDs Directory Search, Client Management, Clients, Add New Client, Add New Employer Group, Reporting, Billing, Client, Employer Groups"},
-                        {CARE_COORDINATOR, "Dashboard, PriceMDs Directory Search, Case Management, Patients, Client Management, Clients, Add New Client, Add New Employer Group, Procedure & Specialties, CPT & Specialty, Reporting, Client, Global Admin, Charts, Facility & Physicians, Facility, Physicians, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups"},
+                        {CLIENT_SERVICE, "Dashboard, PriceMDs Directory Search, Client Management, Clients, Add New Client, Reporting, Billing, Client, Employer Groups"},
+                        {CARE_COORDINATOR, "Dashboard, PriceMDs Directory Search, Case Management, Patients, Client Management, Clients, Add New Client, Procedure & Specialties, CPT & Specialty, Reporting, Client, Global Admin, Charts, Facility & Physicians, Facility, Physicians, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups"},
                         {NET_DEV_DIR, "Dashboard, PriceMDs Directory Search, Reporting, Client, Admin, Facility & Physicians, Facility, Physicians, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups"},
                         {CLIENT_ADMIN, "Dashboard, Client, Client Report, Charts Report"},
-                        {DEVELOPER, "Dashboard, PriceMDs Directory Search, Case Management, Care Coordination, Patients, Client Management, Clients, Add New Client, Add New Employer Group, Procedure & Specialties, CPT & Specialty, Reporting, Billing, Client, Employer Groups, Facility & Physicians, Facility, Physicians, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups"}
+                        {DEVELOPER, "Dashboard, PriceMDs Directory Search, Case Management, Care Coordination, Patients, Client Management, Clients, Add New Client, Procedure & Specialties, CPT & Specialty, Reporting, Billing, Client, Employer Groups, Facility & Physicians, Facility, Physicians, Groups, Affiliate Groups, Physician Groups, Surgical Groups, Groups"}
                 };
     }
 }

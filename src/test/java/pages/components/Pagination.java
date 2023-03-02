@@ -15,7 +15,11 @@ public class Pagination {
     }
 
     @Step(value = "Get number of all pages on the pagination component")
-    public int getNumberOfPages(){
-        return Integer.parseInt(nextButton.preceding(0).$("a").getText());
+    public int getNumberOfPages() {
+        try {
+            return Integer.parseInt(nextButton.preceding(0).$("a").getText());
+        } catch (Exception e) {
+            return 1;
+        }
     }
 }
