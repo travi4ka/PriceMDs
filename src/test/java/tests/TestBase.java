@@ -21,9 +21,9 @@ import pages.authorized.administrator.userManagement.Administrator_UserManagemen
 import pages.authorized.caseManagement.careCoordination.CaseManagement_CareCoordinationPage;
 import pages.authorized.caseManagement.patients.CaseManagement_PatientsPage;
 import pages.authorized.clientAdminRoleSpecific.ChartReportPage;
-import pages.authorized.clientAdminRoleSpecific.ClientPage;
 import pages.authorized.clientAdminRoleSpecific.ClientReportPage;
-import pages.authorized.clientManagement.clients.ClientManagement_ClientsPage;
+import pages.authorized.clientManagement.ClientManagement_AddNewClientPage;
+import pages.authorized.clientManagement.ClientManagement_ClientsPage;
 import pages.authorized.dashboard.DashboardPage;
 import pages.authorized.facilityPhysicians.facility.FacilityPhysicians_FacilityPage;
 import pages.authorized.facilityPhysicians.physicians.FacilityPhysicians_PhysiciansPage;
@@ -69,19 +69,19 @@ public class TestBase {
     public Administrator_GlobalViewPage administrator_globalViewPage = new Administrator_GlobalViewPage();
     public Administrator_MessagingPage administrator_messagingPage = new Administrator_MessagingPage();
     public Administrator_UserManagementPage administrator_userManagementPage = new Administrator_UserManagementPage();
-    public ClientPage clientPage = new ClientPage();
     public ClientReportPage clientReportPage = new ClientReportPage();
     public ChartReportPage chartReportPage = new ChartReportPage();
     public User user = new User();
     public ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
     public Patient patient = new Patient();
+    public ClientManagement_AddNewClientPage clientManagement_addNewClientPage = new ClientManagement_AddNewClientPage();
 
     @BeforeEach
     public void beforeAll() {
         Configuration.baseUrl = MAIN_URL;
 //        Configuration.remote = System.getProperty("remote", null);
-        Configuration.remote = "http://localhost:4444/wd/hub";
-        Configuration.browser = System.getProperty("browser", "edge");
+  //      Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
 

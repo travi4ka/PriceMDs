@@ -44,7 +44,7 @@ public class Menu {
             administrator_globalView = sideLeftMenu.$(byText("Global View")),
             administrator_archive = sideLeftMenu.$(byText("Archive")),
             administrator_messaging = sideLeftMenu.$(byText("Messaging")),
-            clientAdmin_client = $("a[href='../admin/clientAdministrator.php']"),
+            clientAdmin_client = $("a[href='../clients/']"),
             clientAdmin_clientReport = $("a[href='../reporting/clientAdminReports.php']"),
             clientAdmin_chartReport = $("a[href='../reporting/AdministrationChartReporting.php']");
 

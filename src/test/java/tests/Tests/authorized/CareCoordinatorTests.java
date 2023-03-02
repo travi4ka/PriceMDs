@@ -55,12 +55,7 @@ public class CareCoordinatorTests extends TestBase {
         menu
                 .clickClientManagement()
                 .clickClientManagement_addNewClient();
-        clientManagement_clientsPage
-                .checkPageIsOpen();
-        menu
-                .clickClientManagement()
-                .clickClientManagement_addNewEmpGroup();
-        clientManagement_clientsPage
+        clientManagement_addNewClientPage
                 .checkPageIsOpen();
         menu
                 .clickProcedureSpecialties()

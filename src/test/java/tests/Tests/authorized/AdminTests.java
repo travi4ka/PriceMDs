@@ -37,9 +37,7 @@ public class AdminTests extends TestBase {
         menu.clickClientManagement().clickClientManagement_clients();
         clientManagement_clientsPage.checkPageIsOpen();
         menu.clickClientManagement().clickClientManagement_addNewClient();
-        clientManagement_clientsPage.checkPageIsOpen();
-        menu.clickClientManagement().clickClientManagement_addNewEmpGroup();
-        clientManagement_clientsPage.checkPageIsOpen();
+        clientManagement_addNewClientPage.checkPageIsOpen();
         menu.clickProcedureSpecialties().clickProcedureSpecialties_cpt();
         procedureSpeciality_cptSpecialityPage.checkPageIsOpen();
         menu.clickReporting().clickReporting_client();

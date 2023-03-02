@@ -39,7 +39,7 @@ public class ClientAdminTests extends TestBase {
                 .checkThatPageIsOpen();
         menu
                 .clickClientAdmin_client();
-        clientPage
+        clientManagement_clientsPage
                 .checkPageIsOpen();
         menu
                 .clickClientAdmin_clientReport();
