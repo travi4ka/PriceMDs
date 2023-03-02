@@ -1,7 +1,7 @@
 package pages.unauthorized.mainPage;
 
 import com.codeborne.selenide.SelenideElement;
-import entities.user.User;
+import entities.User;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;

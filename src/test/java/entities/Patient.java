@@ -1,4 +1,4 @@
-package entities.user;
+package entities;
 
 import com.github.javafaker.Faker;
 

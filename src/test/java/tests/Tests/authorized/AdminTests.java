@@ -1,10 +1,12 @@
 package tests.Tests.authorized;
 
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
+import static com.codeborne.selenide.Selenide.open;
 import static tests.testData.TestData.userRole.ADMIN;
 
 @Tag("Admin")
@@ -76,21 +78,56 @@ public class AdminTests extends TestBase {
     @DisplayName("Check that DOB of patient displays on the patients case page")
     void checkDobShows() {
         user.createUsersWithRole(ADMIN);
-        mainPage
-                .openPage()
-                .enterUserCredentials(user)
-                .clickSignInButton();
-        menu
-                .clickCaseManagement()
-                .clickCaseManagement_patients();
-        caseManagement_patientsPage
-                .checkPageIsOpen();
+        mainPage.openPage().enterUserCredentials(user).clickSignInButton();
+        menu.clickCaseManagement().clickCaseManagement_patients();
+        caseManagement_patientsPage.checkPageIsOpen();
         String firstDOBOnTable = caseManagement_patientsPage.getDobOfFirstElementOnTheTable();
-        caseManagement_patientsPage
-                .clickFirstOpenFileButton();
-        caseManagement_patientsPage.newCaseTab
-                .checkThatOpen()
-                .checkDobDisplays(firstDOBOnTable);
+        caseManagement_patientsPage.clickFirstOpenFileButton();
+        caseManagement_patientsPage.newCaseTab.checkThatOpen().checkDobDisplays(firstDOBOnTable);
         user.deleteUser();
+    }
+
+    @Tag("Smoke")
+    @Story("PRMD-7")
+    @Test
+    @DisplayName("Check elements on the Clients page")
+    void checkElementsOnTheClientsPage() {
+        user.createUsersWithRole(ADMIN);
+        mainPage.openPage().enterUserCredentials(user).clickSignInButton();
+        dashboardPage.checkThatPageIsOpen();
+        clientManagement_clientsPage.openPage().checkElementsOnThePage();
+        user.deleteUser();
+    }
+
+    @Test
+    @Story("PRMD-7")
+    @Tag("Smoke")
+    @DisplayName("Check That Status Column Contains Only Active status")
+    void checkThatStatusColumnContainsOnlyActive() {
+        user.createUsersWithRole(ADMIN);
+        mainPage.openPage().enterUserCredentials(user).clickSignInButton();
+        dashboardPage.checkThatPageIsOpen();
+        clientManagement_clientsPage.openPage()
+                .checkThatStatusColumnContainsOnlyStatus("Active");
+        user.deleteUser();
+    }
+
+    @Test
+    @Story("PRMD-7")
+    @Tag("Smoke")
+    @DisplayName("Check That Status Column Contains Only Termed status")
+    void checkThatStatusColumnContainsOnlyTermed() {
+        user.createUsersWithRole(ADMIN);
+        mainPage.openPage().enterUserCredentials(user).clickSignInButton();
+        dashboardPage.checkThatPageIsOpen();
+        clientManagement_clientsPage.openPage()
+                .checkThatStatusColumnContainsOnlyStatus("Termed");
+        user.deleteUser();
+    }
+    @Test
+    void koko(){
+        open("");
+        client.createClient();
+        client.deleteClient();
     }
 }

@@ -4,8 +4,9 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import entities.user.Patient;
-import entities.user.User;
+import entities.Client;
+import entities.Patient;
+import entities.User;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -75,6 +76,7 @@ public class TestBase {
     public ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
     public Patient patient = new Patient();
     public ClientManagement_AddNewClientPage clientManagement_addNewClientPage = new ClientManagement_AddNewClientPage();
+    public Client client = new Client();
 
     @BeforeEach
     public void beforeAll() {

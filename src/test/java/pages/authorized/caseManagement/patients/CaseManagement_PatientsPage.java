@@ -2,7 +2,7 @@ package pages.authorized.caseManagement.patients;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import entities.user.Patient;
+import entities.Patient;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
