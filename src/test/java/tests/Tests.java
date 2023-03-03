@@ -218,7 +218,7 @@ public class Tests extends TestBase {
         groups_groupsPage.checkPageIsOpen();
         menu.clickAdministrator()
                 .clickAdministrator_userManagement();
-        administrator_userManagementPage.checkPageIsOpen();
+        administrator_userManagementPage.pageIsOpen();
         menu.clickAdministrator()
                 .clickAdministrator_caseAssign();
         administrator_caseAssignPage.checkPageIsOpen();
