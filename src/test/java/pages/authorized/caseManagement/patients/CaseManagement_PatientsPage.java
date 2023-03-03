@@ -5,10 +5,11 @@ import com.codeborne.selenide.SelenideElement;
 import entities.Patient;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.*;
 
 public class CaseManagement_PatientsPage {
+    private final String url = "case/patients.php";
+
     private final SelenideElement
             table = $("#demo-dt-basic"),
             addPatientButton = $x("//button[text()='Add Patient']"),
@@ -45,6 +46,13 @@ public class CaseManagement_PatientsPage {
 
     public CaseManagement_PatientsPage enterFirstNameOfCreatedPatient(Patient patient) {
         searchField.setValue(patient.getFirstName() + " " + patient.getLastName());
+        return this;
+    }
+
+    @Step("Open page")
+    public CaseManagement_PatientsPage openPage() {
+        open(url);
+        checkPageIsOpen();
         return this;
     }
 }

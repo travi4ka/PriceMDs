@@ -8,6 +8,7 @@ import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static tests.testData.TestData.userRole.CLIENT_ADMIN;
 
 public class ClientManagement_ClientsPage {
     private final SelenideElement filterByStatusButton = $(byText("Filter by Status"));
@@ -16,16 +17,18 @@ public class ClientManagement_ClientsPage {
     private final SelenideElement numberOfElementsPerPageElement = $("#clientsData_length");
     private final SelenideElement searchInput = $(byText("Search:")).$("input");
     private final SelenideElement clientsTable = $("#clientsData");
-    private final SelenideElement clientsTable_StatusColumn = clientsTable.$$("th").find(text("Status"));
+    private final SelenideElement clientsTable_StatusColumn = clientsTable.$$("th")
+            .find(text("Status"));
 
 
     private Pagination pagination = new Pagination();
 
 
     @Step("Set filter value to {0}")
-    public ClientManagement_ClientsPage setFilterValueTo(String value){
+    public ClientManagement_ClientsPage setFilterValueTo(String value) {
         statusDropdown.click();
-        statusDropdown.$(byText(value)).click();
+        statusDropdown.$(byText(value))
+                .click();
         filterByStatusButton.click();
         return this;
     }
@@ -43,14 +46,25 @@ public class ClientManagement_ClientsPage {
     }
 
     @Step("Check elements on the page")
-    public ClientManagement_ClientsPage checkElementsOnThePage() {
-        filterByStatusButton.shouldBe(visible);
-        statusDropdown.shouldBe(visible);
-        addClientButton.shouldBe(visible);
-        numberOfElementsPerPageElement.shouldBe(visible);
-        searchInput.shouldBe(visible);
-        clientsTable.shouldBe(visible);
-        pagination.checkThatPaginationIsPresented();
+    public ClientManagement_ClientsPage checkElementsOnThePage(String role) {
+        if (!role.equals(CLIENT_ADMIN)) {
+            filterByStatusButton.shouldBe(visible);
+            statusDropdown.shouldBe(visible);
+            addClientButton.shouldBe(visible);
+            numberOfElementsPerPageElement.shouldBe(visible);
+            searchInput.shouldBe(visible);
+            clientsTable.shouldBe(visible);
+            pagination.checkThatPaginationIsPresented();
+        }
+        else {
+            filterByStatusButton.shouldBe(visible);
+            statusDropdown.shouldBe(visible);
+            addClientButton.shouldNot(exist);
+            numberOfElementsPerPageElement.shouldBe(visible);
+            searchInput.shouldBe(visible);
+            clientsTable.shouldBe(visible);
+            pagination.checkThatPaginationIsPresented();
+        }
         return this;
     }
 
@@ -59,8 +73,7 @@ public class ClientManagement_ClientsPage {
         setFilterValueTo(value);
         int StatusColumnIndex = Integer.parseInt(clientsTable_StatusColumn.getAttribute("cellIndex"));
         for (int i = 1; i <= pagination.getNumberOfPages(); i++) {
-            $$("tr td:nth-child(" + (StatusColumnIndex + 1) + ")")
-                    .filter(not(text(value)))
+            $$("tr td:nth-child(" + (StatusColumnIndex + 1) + ")").filter(not(text(value)))
                     .shouldHave(size(0));
             pagination.clickNextButton();
         }
