@@ -10,7 +10,7 @@
 - Интеграция с Telegram
 - Видео пример прохождения тестов
 
-<h3 name="test1>"Технологии и инструменты</h3>
+<h3 name="test1">Технологии и инструменты</h3>
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="/images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
