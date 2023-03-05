@@ -10,7 +10,7 @@
 - <a href="#telegram">Интеграция с Telegram</a>
 - <a href="#video">Видео пример прохождения тестов</a>
 
-:memo:<h2 name="tools">Технологии и инструменты</h2>:memo:
+:memo:<span><h2 name="tools">Технологии и инструменты</h2></span>:memo:
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="/images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
