@@ -20,17 +20,20 @@ import static tests.testData.TestData.userRole.*;
 public class User {
     Faker faker = new Faker();
 
-    private final String
-            firstName,
-            lastName,
-            password,
-            email;
+    private final String firstName, lastName, password, email;
 
     public User() {
-        this.firstName = faker.name().firstName();
-        this.lastName = faker.name().lastName();
+        this.firstName = faker.name()
+                .firstName();
+        this.lastName = faker.name()
+                .lastName();
         this.password = "Travi4ka1!";
-        this.email = "AQA_" + faker.random().nextInt(1, 10000) + "_" + faker.internet().emailAddress();
+        this.email = "AQA_" +
+                faker.random()
+                        .nextInt(1, 10000) +
+                "_" +
+                faker.internet()
+                        .emailAddress();
     }
 
     public String getFirstName() {
@@ -73,8 +76,7 @@ public class User {
                 map.put("userRole", line[1]);
                 map.put("stateText", "Select State");
 
-                given()
-                        .baseUri(MAIN_URL + "ajaxControl.php")
+                given().baseUri(MAIN_URL + "ajaxControl.php")
                         .header("cookie", "PHPSESSID=" + getTokenForAdmin())
                         .formParams(map)
                         .when()
@@ -90,15 +92,17 @@ public class User {
     public User deleteUser() {
         MainPage mainPage = new MainPage();
         Menu menu = new Menu();
-        mainPage
-                .openPage()
+        mainPage.openPage()
                 .enterCredentialsForMainAdmin()
                 .clickSignInButton();
-        menu
-                .clickAdministrator()
+        menu.clickAdministrator()
                 .clickAdministrator_userManagement();
         $("input[type='search']").setValue(email);
-        $$("td").findBy(text(email)).shouldBe(visible).parent().$("button[value^='DELETE']").click();
+        $$("td").findBy(text(email))
+                .shouldBe(visible)
+                .parent()
+                .$("button[value^='DELETE']")
+                .click();
         $("#delBtnModal").click();
         return this;
     }
@@ -108,22 +112,21 @@ public class User {
         map.put("loginValue", "1");
         map.put("userEmail", MAIN_ADMIN_EMAIL);
         map.put("pwd", MAIN_ADMIN_PASSWORD);
-        return
-                given()
-                        .baseUri(MAIN_URL + "doLoginNow.php")
-                        .formParams(map)
-                        .when()
-                        .post()
-                        .then()
-                        .statusCode(200)
-                        .extract()
-                        .cookie("PHPSESSID");
+        return given().baseUri(MAIN_URL + "doLoginNow.php")
+                .formParams(map)
+                .when()
+                .post()
+                .then()
+                .statusCode(200)
+                .extract()
+                .cookie("PHPSESSID");
 
     }
 
     @Step("Select random role")
     String selectRandomRole() {
-        return faker.options().option(NURSE, ADMIN, CARE_COORDINATOR, CLIENT_ADMIN, CLIENT_SERVICE, NET_DEV_DIR);
+        return faker.options()
+                .option(NURSE, ADMIN, CARE_COORDINATOR, CLIENT_ADMIN, CLIENT_SERVICE, NET_DEV_DIR);
     }
 
     @Step("Create random user")
