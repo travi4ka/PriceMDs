@@ -63,22 +63,22 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 
 <h2 name="report">Allure-отчет</h2>
 
-###  Главное окно
+<h3>Главное окно</h3>
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/Allure_Report1.png">
+<img title="Allure Overview Dashboard" src="images/allure_report/report1.png">
 </p>
 
-###  Тесты
+<h3>Тесты</h3>
 
 <p align="center">
-<img title="Allure Tests" src="images/screens/Allure_Report2.png">
+<img title="Allure Overview Dashboard" src="images/allure_report/report2.png">
 </p>
 
-###  Графики
+<h3>Графики</h3>
 
 <p align="center">
-<img title="Allure Graphics" src="images/screens/Allure_Report3.png">
+<img title="Allure Overview Dashboard" src="images/allure_report/report3.png">
 </p>
 
 
