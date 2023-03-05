@@ -237,7 +237,6 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
-    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Care Coordinator")
     void checkAllPAgesCanBeOpenForCareCoordinator() {
         user.createUsersWithRole(CARE_COORDINATOR);
@@ -369,6 +368,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Nurse")
     void checkAllPAgesCanBeOpenForNurse() {
         user.createUsersWithRole(NURSE);
