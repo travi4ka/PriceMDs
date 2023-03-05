@@ -7,6 +7,7 @@
 - <a href="#launch">Запуск тестов</a>
 - <a href="#report">Allure-отчет</a>
 - <a href="#testops">Интеграция с Allure TestOps</a>
+- <a href="#jira">Интеграция с Jira</a>
 - <a href="#telegram">Интеграция с Telegram</a>
 - <a href="#video">Видео пример прохождения тестов</a>
 
@@ -91,6 +92,11 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 <h3>Dashboard</h3>
 <p align="center">
 <img src="images/testops/testops2.png">
+</p>
+
+<h2 name="jira">:memo:Интеграция с Jira:memo:</h2>
+<p align="center">
+<img src="images/jira/jira.png" >
 </p>
 
 <h2 name="telegram">:memo:Интеграция с Telegram:memo:</h2>
