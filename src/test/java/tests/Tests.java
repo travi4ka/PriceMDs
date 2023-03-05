@@ -14,6 +14,7 @@ public class Tests extends TestBase {
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check menu items for ")
     @CsvSource({ADMIN, NURSE, CLIENT_SERVICE, CLIENT_ADMIN, CARE_COORDINATOR, NET_DEV_DIR})
     void checkMenuForAllRoles(String role) {
@@ -291,6 +292,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Client Admin")
     void checkAllPAgesCanBeOpenForClientAdmin() {
         user.createUsersWithRole(CLIENT_ADMIN);
@@ -395,6 +397,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check forgot password flow with valid data")
     void checkForgotPasswordFlowWithValidData() {
         user.createRandomUser();
