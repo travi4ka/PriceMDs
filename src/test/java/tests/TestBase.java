@@ -7,12 +7,10 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import entities.Client;
 import entities.Patient;
 import entities.User;
-import io.qameta.allure.Attachment;
+import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.authorized.administrator.archive.Administrator_ArchivePage;
 import pages.authorized.administrator.caseAssign.Administrator_CaseAssignPage;
@@ -43,7 +41,6 @@ import pages.unauthorized.mainPage.MainPage;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static tests.testData.TestData.MAIN_URL;
 
 public class TestBase {
@@ -81,14 +78,14 @@ public class TestBase {
     @BeforeEach
     public void beforeAll() {
         Configuration.baseUrl = MAIN_URL;
-//        Configuration.remote = System.getProperty("remote", null);
-  //      Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browser = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of("enableVNC", true, "enableVideo", false));
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of("enableVNC", true, "enableVideo", true));
         Configuration.browserCapabilities = capabilities;
     }
 
@@ -99,18 +96,14 @@ public class TestBase {
 
     @AfterEach
     void addAttachments() {
-        screenshotAs();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
 
         WebDriverRunner.clearBrowserCache();
         Selenide.clearBrowserCookies();
         Selenide.sessionStorage().clear();
         Selenide.localStorage().clear();
-
     }
-
-    @Attachment(value = "Screenshot", type = "image/png")
-    public static byte[] screenshotAs() {
-        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
-    }
-
 }
