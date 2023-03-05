@@ -10,7 +10,7 @@
 - Интеграция с Telegram
 - Видео пример прохождения тестов
 
-## :wrench: <span name="test1>"Технологии и инструменты</span>
+<h3 name="test1>"Технологии и инструменты</h3>
 
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="/images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
