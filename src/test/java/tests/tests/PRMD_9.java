@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
-import static tests.testData.TestData.userRole.ADMIN;
+import static tests.testdata.TestData.userRole.ADMIN;
 
 public class PRMD_9 extends TestBase {
     @Test

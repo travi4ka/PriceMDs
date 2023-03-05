@@ -3,7 +3,7 @@ package entities;
 import com.github.javafaker.Faker;
 import io.qameta.allure.Step;
 import pages.components.Menu;
-import pages.unauthorized.mainPage.MainPage;
+import pages.unauthorized.mainpage.MainPage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,9 +13,9 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.restassured.RestAssured.given;
-import static tests.testData.TestData.*;
-import static tests.testData.TestData.roleRoleId.roleRoleId;
-import static tests.testData.TestData.userRole.*;
+import static tests.testdata.TestData.*;
+import static tests.testdata.TestData.roleRoleId.roleRoleId;
+import static tests.testdata.TestData.userRole.*;
 
 public class User {
     Faker faker = new Faker();

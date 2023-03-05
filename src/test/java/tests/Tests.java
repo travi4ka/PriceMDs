@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static tests.testData.TestData.userRole.*;
+import static tests.testdata.TestData.userRole.*;
 
 public class Tests extends TestBase {
 

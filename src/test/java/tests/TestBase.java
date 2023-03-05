@@ -13,35 +13,35 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.authorized.administrator.archive.Administrator_ArchivePage;
-import pages.authorized.administrator.caseAssign.Administrator_CaseAssignPage;
-import pages.authorized.administrator.globalView.Administrator_GlobalViewPage;
+import pages.authorized.administrator.caseassign.Administrator_CaseAssignPage;
+import pages.authorized.administrator.globalview.Administrator_GlobalViewPage;
 import pages.authorized.administrator.messaging.Administrator_MessagingPage;
-import pages.authorized.administrator.userManagement.Administrator_UserManagementPage;
-import pages.authorized.caseManagement.careCoordination.CaseManagement_CareCoordinationPage;
-import pages.authorized.caseManagement.patients.CaseManagement_PatientsPage;
-import pages.authorized.clientAdminRoleSpecific.ChartReportPage;
-import pages.authorized.clientAdminRoleSpecific.ClientReportPage;
-import pages.authorized.clientManagement.ClientManagement_AddNewClientPage;
-import pages.authorized.clientManagement.ClientManagement_ClientsPage;
+import pages.authorized.administrator.usermanagement.Administrator_UserManagementPage;
+import pages.authorized.casemanagement.carecoordination.CaseManagement_CareCoordinationPage;
+import pages.authorized.casemanagement.patients.CaseManagement_PatientsPage;
+import pages.authorized.clientadminrolespecific.ChartReportPage;
+import pages.authorized.clientadminrolespecific.ClientReportPage;
+import pages.authorized.clientmanagement.ClientManagement_AddNewClientPage;
+import pages.authorized.clientmanagement.ClientManagement_ClientsPage;
 import pages.authorized.dashboard.DashboardPage;
-import pages.authorized.facilityPhysicians.facility.FacilityPhysicians_FacilityPage;
-import pages.authorized.facilityPhysicians.physicians.FacilityPhysicians_PhysiciansPage;
-import pages.authorized.groups.affiliateGroups.Groups_AffiliateGroupsPage;
+import pages.authorized.facilityphysicians.facility.FacilityPhysicians_FacilityPage;
+import pages.authorized.facilityphysicians.physicians.FacilityPhysicians_PhysiciansPage;
+import pages.authorized.groups.affiliategroups.Groups_AffiliateGroupsPage;
 import pages.authorized.groups.groups.Groups_GroupsPage;
-import pages.authorized.groups.physicianGroups.Groups_PhysicianGroupsPage;
-import pages.authorized.groups.surgicalGroups.Groups_SurgicalGroupsPage;
-import pages.authorized.procedureSpecialities.cptSpeciality.ProcedureSpeciality_CptSpecialityPage;
+import pages.authorized.groups.physiciangroups.Groups_PhysicianGroupsPage;
+import pages.authorized.groups.surgicalgroups.Groups_SurgicalGroupsPage;
+import pages.authorized.procedurespecialities.ProcedureSpeciality_CptSpecialityPage;
 import pages.authorized.reporting.charts.Reporting_ChartsPage;
 import pages.authorized.reporting.client.Reporting_ClientPage;
-import pages.authorized.reporting.globalAdmin.Reporting_GlobalAdminPage;
-import pages.authorized.searchFacility.SearchFacilityPage;
+import pages.authorized.reporting.globaladmin.Reporting_GlobalAdminPage;
+import pages.authorized.searchfacility.SearchFacilityPage;
 import pages.components.Menu;
-import pages.unauthorized.mainPage.ForgotPasswordPage;
-import pages.unauthorized.mainPage.MainPage;
+import pages.unauthorized.mainpage.ForgotPasswordPage;
+import pages.unauthorized.mainpage.MainPage;
 
 import java.util.Map;
 
-import static tests.testData.TestData.MAIN_URL;
+import static tests.testdata.TestData.MAIN_URL;
 
 public class TestBase {
 
@@ -78,7 +78,7 @@ public class TestBase {
     @BeforeEach
     public void beforeAll() {
         Configuration.baseUrl = MAIN_URL;
-        Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = System.getProperty("remote", null);
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
@@ -103,7 +103,9 @@ public class TestBase {
 
         WebDriverRunner.clearBrowserCache();
         Selenide.clearBrowserCookies();
-        Selenide.sessionStorage().clear();
-        Selenide.localStorage().clear();
+        Selenide.sessionStorage()
+                .clear();
+        Selenide.localStorage()
+                .clear();
     }
 }
