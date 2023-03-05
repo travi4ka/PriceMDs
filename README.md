@@ -100,5 +100,5 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 
 <h2 name="#video">Видео пример прохождения тестов</h2>
 <p align="center">
-<video> <source src="images/video.mp4"></source>></video>
+<img src="images/video.gif">
 </p>
