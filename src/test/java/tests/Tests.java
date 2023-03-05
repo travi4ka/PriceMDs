@@ -14,6 +14,7 @@ public class Tests extends TestBase {
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check menu items for ")
     @CsvSource({ADMIN, NURSE, CLIENT_SERVICE, CLIENT_ADMIN, CARE_COORDINATOR, NET_DEV_DIR})
     void checkMenuForAllRoles(String role) {
@@ -29,6 +30,7 @@ public class Tests extends TestBase {
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check that DOB of patient displays on the patients case page")
     @CsvSource({ADMIN, NURSE, CARE_COORDINATOR})
     void checkDobShows(String role) {
@@ -99,6 +101,7 @@ public class Tests extends TestBase {
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check absence of CPT input field")
     @CsvSource({CARE_COORDINATOR, NURSE})
     void checkAbsenceOfCptField(String role) {
@@ -310,6 +313,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Client Service")
     void checkAllPAgesCanBeOpenForClientService() {
         user.createUsersWithRole(CLIENT_SERVICE);
@@ -334,6 +338,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Net Dev Dir")
     void checkAllPAgesCanBeOpenForNetDevDir() {
         user.createUsersWithRole(NET_DEV_DIR);
