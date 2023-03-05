@@ -24,7 +24,7 @@
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 </p>
 
-<h2 name="checks">Перечень проверок</h2>
+<h2 name="checks">:memo:Перечень проверок:memo:</h2>
 <h3>Автоматизированные тесты</h3>
 
 - [x] Возможность открытия всех страниц сайта посредством меню для роли Client Admin
@@ -38,7 +38,7 @@
 
 - [x] Проверка тайтла главной страницы
 
-<h2 name="launch">Запуск тестов</h2>
+<h2 name="launch">:memo:Запуск тестов:memo:</h2>
 
 <h3>Локальный запуск</h3>
 Запуск с использованием командной строки:
@@ -61,7 +61,7 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 </ol>
 
 
-<h2 name="report">Allure-отчет</h2>
+<h2 name="report">:memo:Allure-отчет:memo:</h2>
 
 <h3>Главное окно</h3>
 
@@ -82,7 +82,7 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 </p>
 
 
-<h2 name="testops">Интеграция с Allure TestOps</h2>
+<h2 name="testops">:memo:Интеграция с Allure TestOps:memo:</h2>
 <h3>Общий список всех тест-кейсов</h3>
 <p align="center">
 <img src="images/testops/testops.png">
@@ -93,12 +93,12 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 <img src="images/testops/testops2.png">
 </p>
 
-<h2 name="telegram">Интеграция с Telegram</h2>
+<h2 name="telegram">:memo:Интеграция с Telegram:memo:</h2>
 <p align="center">
 <img src="images/telegram/telegram.png" >
 </p>
 
-<h2 name="#video">Видео пример прохождения тестов</h2>
+<h2 name="video">:memo:Видео пример прохождения тестов:memo:</h2>
 <p align="center">
 <img src="images/video.gif">
 </p>
