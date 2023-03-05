@@ -66,42 +66,39 @@ clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-Dbrow
 <h3>Главное окно</h3>
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_report/report1.png">
+<img src="images/allure_report/report1.png">
 </p>
 
 <h3>Тесты</h3>
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_report/report2.png">
+<img src="images/allure_report/report2.png">
 </p>
 
 <h3>Графики</h3>
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allure_report/report3.png">
+<img src="images/allure_report/report3.png">
 </p>
 
 
-## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a> Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/1887/dashboards">Allure TestOps</a>
-### Общий список всех кейсов: ручных и авто
+<h2 name="testops">Интеграция с Allure TestOps</h2>
+<h3>Общий список всех тест-кейсов</h3>
 <p align="center">
-<img title="Allure Graphics" src="images/screens/allureTO-report.png">
+<img src="images/testops/testops.png">
 </p>
 
-### Dashboard с общими результатами тестирования
+<h3>Dashboard</h3>
 <p align="center">
-<img title="Allure Graphics" src="images/screens/allureTO_dashboard.png">
+<img src="images/testops/testops2.png">
 </p>
 
-## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram о результатах прогона тестов
-
+<h2 name="telegram">Интеграция с Telegram</h2>
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/telegramNotif.png" >
+<img src="images/telegram/telegram.png" >
 </p>
 
-## <img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Пример видео прохождения теста
-### Тест #2 Появляется окно запроса на регистрацию после заполнения всех полей формы и подтверждения
+<h2 name="#video">Видео пример прохождения тестов</h2>
 <p align="center">
-<img title="Selenoid Video" src="images/gifs/video.gif" width="250" height="153"  alt="videoUItests.mp4"> 
-
+<video src="images/video.mp4" width="250" height="153"> 
 </p>
