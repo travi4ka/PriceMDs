@@ -1,5 +1,4 @@
-# Автоматизации тестирования для приложения <a href="https://pricemds.com/">PriceMDs</a>
-### <a target="_blank" href="https://online.sochisirius.ru/auth">Страница регистрации Сириус Курсы</a>
+# Автоматизации тестирования для CRM системы приложения <a href="https://pricemds.com/">PriceMDs</a>
 
 ## Содержание:
 
@@ -16,7 +15,6 @@
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="/images/logo/Idea.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
-<a href="https://github.com/"><img src="images/logo/GitHub.svg" width="50" height="50"  alt="Github"/></a>
 <a href="https://junit.org/junit5/"><img src="images/logo/Junit5.svg" width="50" height="50"  alt="JUnit 5"/></a>
 <a href="https://gradle.org/"><img src="images/logo/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
 <a href="https://selenide.org/"><img src="images/logo/Selenide.svg" width="50" height="50"  alt="Selenide"/></a>
@@ -26,8 +24,8 @@
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 </p>
 
-## :white_check_mark: Список проверок
-### Автотесты
+## :white_check_mark: Перечень проверок
+### Автоматизированные тесты
 
 - [x] Проверка названия формы регистрации
 - [x] Проверка отображения подтверждающего окна после прохождения регистрации
