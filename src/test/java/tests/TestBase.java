@@ -80,7 +80,7 @@ public class TestBase {
         Configuration.baseUrl = MAIN_URL;
         Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browser = System.getProperty("browserVersion", "100.0");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.timeout = 10_000;
 
