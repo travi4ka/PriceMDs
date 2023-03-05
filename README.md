@@ -51,6 +51,13 @@ gradle clean test
 <pre>
 clean ${RUN_OPTION} "-Dbrowser=${BROWSER}" "-DbrowserVersion=${VERSION}" "-DbrowserSize=${RESOLUTION}" "-Dremote=${SELENOID_CLOUD}"
 </pre>
+<pre>
+BROWSER - браузер, default: chrome
+VERSION - версия браузера, default: 100.0
+RESOLUTION - разрешение окна браузера, default: 1920x1080
+SELENOID_CLOUD - адрес Selenoid, default: https://user1:1234@selenoid.autotests.cloud/wd/hub
+RUN_OPTION - название task для Gradle
+</pre>
 
 <h3>Проект в Jenkins:</h3>
 <ol>
