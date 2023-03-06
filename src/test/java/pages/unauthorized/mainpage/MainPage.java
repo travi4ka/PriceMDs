@@ -1,5 +1,6 @@
 package pages.unauthorized.mainpage;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import entities.User;
 import io.qameta.allure.Step;
@@ -39,7 +40,7 @@ public class MainPage {
 
     @Step("Open main page")
     public MainPage openPage() {
-        open(MAIN_URL);
+        open(Configuration.baseUrl);
         return this;
     }
 

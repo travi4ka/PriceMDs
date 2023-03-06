@@ -397,7 +397,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
-    @Tag("qa_guru")
+    @Tag("qa_guru1")
     @DisplayName("Check forgot password flow with valid data")
     void checkForgotPasswordFlowWithValidData() {
         user.createRandomUser();
