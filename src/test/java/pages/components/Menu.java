@@ -9,7 +9,7 @@ import java.util.List;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
-import static tests.testData.TestData.roleMenu.roleMenu;
+import static tests.testdata.TestData.roleMenu.roleMenu;
 
 public class Menu {
     final SelenideElement

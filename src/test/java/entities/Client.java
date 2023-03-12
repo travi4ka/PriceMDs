@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
-import static tests.testData.TestData.MAIN_URL;
+import static tests.testdata.TestData.MAIN_URL;
 
 public class Client {
     private Faker faker = new Faker();

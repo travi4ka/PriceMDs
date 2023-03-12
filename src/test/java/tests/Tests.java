@@ -7,13 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static tests.testData.TestData.userRole.*;
+import static tests.testdata.TestData.userRole.*;
 
 public class Tests extends TestBase {
 
     @ParameterizedTest
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check menu items for ")
     @CsvSource({ADMIN, NURSE, CLIENT_SERVICE, CLIENT_ADMIN, CARE_COORDINATOR, NET_DEV_DIR})
     void checkMenuForAllRoles(String role) {
@@ -291,6 +292,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Client Admin")
     void checkAllPAgesCanBeOpenForClientAdmin() {
         user.createUsersWithRole(CLIENT_ADMIN);
@@ -310,6 +312,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Client Service")
     void checkAllPAgesCanBeOpenForClientService() {
         user.createUsersWithRole(CLIENT_SERVICE);
@@ -334,6 +337,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Net Dev Dir")
     void checkAllPAgesCanBeOpenForNetDevDir() {
         user.createUsersWithRole(NET_DEV_DIR);
@@ -368,6 +372,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check all pages can be open for Nurse")
     void checkAllPAgesCanBeOpenForNurse() {
         user.createUsersWithRole(NURSE);
@@ -392,6 +397,7 @@ public class Tests extends TestBase {
     @Test
     @Tag("Smoke")
     @Tag("Prod")
+    @Tag("qa_guru")
     @DisplayName("Check forgot password flow with valid data")
     void checkForgotPasswordFlowWithValidData() {
         user.createRandomUser();

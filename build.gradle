@@ -60,6 +60,12 @@ task prod(type: Test) {
     }
 }
 
+task qa_guru(type: Test) {
+    useJUnitPlatform {
+        includeTags("qa_guru")
+    }
+}
+
 test {
     useJUnitPlatform()
 }
